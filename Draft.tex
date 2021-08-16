@@ -480,8 +480,9 @@ con lo que se obtiene la frecuencia de plasma como,
 
 Con un análisis análogo podemos obtener la frecuencia de un plasmón de
 superficie, considerando al cumulo de carga $Q$ en una región $R$ en
-la interfaz de un conductor semiinfinito como ilustra la imagen
-\ref{Surfplasmon},
+la interfaz de un conductor semi-infinito como ilustra la imagen
+\ref{Surfplasmon}, la cual produce un campo eléctrico $\vec{E}(\vec{r},t)$
+que induce corrientes en el conductor.
 \begin{figure}[H]
   \centering
 \tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
@@ -745,11 +746,33 @@ and (1.99,-0.18) .. (0,0) .. controls (1.99,0.18) and (4.17,0.84)
       [font=\footnotesize] {$\mathcal{R}$};
 
 \end{tikzpicture}
-\label{Surfplasmon}
 \caption{Region $\mathcal{R}$ cargada en la superficie de un conductor
-  semiinfinito. La carga $Q$ produce un campo eléctrico \vec{E}(\vec{r},t)}
+  semi-infinito. La carga $Q$ produce un campo eléctrico
+  $\vec{E}(\vec{r},t)$ (líneas azules) y este una densidad de
+  corriente (líneas verdes) la cual es inducida únicamente en el
+  conductor.}
+\label{Surfplasmon}
 \end{figure}
- 
+
+Usando la ecuación dinámica de la densidad de corriente podemos
+escribir la ecuación dinámica de la carga como para el plasmón de
+bulto, con la diferencia que la densidad de corriente en este caso
+atraviesa la mitad de la superficie $\Sigma $,
+\begin{equation}
+  \begin{split}
+    \frac{d^{2}}{dt^{2}}Q = & -\int_{\Sigma}d\vec{a}\cdot\frac{\partial}{\partial t}\vec{j},\\
+    = & ne \int_{\Sigma/2}d\vec{a}\cdot\frac{\partial}{\partial t}\vec{v},\\
+    = & \frac{ne^{2}}{m}\int_{\Sigma}d\vec{a}\cdot \vec{E}, \\
+    = & -\frac{2\pi ne^{2}}{m}Q,
+  \end{split}
+\end{equation}
+obteniendo que la frecuencia de una plasmón de superficie es,
+\begin{equation}
+  \omega_{sp}^{2}=\frac{2\pi ne^{2}}{m} = \frac{\omega_{p}^{2}}{m}.
+  \label{surfaceplasmonfrecuency}
+\end{equation}  
+    
+
 \section{Teoría}
 
 Las propiedades ópticas de estos materiales están determinadas por su
