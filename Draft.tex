@@ -100,7 +100,7 @@ por $\frac{\partial \vec{j}(\vec{r},t)}{\partial t}=
 corriente sobre una superficie que rodee completamente la carga y
 usando la ecuación de continuidad y la Ley de Gauss para el campo
 eléctrico obtenemos una ecuación diferencial para la carga,
-\begin{figure}[H]
+\begin{figure}
 \centering
 \input{Bulkplasmon.code.tex}
 \label{Bulkplasmon}
@@ -121,7 +121,7 @@ la cual es una ecuación diferencial idéntica a la ecuación de un
 oscilador armónico simple como el que si ilustra en la
 imagen \ref{OscArmonicoSimple}, cuya derivación se muestra en seguida,
 \begin{multicols}{2}
-  \begin{figure}[H]
+  \begin{figure}
     \input{Oscilador.code.tex}
     \label{OscArmonicoSimple}
     \caption{Oscilador armónico en equilibrio y acelerado.}
@@ -151,7 +151,7 @@ superficie, considerando al cumulo de carga $Q$ en una región $R$ en
 la interfaz de un conductor semi-infinito como ilustra la imagen
 \ref{Surfplasmon}, la cual produce un campo eléctrico $\vec{E}(\vec{r},t)$
 que induce corrientes en el conductor.
-\begin{figure}[H]
+\begin{figure}
   \centering
   \input{SurfPlasmon.code.tex}
   \caption{Region $\mathcal{R}$ cargada en la superficie de un conductor
@@ -180,12 +180,12 @@ obteniendo que la frecuencia de una plasmón de superficie es,
   \label{surfaceplasmonfrecuency}
 \end{equation}
 
-Como último ejemplo de la misma respuesta en las cargas electricas de
-un sistema. Considerese una esfera metálica la cual es perturbada al
+Como último ejemplo de la misma respuesta en las cargas eléctricas de
+un sistema, considérese una esfera metálica la cual es perturbada al
 desplazar todos sus electrones en la dirección $\vec{\zeta}$ lo cual
-induce una polaricación $\vec{\mathcal{P}}$ en la misma y un campo
+induce una polarización $\vec{\mathcal{P}}$ en la misma y un campo
 eléctrico $\vec{E}(\vec{r},t)$, como ilustra la siguiente figura,
-\begin{figure}[H]
+\begin{figure}
   \centering
   \input{polaritonesferico.code.tex}
 
@@ -235,7 +235,7 @@ de la copa, como muestra la imagen \ref{Lycurgus}. A este fenómeno se
 le denomina \textit{dicroísmo}, y de los artefactos de vidrio romano
 encontrado, la copa es la que muestra dicho efecto más
 intensamente. \cite{LycurgusInvestigation}
-\begin{figure}[H]
+\begin{figure}
     \centering
     \includegraphics[width = 0.6\textwidth]{Lycurguscup.jpg}
     \caption{La copa de Lycurgo, copa fabricada en la Roma tardía del
@@ -255,7 +255,82 @@ inglés, se pudieron determinar tamaños de las partículas de $\approx
 10 nm $. Actualmente se ha encontrado que contiene partículas de
 diferentes metales y de materiales no metálicos.
 
-%¿Agregaríamos algo más?% 
+%¿Agregaríamos algo más, quitamos esto y ponemos los vidrios de la
+%catedral?% Falta agregar la última lámina de la presentación de
+%ejemplos sobre propiedades ópticas de partículas cúbicas, pero no supe
+%como introducirlas.%
+
+\subsection{Electrodinámica}
+La descripción de los fenomenos electromagnéticos es provista por las
+ecuaciones de Maxwell las cuales describen la propagación de los
+campos electromagnéticos en el vacío y en la materia, su interacción
+con las cargas eléctricas de los materiales, y la interacción entre las
+misma cargas, las ecuaciones en forma diferencial son,
+\begin{equation}
+  \label{Maxwell-eqs}
+  \begin{array}{cc}
+    \nabla \cdot {\bf D} = 4\pi \rho_{ex}, & \nabla \cdot {\bf B} =0, \\
+    \nabla \times {\bf E} = -\frac{1}{c}\frac{\partial {\bf B}}{\partial t}, &
+    \nabla \times {\bf H} = \frac{4\pi}{c}{\bf
+      J}_{ex} + \frac{1}{c}\frac{\partial {\bf D}}{\partial t},
+  \end{array}
+\end{equation}
+donde ${\bf J}_{ex}$ y $\rho_{ex}$ son la densidad de corriente y
+densidad de carga externas, respectivamente. Por ejemplo, el siguiente
+sistema que consiste de circuitos de alambre a los que se aplica un
+campo magnético a lo largo de la dirección perpendicular al plano en
+el que está el circuito y un campo eléctrico que reside en el mismo
+plano y cuyo efecto sobre los circuitos es el movimiento de sus
+caragas eléctricas, como ilustra la figura \ref{circuitos}.
+\begin{figure}
+  \centering
+  \input{circuitos.code.tex}
+
+  \caption{Circuitos de lazos de metal bajo la aplicación de un campo
+    magnético $\vec{B}$ en la dirección perpendicular a al plano del
+    circuito y de un campo eléctrico $\vec{E}$ que reside en el plano
+    del circuito. El efecto de la aplicación de los campos sobre los
+    alambres de metal es el movimiento de cargas eléctricas, la
+    densidad de corriente $\vec{j}$. }
+\label{Circuitos}
+
+\end{figure}
+
+Los efectos en la materia por perturbaciones externas es descrito por
+sus propiedades intrínsecas tales como la permitividad
+$\epsilon(\vec{k},\omega)$, la cual describe cuánto es afectado un
+material al aplicar un campo eléctrico y la permeabilidad
+$\mu(\vec{k},\omega)$, que describe el efecto cuando se aplican campos
+magnéticos. A estas cantidades se les denomina funciones respuesta del
+sistema y pueden o no depender de $\vec{k}$ el vector de onda la cual
+es y $\omega$ la frecuencia de la preturbación, en el espació real
+estas dependencias son espacial y temporal respectivamente. Las
+diferentes formas de estás funciones dan pie a la clasifición de la
+materia, por ejemplo, un medio con permitividad constante $\epsilon$
+en todas las direcciones es un medio isotrópico homogéneo, los medios
+cuyas funciones respuesta dependen de la dirección y/o del punto en
+que se realiza la medición, se les clasifica como anisotrópicos
+inhomogenéos.
+
+La propagación de ondas electromagnéticas en los medios es descrita
+por estas funciones respuesta, por ejemplo, consideremos un medio
+homogéneo con permitividad constante $\epsilon$, la propagación de la
+onda está dada por la relación entre el vector de onda y la
+frecuencia, la relación de dispersión de la onda al propagarse en el
+medio como se ilustra en la imagen \ref{mediohomogneo}, la cual es
+amplificada por el factor $\sqrt{\epsilon}$ con respecto a la relación
+de dispersión en el vacío.
+\begin{figure}
+  \centering
+  \input{Mediohomogneo.code.tex}
+
+  \caption{(a) Medio homogéneo con permitividad constante $\epsilon$,
+    (b) relaciones de dipersión de la propagación de la onda, línea
+    roja propagación en el vacío, línea azul propagación dentro del material.}
+\label{mediohomogneo}
+
+\end{figure}
+
 
 \section{Teoría}
 
@@ -380,7 +455,8 @@ ecuación \eqref{CamposCompletos},
 \end{equation}
 comparando con la ecuación de campos macroscópicos obtenemos que
 \begin{equation}
-  \hat{\epsilon}_{M}=\hat{\epsilon}_{aa}-\hat{\epsilon}_{af}\left[(\hat{\epsilon}_{ff}-\frac{c^{2}}{\omega^{2}}(\nabla \times \nabla)_{ff})\right]^{-1}\hat{\epsilon}_{fa},
+  \hat{\epsilon}_{M}=\hat{\epsilon}_{aa}-\hat{\epsilon}_{af}\left[(\hat{\epsilon}_{ff}-\frac{c^{2}}{\omega^{2}}(\nabla
+    \times \nabla)_{ff})\right]^{-1}\hat{\epsilon}_{fa},
   \label{DielectricFunction}
 \end{equation}
 la respuesta macroscópica de un sistema está dada por el promedio de
@@ -390,7 +466,8 @@ resultado se presume exacto.
 
 Para analizar el resultado de \eqref{DielectricFunction} nos
 restringimos a una longitud de escala característica de las
-fluctuaciones mucho menor a la longitud de onda. Convenitntemente se definen los  operadores de proyección longitudinal
+fluctuaciones mucho menor a la longitud de onda. Convenitntemente se
+definen los operadores de proyección longitudinal
 \begin{equation}
   \hat{P}^{L} = \hat{\nabla} \hat{\nabla}^{-2} \hat{\nabla}\times,
 \end{equation}
@@ -419,15 +496,16 @@ transversal
     \mathcal{W}_{LL} &  \mathcal{W}_{LT} \\
     \mathcal{W}_{TL} &  \mathcal{W}_{TT}
     \end{array}
-    \right]^{-1}, \]
-y reescribiendo el termino de operadores nabla como, $(\nabla \times \nabla \times)_{ff} = \nabla ^{2}\hat{P}^{T}\hat{P}_{f}$,
-tenemos
+    \right]^{-1}, \] y reescribiendo el termino de operadores nabla
+como, $(\nabla \times \nabla \times)_{ff} = \nabla
+^{2}\hat{P}^{T}\hat{P}_{f}$, tenemos
 \begin{equation}
   \label{MatrizdeProyeccionesdeW}
   \left[(\hat{\epsilon}_{ff}-\frac{c^{2}}{\omega^{2}}(\nabla \times \nabla \times)_{ff})\right]^{-1} = \left[
   \begin{array}{cc}
-    \hat{\epsilon}_{ff}^{LL} & \hat{\epsilon}_{ff}^{LT} \\
-    \hat{\epsilon}_{ff}^{TL} &  \hat{\epsilon}_{ff}^{TT}+ \frac{c^{2}}{\omega^{2}}\nabla ^{2}\hat{P}^{T}\hat{P}_{f}
+    \hat{\epsilon}_{ff}^{LL} & \hat{\epsilon}_{ff}^{LT}
+    \\ \hat{\epsilon}_{ff}^{TL} & \hat{\epsilon}_{ff}^{TT}+
+    \frac{c^{2}}{\omega^{2}}\nabla ^{2}\hat{P}^{T}\hat{P}_{f}
   \end{array}
   \right]^{-1}.
 \end{equation}
@@ -478,8 +556,11 @@ lo que los elementos respectivos son
 \end{split}
 \]
 y asumiendo que $\lambda^{2}/l^{2} >> ||\hat{\epsilon}||$ donde $l$ es
-la longitud de escala de las fluctuaciones, y que $||(\omega^{2}/c^{2})\hat{\nabla}^{-2}\hat{P}_{f}||\approx l^{2}/\lambda ^{2}$, entonces el segundo termino del
-elemento $\hat{D}$ es mucho mayor que el primero. Para hacer el cálculo más explícito lo reescribimos como
+la longitud de escala de las fluctuaciones, y que
+$||(\omega^{2}/c^{2})\hat{\nabla}^{-2}\hat{P}_{f}||\approx
+l^{2}/\lambda ^{2}$, entonces el segundo termino del elemento
+$\hat{D}$ es mucho mayor que el primero. Para hacer el cálculo más
+explícito lo reescribimos como
 \[ \frac{c^{2}}{\omega^{2}}\nabla ^{2}\hat{P}^{T}\hat{P}_{f}(1+\frac{\omega^{2}}{c^{2}}\nabla ^{-2}\hat{P}^{T}\hat{P}_{f}\hat{\epsilon}_{ff}^{TT}) \]
 y al sustituir en las ecuaciones \eqref{eqsalgebraicas}, obtenemos
 \begin{equation}
@@ -489,15 +570,18 @@ y al sustituir en las ecuaciones \eqref{eqsalgebraicas}, obtenemos
     \left[ \begin{array}{cc}
         (\hat{\epsilon}_{ff}^{LL})^{-1} & 0 \\ 0 & 0 \\
     \end{array}
-      \right] \\
-   & + \frac{\omega^{2}}{c^{2}}\left[ \begin{array}{cc}
-      (\hat{\epsilon}_{ff}^{LL})^{-1}(\hat{\epsilon}_{ff}^{LT})\hat{\nabla}^{-2}(\hat{\epsilon}_{ff}^{TL})(\hat{\epsilon}_{ff}^{LL})^{-1}  & -(\hat{\epsilon}_{ff}^{LL})^{-1}(\hat{\epsilon}_{ff}^{LT})\hat{\nabla}^{-2} \\ -\hat{\nabla}^{-2}(\hat{\epsilon}_{ff}^{TL})(\hat{\epsilon}_{ff}^{LL})^{-1}
-      & \nabla^{-2}\hat{P}^{T}\hat{P}_{f}
+      \right] \\ & + \frac{\omega^{2}}{c^{2}}\left[ \begin{array}{cc}
+        (\hat{\epsilon}_{ff}^{LL})^{-1}(\hat{\epsilon}_{ff}^{LT})\hat{\nabla}^{-2}(\hat{\epsilon}_{ff}^{TL})(\hat{\epsilon}_{ff}^{LL})^{-1}
+        &
+        -(\hat{\epsilon}_{ff}^{LL})^{-1}(\hat{\epsilon}_{ff}^{LT})\hat{\nabla}^{-2}
+        \\ -\hat{\nabla}^{-2}(\hat{\epsilon}_{ff}^{TL})(\hat{\epsilon}_{ff}^{LL})^{-1}
+        & \nabla^{-2}\hat{P}^{T}\hat{P}_{f}
       \end{array} \right] + ...,
     \end{split}
 \end{equation}
 en los casos en que $l << \lambda $, solo nos quedamos con el primer
-termino de la expansión y sustituyéndolo en \eqref{DielectricFunction} la reescribimos como
+termino de la expansión y sustituyéndolo en \eqref{DielectricFunction}
+la reescribimos como
 \begin{equation}
   \hat{\epsilon}_{M}=\hat{\epsilon}_{aa}-\hat{\epsilon}_{af}(\hat{\epsilon}_{ff}^{LL})^{-1}\hat{\epsilon}_{fa}.
 \end{equation}
