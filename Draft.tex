@@ -91,16 +91,16 @@ libre de moverse en un entorno positivamente cargado, de manera que el
 sistema sea neutro. Si debido a algún efecto como una
 compresión o rarefacción del gas de electrones se produce una
 acumulación de carga $Q$, localizada en alguna región $\mathcal{R}$,
-esta producirá un campo eléctrico $\vec{E} (\vec{r})$, como ilustra la
+esta producirá un campo eléctrico $\bm{E} (\bm{r})$, como ilustra la
 figura \ref{Bulkplasmon}. De acuerdo
 a la segunda ley de Newton, los electrones adquieren una aceleración
-$\frac{d^{2}\vec{r}}{dt^{2}} = -e\vec{E}(\vec{r},t)/m$, donde $m$ y
+$\frac{d^{2}\bm{r}}{dt^{2}} = -e\bm{E}(\bm{r},t)/m$, donde $m$ y
 $-e$ son la masa y la carga eléctrica electrónica. La
 velocidad adquirida por los electrones resulta en una corriente
-eléctrica  $\vec{j}(\vec{r},t) = -n_0 e \vec v=-n_{0}e({d\vec{r}}/{dt})$
+eléctrica  $\bm{j}(\bm{r},t) = -n_0 e \bm v=-n_{0}e({d\bm{r}}/{dt})$
 que obedece la ecuación de movimiento
-por ${\partial \vec{j}(\vec{r},t)}/{\partial t}=
--\frac{n_{0}e^{2}}{m}\vec{E}(\vec{r},t)$. Integrando la ecuación diferencial de la
+por ${\partial \bm{j}(\bm{r},t)}/{\partial t}=
+-\frac{n_{0}e^{2}}{m}\bm{E}(\bm{r},t)$. Integrando la ecuación diferencial de la
 corriente sobre una superficie $\Sigma$ que rodee completamente la carga y
 usando la ecuación de continuidad y la Ley de Gauss para el campo
 eléctrico obtenemos una ecuación diferencial para la carga $Q$
@@ -165,14 +165,14 @@ semiinfinito separado del vacío por una superficie plana.
 Un análisis análogo nos permite obtener la frecuencia del {\em plasmón de
 superficie}, considerando ahora un exceso de carga $Q$ en una región $R$ en
 la interfaz, como ilustra la fig.
-\ref{Surfplasmon}, el cual produce un campo eléctrico $\vec{E}(\vec{r},t)$
+\ref{Surfplasmon}, el cual produce un campo eléctrico $\bm{E}(\bm{r},t)$
 que induce corrientes en el conductor.
 \begin{figure}
   \centering
   \input{SurfPlasmon.code.tex}
   \caption{Region $\mathcal{R}$ en la superficie de un conductor
   semi-infinito en la que hay una carga $Q$, la cual produce un campo eléctrico
-  $\vec{E}(\vec{r},t)$ (líneas azules) y éste a su vez produce una densidad de
+  $\bm{E}(\bm{r},t)$ (líneas azules) y éste a su vez produce una densidad de
   corriente (líneas verdes) que atraviesan aquella parte de la
   superficie lejana $\Sigma$ que se halla dentro del
   conductor.}
@@ -186,9 +186,9 @@ sólo fluye a través de la mitad de la superficie $\Sigma $ que se
 halla en el interior del metal,
 \begin{equation}
   \begin{split}
-    \frac{d^{2}}{dt^{2}}Q = & -\int_{\Sigma}d\vec{a}\cdot\frac{\partial}{\partial t}\vec{j},\\
-    = & ne \int_{\Sigma/2}d\vec{a}\cdot\frac{\partial}{\partial t}\vec{v},\\
-    = & \frac{1}{2}\frac{ne^{2}}{m}\int_{\Sigma}d\vec{a}\cdot \vec{E}, \\
+    \frac{d^{2}}{dt^{2}}Q = & -\int_{\Sigma}d\bm{a}\cdot\frac{\partial}{\partial t}\bm{j},\\
+    = & ne \int_{\Sigma/2}d\bm{a}\cdot\frac{\partial}{\partial t}\bm{v},\\
+    = & \frac{1}{2}\frac{ne^{2}}{m}\int_{\Sigma}d\bm{a}\cdot \bm{E}, \\
     = & -\frac{2\pi ne^{2}}{m}Q.
   \end{split}
 \end{equation}
@@ -203,37 +203,37 @@ $\omega_{\text{sp}}$, dada por
 En lugar de un sistema semiinfinito, consideremos ahora un sistema
 finito consistente en una partícula metálica separada del vacío por
 una superficie esférica. Supongamos que perturbamos esta esfera
-moviendo todos sus electrones una separación $\vec{\zeta}$ respecto a
+moviendo todos sus electrones una separación $\bm{\zeta}$ respecto a
 su posición de equilibrio, lo cual
-induce una polarización $\vec{\mathcal{P}}=-n_0 e\vec \zeta$, como ilustra la
+induce una polarización $\bm{\mathcal{P}}=-n_0 e\bm \zeta$, como ilustra la
 siguiente figura,
 \begin{figure}
   \centering
   \input{polaritonesferico.code.tex}
 
     \caption{Esfera metálica cuyos electrones han sido desplazados en la
-  dirección de $\vec{\zeta}$ (flecha negra), dejando una ausencia de
+  dirección de $\bm{\zeta}$ (flecha negra), dejando una ausencia de
   carga en la dirección opuesta induciendo polarización en el sistema
-  $\vec{\mathcal{P}}$ (flechas verdes) y una carga superficial la cual
-  produce un campo eléctrico $\vec{E}(\vec{r},t)$.}
+  $\bm{\mathcal{P}}$ (flechas verdes) y una carga superficial la cual
+  produce un campo eléctrico $\bm{E}(\bm{r},t)$.}
 \label{Polariton}
 
 \end{figure}
 El deplazamiento de los electrones hacia uno de los
 hemisferios de la esfera genera un exceso de carga negativa en su
 superficie y un exceso de carga positiva en el otro, descrita por la
-densidad de carga superficial $\sigma=\vec{\mathcal P}\cdot\hat n$,
+densidad de carga superficial $\sigma=\bm{\mathcal P}\cdot\hat n$,
 donde $\hat n$ es un vector unitario radial. Estas cargas producen un
 campo eléctrico
-$\vec{E}(\vec{r},t) = -(4\pi/3)\vec{\mathcal{P}}
+$\bm{E}(\bm{r},t) = -(4\pi/3)\bm{\mathcal{P}}
 $ donde empleamos el {\em factor de depolarización} $-4\pi/3$ de una
   esfera. Este campo acelera las cargas de acuerdo a
-$m\frac{d^{2}\vec{\zeta}}{d^{2}t}=-e\vec{E}(\vec{r},t)$. Escribiendo
-al campo en términos de $\vec\zeta$, $\vec{E}= -(4\pi n_0
-  e^{2}/3m)\vec{\zeta}$, la ecuación de movimiento para
-$\vec{\zeta}$ se convierte en,
+$m\frac{d^{2}\bm{\zeta}}{d^{2}t}=-e\bm{E}(\bm{r},t)$. Escribiendo
+al campo en términos de $\bm\zeta$, $\bm{E}= -(4\pi n_0
+  e^{2}/3m)\bm{\zeta}$, la ecuación de movimiento para
+$\bm{\zeta}$ se convierte en,
 \begin{equation}
-  \frac{d^{2}\vec{\zeta}}{d^{2}t}= -\frac{4\pi_0 e^{2}}{3m}\vec{\zeta}
+  \frac{d^{2}\bm{\zeta}}{d^{2}t}= -\frac{4\pi_0 e^{2}}{3m}\bm{\zeta}
   \label{polaritondifec}
 \end{equation}
 de la cual obtenemos la frecuencia de las oscilaciones de carga en una
@@ -394,35 +394,35 @@ este caso, su producto $\epsilon\mu>0$ sería positivo y sí podría
 haber propagación con un vector de onda real. Sin embargo, esta
 propagación sería curiosa. Sabemos que a partir de las
 ecuaciones de Maxwell, por ejemplo, de las leyes de Faraday y de Gauss magnética,
-que para una onda plana, el campo eléctrico $\vec E$, la densidad de
+que para una onda plana, el campo eléctrico $\bm E$, la densidad de
 flujo magnético
-$\vec B$ y el vector de onda $\vec k$ forman una triada ordenada
+$\bm B$ y el vector de onda $\bm k$ forman una triada ordenada
 derecha, como ilustra la figura \ref{fig:triada}.
 \begin{figure}
   \centering
   \includegraphics{talk-13}
   \caption{Relación entre las direcciones del campo eléctrico
-    $\vec E$, densidad de flujo magnético $\vec B$, vector de onda
-    $\vec k$, campo magnético $\vec H$ y vector de Poynting $\vec S$
-    en un metamaterial izquierdo isotrópico. Como $(\vec E, \vec B,
-    \vec k)$ y $(\vec E, \vec H,\vec S)$ son triadas ordenadas
-    derechas, y $\vec B$ y $\vec H$ son antiparalelos, entonces $\vec
-    k$ y $\vec S$ son antiparalelos.  }
+    $\bm E$, densidad de flujo magnético $\bm B$, vector de onda
+    $\bm k$, campo magnético $\bm H$ y vector de Poynting $\bm S$
+    en un metamaterial izquierdo isotrópico. Como $(\bm E, \bm B,
+    \bm k)$ y $(\bm E, \bm H,\bm S)$ son triadas ordenadas
+    derechas, y $\bm B$ y $\bm H$ son antiparalelos, entonces $\bm
+    k$ y $\bm S$ son antiparalelos.  }
   \label{fig:triada}
 \end{figure}
 Sin embargo, la definición del vector de Poynting y la ley de
-Ampere-Maxwell implican que el campo eléctrico $\vec E$, el campo
+Ampere-Maxwell implican que el campo eléctrico $\bm E$, el campo
 magnético
-$\vec H$ y el flujo de energía $\vec S$ también forman una triada
-ordenada derecha. Sin embargo, si $\mu<0$, entonces $\vec B$ y $\vec
-H$ apuntan en direcciones opuestas. Luego, $\vec S$ ¡apunta en la
-dirección opuesta a $\vec k$! La dirección en que avanza la fase de la
+$\bm H$ y el flujo de energía $\bm S$ también forman una triada
+ordenada derecha. Sin embargo, si $\mu<0$, entonces $\bm B$ y $\bm
+H$ apuntan en direcciones opuestas. Luego, $\bm S$ ¡apunta en la
+dirección opuesta a $\bm k$! La dirección en que avanza la fase de la
 onda es opuesta a la dirección en que avanza la energía. Esto sólo
 puede ser posible si la velocidad de grupo es opuesta a la velocidad
 de fase. Una consecuencia curiosa de este resultado se manifiesta
 cuando una onda se refracta en una superficie plana. La ley de
 conservación del ímpetu asociada a una simetría translacional implica
-que la proyección del vector de onda $\vec k_\|$ a lo largo de la
+que la proyección del vector de onda $\bm k_\|$ a lo largo de la
 superficie debe coicidir para la onda reflejada, la onda transmitida y
 la onda incidente. De aquí se derivan las leyes de la reflexión y de
 Snell. Sin embargo, la {\em causalidad} implica que las ondas
@@ -527,19 +527,19 @@ forma análoga a como el ancho variable de una lente o de un prisma
 modula la fase de los rayos de luz que los atraviesan.
 
 La ley de Snell usual implica que a lo largo de una interface uniforme
-hay un empatamiento de fases $\phi^\alpha(\vec r_\|)=\vec k^\alpha_\|\cdot\vec
+hay un empatamiento de fases $\phi^\alpha(\bm r_\|)=\bm k^\alpha_\|\cdot\bm
 r_\|$ entre la onda incidente, la onda reflejada y la
-onda transmitida, por lo cual los vectores de onda $\vec k^\alpha_\|$
+onda transmitida, por lo cual los vectores de onda $\bm k^\alpha_\|$
 proyectados sobre la superficie son iguales para las tres ondas $\alpha=i,r,t$. Sin
 embargo, si la superficie no es uniforme y a lo largo de ésta la onda
-transmitida y/o reflejada adquiere una fase adicional $\psi^\alpha(\vec
-r_\|)$ a la de la onda incidente, $\phi^\alpha(\vec
-r_\|)=\vec k^i_\|\cdot\vec r_\|+\psi^\alpha(\vec r_\|)\approx (\vec
-k^i_\|+\nabla_\|\psi^\alpha(0))\cdot\vec r_\|$ la ley de Snell debe
+transmitida y/o reflejada adquiere una fase adicional $\psi^\alpha(\bm
+r_\|)$ a la de la onda incidente, $\phi^\alpha(\bm
+r_\|)=\bm k^i_\|\cdot\bm r_\|+\psi^\alpha(\bm r_\|)\approx (\bm
+k^i_\|+\nabla_\|\psi^\alpha(0))\cdot\bm r_\|$ la ley de Snell debe
 generalizarse,
 \begin{equation}
   \label{eq:snell}
-  \vec k^\alpha_\|=\vec k^i_\|+\nabla_\|\psi^\alpha,\quad(\alpha=r,t)
+  \bm k^\alpha_\|=\bm k^i_\|+\nabla_\|\psi^\alpha,\quad(\alpha=r,t)
 \end{equation}
 i.e., el ímpetu paralelo a la interfase adquiere una contribución
 debida a la variación de la fase adicional $\psi^\alpha$. Por lo
@@ -612,22 +612,22 @@ caragas eléctricas, como ilustra la figura \ref{Circuitos}.
   \input{circuitos.code.tex}
 
   \caption{Circuitos de lazos de metal bajo la aplicación de un campo
-    magnético $\vec{B}$ en la dirección perpendicular a al plano del
-    circuito y de un campo eléctrico $\vec{E}$ que reside en el plano
+    magnético $\bm{B}$ en la dirección perpendicular a al plano del
+    circuito y de un campo eléctrico $\bm{E}$ que reside en el plano
     del circuito. El efecto de la aplicación de los campos sobre los
     alambres de metal es el movimiento de cargas eléctricas, la
-    densidad de corriente $\vec{j}$. }
+    densidad de corriente $\bm{j}$. }
 \label{Circuitos}
 
 \end{figure}
 
 Los efectos en la materia por perturbaciones externas es descrito por
 sus propiedades intrínsecas tales como la permitividad
-$\epsilon(\vec{k},\omega)$, la cual describe cuánto es afectado un
+$\epsilon(\bm{k},\omega)$, la cual describe cuánto es afectado un
 material al aplicar un campo eléctrico y la permeabilidad
-$\mu(\vec{k},\omega)$, que describe el efecto cuando se aplican campos
+$\mu(\bm{k},\omega)$, que describe el efecto cuando se aplican campos
 magnéticos. A estas cantidades se les denomina funciones respuesta del
-sistema y pueden o no depender de $\vec{k}$ el vector de onda la cual
+sistema y pueden o no depender de $\bm k}$ el vector de onda la cual
 es y $\omega$ la frecuencia de la preturbación, en el espació real
 estas dependencias son espacial y temporal respectivamente. Las
 diferentes formas de estás funciones dan pie a la clasifición de la
@@ -660,17 +660,224 @@ de dispersión en el vacío.
 
 \section{Teoría}
 
-Las propiedades ópticas de estos materiales compuestos están determinadas por su
-composición y geometría. Propiedades como las relaciones de dispersión
-de los modos electromagnéticos que se propagan a través del material
-en un sistema semi-infinito, las amplitudes de reflexión y transmisión,
-y relaciones de dispersión de modos electromagnéticos en la superficie
-de un sistema bordeado pueden ser expresadas en términos del operador
-dieléctrico macroscópico a través de las soluciones de las ecuaciones
-de Maxwell en dicho material.
+Las propiedades ópticas de materiales compuestos como los presentados
+arriba, metamateriales, cristales fotónicos, materiales izquierdos, etc., con propiedades
+en ocasiones exóticas, están determinadas no sólo por su
+composición, sino también por su geometría. Propiedades como las relaciones de dispersión
+de los modos electromagnéticos que se propagan a través de un
+metamaterial extendido, las amplitudes de reflexión y transmisión,
+y relaciones de dispersión de modos electromagnéticos confinados a la superficie
+de sistemas con fronteras, las secciones transversales de dispersión,
+absorción y extinción de partículas formadas por partículas, pueden
+ser expresadas en términos del operador dieléctrico macroscópico del
+compuesto a través de las soluciones de las ecuaciones
+de Maxwell en dicho material. En esta sección presentaremos un
+formalismo para obtener la respuesta macroscópica en términos de la
+respuesta microscópica.
 
-Las ecuaciones de Maxwell con las cuales se asume una descripción
-macroscópica de los campos en un medio son
+\subsection{Proyectores promedio y fluctuación}
+Primero notamos que el campo electromagnético dentro de un material
+tiene oscilaciones asociadas a la {\em textura} del material, con una
+escala de distancias de variación del orden del tamaño de las
+partículas que forman el compuesto y de la distancia entre una
+partícula y partículas vecinas. Llamamos campo macroscópico a aquel
+del cual hemos eliminado dichas fluctuaciones. El campo macroscópico
+puede tener oscilaciones espaciales, pero éstas están asociadas a las
+oscilaciones temporales del campo y a la longitud de onda finita de
+los campos que se propagan. En todo caso, es conveniente introducir
+dos operadores, el {\em promedio} $\hat {\mathcal
+  P}_p$ y las {\em fluctuación} $\hat {\mathcal P}_f$, tales
+que al actuar sobre un campo arbitrario $\bm F$ producen el campo
+promedio $\bm F_p=\hat {\mathcal P}_p \bm F$ y el campo fluctuante
+$\bm F_f=\hat {\mathcal P}_f \bm F$. Existen muchas formas de definir
+promedio. En sistemas desordenados, podríamos usar el promedio de
+ensamble, es decir, sumar sobre $N$ realizaciones del sistema y
+dividir entre $N$, tomando el límite $N\to\infty$. En sistemas
+dinámicos como un fluido, y para campos que oscilen lentamente con
+respecto a los tiempos característicos en que cambia el sistema,
+podríamos emplear un promedio temporal. Para otro tipo de sistemas
+podríamos tomar un promedio espacial o aplicar un filtro pasabajo en el espacio
+recíproco. Lo que debe ser claro es que un campo se promedia cuando se
+le remueven las fluctuaciones, i.e., $\hat{\mathcal P}_p=\hat
+{\bm 1}-\hat{\mathcal P}_f$, con $\hat {\bm 1}$ el operador identidad. Si
+pretendemos remover las fluctuaciones a un campo al
+cual ya hemos promediado, nos encontraríamos que no queda nada por
+remover. Esto implica que el operador promedio es idempotente
+$\hat{\mathcal P}_p^2=\hat{\mathcal P}_p$, i.e., el promedio del
+promedio es el promedio. Análogamente, las
+fluctuaciones son lo que queda al remover el promedio. Por tanto, el
+operador fluctuación también es idempotente, $\hat{\mathcal
+  P}_f^2=\hat{\mathcal P}_f$. Finalmente, si eliminamos las
+fluctuaciones y eliminamos el promedio, no nos queda nada, por lo cual
+$\hat{\mathcal P}_p\hat{\mathcal P}_f=0$ y
+$\hat{\mathcal P}_f\hat{\mathcal P}_p=0$. Los resultados previos
+muestran que $\hat{\mathcal P}_p$ y $\hat{\mathcal P}_f$ son
+proyectores que mandan a un campo al subespacio de los campos
+promedios y al subespacio de los campos fluctuantes respectivamente, y que el espacio
+donde vive originalmente el campo vectorial es una suma directa de
+estos dos subespacios. Esto permite escribir formalmente a un campo
+arbitrario como si fuera un vector de dos componentes,
+\begin{equation}
+  \label{eq:vectorpf}
+  \bm F=
+  \begin{pmatrix}
+    \bm F_p\\\bm F_f
+  \end{pmatrix},
+\end{equation}
+aunque cada componente es en sí no es un  número sino un campo
+vectorial. Análogamente, las funciones respuesta pueden interpretarse
+como operadores lineales los cuales a su vez pueden expresarse en
+términos de matrices de dos por dos. Así, la ecuación $\bm
+D=\hat{\bm\epsilon} \bm E$ puede escribirse como una ecuación matricial
+\begin{equation}
+  \label{eq:DeE}
+  \begin{pmatrix}
+    \bm D_p\\\bm D_f
+  \end{pmatrix}
+  =
+  \begin{pmatrix}
+    \hat{\bm  \epsilon}_{pp}&\hat{\bm  \epsilon}_{pf}\\\hat{\bm
+      \epsilon}_{fp}&\hat{\bm  \epsilon}_{ff}
+  \end{pmatrix}
+  \begin{pmatrix}
+    \bm E_p\\\bm E_f
+  \end{pmatrix}.
+\end{equation}
+Aquí, hemos definido $\hat{\bm O}_{\alpha\beta}=\hat{\mathcal
+  P}_\alpha\hat {\bm O} \hat{\mathcal P}_\beta$ ($\alpha,\beta=p,f$)
+para cualquier operador $\hat{\bm O}$.
+Interpretaremos a la ec. \eqref{eq:DeE} como un ecuación material {\em
+  microscópica}, pues incorpora las fluctuaciones espaciales derivadas
+de la textura del material. La correspondiente ecuación macroscópica
+sería
+\begin{equation}
+  \label{eq:DeEmacro}
+  \bm D_M=\bm \epsilon_M\bm E_M,
+\end{equation}
+donde identificamos a los campo macroscópicos como los campos
+promediados y por tanto, libres de fluctuaciones, $\bm D_M\equiv \bm D_a$,
+$\bm E_M\equiv\bm E_a$. Notamos que en general, $\hat{\bm\epsilon}_M$ no es el
+promedio $\hat{\bm\epsilon}_{pp}$ de $\hat{\bm \epsilon}$, pues puede
+haber {\em correlaciones} entre las fluctuaciones espaciales de $\epsilon(\bm r)$
+y del campo eléctrico $\bm E(\bm r)$.
+
+\subsection{Proyectores longitudinal y transversal}
+Para obtener la respuesta macroscópica $\hat{\bm \epsilon}_M$, que
+hemos visto que no es el simple promedio de la respuesta microscópica
+$\hat{\bm\epsilon}$, podemos recurrir a las ecuaciones de Maxwell.
+Consideraremos primero un material formado por inclusiones muy pequeñas
+y muy cercanas entre sí, comparando su tamaño y su separación con la
+longitud de onda característica de la luz $\lambda_0=2\pi c/\omega$ a
+una frecuencia $\omega$ dada. En este caso podemos ignorar el {\em
+  retardamiento}, tomar el límite $c\to\infty$ en la ecuación de
+Faraday y tratar al campo eléctrico como si fuera un campo
+{\em longitudinal}, $\bm E=\bm E^L$, derivable de un potencial escalar. Recordemos que de
+acuerdo al teorema de Helmholtz, todo campo vectorial $\bm F=\bm
+F^L+\bm F^T$ puede escribirse como la suma de dos contribuciones, un
+campo longitudinal $\bm F^L=\hat{\mathcal P^L}\bm F$ y un campo
+transversal $\bm F^T=\hat{\mathcal P^T}\bm F$, que cumplen las
+ecuaciones
+\begin{subequations}
+  \label{eq:Helmholtz}
+  \begin{align}
+    \label{eq:Helmholtza}\nabla\times\bm F^L&=0,\\
+    \label{eq:Helmholtzb}\nabla\cdot\bm F^L&=\nabla\cdot\bm F,\\
+    \label{eq:Helmholtzc}\nabla\times\bm F^T&=\nabla\times\bm F,\\
+    \label{eq:Helmholtzd}\nabla\cdot\bm F^T&=0,
+  \end{align}
+\end{subequations}
+Para obtener los proyectores $\hat{\mathcal P}^L$ y  $\hat{\mathcal
+  P}^T$ podemos empezar con la ec. \eqref{eq:Helmholtza}, la cual implica
+que $\bm F^L$ puede derivarse de algún potencial escalar $\Phi$ como
+$\bm F^L=-\nabla\Phi$. Luego, la ecuación \eqref{eq:Helmholtzb}
+implica que el potencial obedece la ec. de Poisson,
+$\nabla^2\Phi=-\nabla\cdot\bm F$, cuya solución formal es
+$\Phi=-\hat\nabla^{-2}\hat\nabla\cdot\bm F$. Aquí, $\hat\nabla^{-2}$
+representa el operador inverso al laplaciano, el cual puede escribirse
+en el espacio real como un operador integral cuyo kernel en 3D es el
+potencial coulombiano $-1/(4\pi|\bm r-\bm r'|)$. Finalmente,
+obtenemos $\bm F^L=\hat\nabla\hat\nabla^{-2}\hat\nabla\cdot\bm F$ de
+donde identificamos al proyector longitudinal
+\begin{equation}
+  \label{eq:PL}
+  \hat{\mathcal P}^L=\hat\nabla\hat\nabla^{-2}\hat\nabla\cdot.
+\end{equation}
+Análogamente, podemos identificar al proyector transversal
+\begin{equation}
+  \label{eq:PT}
+  \hat{\mathcal P}^T=\hat{\bm 1}-\hat{\mathcal P}^L=-\hat\nabla\times \hat\nabla^{-2}\hat\nabla\times.
+\end{equation}
+\subsection{Caso no retardado}
+Regresando a nuestro problema, notamos a partir de las ecuaciones de
+Maxwell que la proyección longitudinal del desplazamiento, $\bm
+D^L=\hat{\mathcal P}^L\hat\epsilon \bm E=\hat{\mathcal P}^L\epsilon
+\bm E^L=\hat{\mathcal P}^L\epsilon\hat{\mathcal P}^L \bm
+E^L$,
+\begin{equation}
+  \label{eq:DLvsEL}
+  \bm D^L=\hat{\bm\epsilon}^{LL}\bm E^L,
+\end{equation}
+cumple las mismas ecuaciones que el campo eléctrico longitudinal
+externo,
+\begin{equation}
+  \label{eq:DvsEext}
+  \begin{split}
+    \nabla\times\bm D^L&=0=\nabla\times\bm E^{\text{ex,}L},\\
+    \nabla\cdot\bm D^L&=4\pi\rho^{\text{ex}}=\nabla\cdot\bm E^{\text{ex,}L}.
+  \end{split}
+\end{equation}
+Aquí, hemos definido $\hat{\bm O}^{\alpha\beta}=\hat{\mathcal
+  P}^\alpha\hat {\bm O} \hat{\mathcal P}^\beta$ ($\alpha,\beta=L,T$)
+para cualquier operador $\hat{\bm O}$.
+Por lo tanto, podemos identificar a $\bm D^L$ con el campo eléctrico
+longitudinal externo. Siendo un campo externo, sus fuentes son
+unicamente las cargas externas $\rho^{\text{ex}}$, las cuales no tienen absolutamente
+nada que ver con la composición del material ni con la disposición de
+sus componentes. En particular, $\bm D^L$ no tiene fluctuaciones
+espaciales derivadas de la textura del material, $\bm D^L=\bm D^L_p=
+\hat{\mathcal P_p} D^L$. Despejando el campo
+eléctrico de la ec. \eqref{DLvsEL} obtenemos
+\begin{equation}
+  \label{eq:ELvsDL}
+  \bm E^L=(\hat{\bm\epsilon}^{LL})^{-1}\bm D^L,
+\end{equation}
+y promediando ambos lados de la ecuación, usando el hecho de que $\bm
+D^L$ no tiene fluctuaciones y que $\hat{\mathcal P}_p$ es idempotente,
+obtenemos
+\begin{equation}
+  \label{eq:ELvsDL}
+  \bm E^L_p=(\hat{\bm\epsilon}^{LL})^{-1}_{pp}\bm D^L_p.
+\end{equation}
+Finalmente, identificando los campos promedios con los campos
+macroscópicos y su relación con la respuesta macroscópica,
+podemos identificar
+\begin{equation}
+  \label{eq:epsLLM}
+  (\hat{\bm \epsilon}_M^{LL})^{-1}=(\hat{\bm\epsilon}^{LL})^{-1}_{pp}.
+\end{equation}
+Podemos leer este resultado de la siguiente manera: el inverso de la
+proyección longitudinal de la respuesta dieléctrica macroscópica es
+igual al promedio del inverso de la proyección longitudinal de la
+respuesta microscópica.
+
+\subsection{Caso retardado}
+Una lección de este pequeño ejercicio es que para obtener la respuesta
+macroscópica de un sistema no basta con promediar cualquier función
+respuesta. Por ejemplo, el promedio de $\bm\epsilon$ no tiene
+significado como respuesta macroscópica. Sin embargo, si logramos
+encontrar un operador que responda a una excitación {\em externa},
+como ella no tiene fluctuaciones espaciales asociadas a la textura
+microscópica del sistema, entonces su promedio nos proporciona la
+respuesta correspondiente macroscópica. Para dar un ejemplo de éste
+proceder, a continuación obtendremos la respuesta macroscópica en el
+caso en que no podemos ignorar el retardamiento.
+
+
+
+
+
+\ifignora
+
 \begin{equation}
   \label{Maxwell-eqs1}
   \begin{array}{cc}
@@ -685,10 +892,10 @@ densidad de carga externas, respectivamente. Y para calcular
 respuestas ópticas de un sistema se define al operador dieléctrico
 $\hat{\epsilon}_{M}$ a través de la relación
 \begin{equation}
-  {\bf D}_{a} = \hat{\epsilon}_{M} {\bf E}_{a}
+  {\bf D}_{p} = \hat{\epsilon}_{M} {\bf E}_{p}
   \label{Def-Dilectric-Op}
 \end{equation}
-donde ${\bf D}_{a}$ y ${\bf E}_{a}$ representan los promedios macroscópicos del
+donde ${\bf D}_{p}$ y ${\bf E}_{p}$ representan los promedios macroscópicos del
 campo desplazamiento y eléctrico, respectivamente.
 
 Sin embargo es posible definir ${\bf D}$ y ${\bf H}$ para incluir
@@ -716,20 +923,20 @@ Formalmente se definen los operadores
 \begin{equation}
   \begin{array}{cc}
     \label{operadoresPromedio-Fluctuaciones}
-    \hat{P}_{a}, & \hat{P}_{f} = \hat{1} - \hat{P}_{a},
+    \hat{P}_{p}, & \hat{P}_{f} = \hat{1} - \hat{P}_{p},
   \end{array}
 \end{equation}
-los cuales extraen la componente promedio $F_{a}=\hat{P}_{a}F$ y
-fluctuante $F_{f}=\hat{P}_{f}F$ de una función $F = F_{a}+F_{f}$
+los cuales extraen la componente promedio $F_{p}=\hat{P}_{p}F$ y
+fluctuante $F_{f}=\hat{P}_{f}F$ de una función $F = F_{p}+F_{f}$
 arbitraria. Tales operadores son idempotentes
 \begin{equation}
   \begin{array}{cc}
     \label{Op-Idempotentes}
-    \hat{P}^{2}_{a}=\hat{P}_{a}, & \hat{P}^{2}_{f} =\hat{P}_{f},
+    \hat{P}^{2}_{p}=\hat{P}_{p}, & \hat{P}^{2}_{f} =\hat{P}_{f},
   \end{array}
 \end{equation}
 \begin{equation}
-  \hat{P}_{a}\hat{P}_{f}=\hat{P}_{f}\hat{P}_{a}=0,
+  \hat{P}_{p}\hat{P}_{f}=\hat{P}_{f}\hat{P}_{p}=0,
 \end{equation}
 lo cual significa que son operadores de proyección.
 
@@ -738,7 +945,7 @@ una parte fluctuante
 \begin{equation}
   {\bf E} =
   \begin{pmatrix}
-  {\bf E}_{a} \\
+  {\bf E}_{p} \\
   {\bf E}_{f}
 \end{pmatrix}
 ,
@@ -749,16 +956,16 @@ $f$,
 \begin{equation}
   \label{CamposCompletos}
   \begin{pmatrix}
-    {\bf D}_{a} \\
+    {\bf D}_{p} \\
     {\bf D}_{f}
   \end{pmatrix}
   =
   \begin{pmatrix}
-    \hat{\epsilon}_{aa} & \hat{\epsilon}_{af} \\
-    \hat{\epsilon}_{fa} & \hat{\epsilon}_{ff}
+    \hat{\epsilon}-{pp} & \hat{\epsilon}-{pf} \\
+    \hat{\epsilon}_{fp} & \hat{\epsilon}_{ff}
   \end{pmatrix}
   \begin{pmatrix}
-    {\bf E}_{a} \\
+    {\bf E}_{p} \\
     {\bf E}_{f}
   \end{pmatrix}
 \end{equation}
@@ -771,9 +978,9 @@ donde se ha definido
 para cualquier operador.
 
 Para calcular la respuesta macroscópica del sistema desacoplamos
-${\bf D}_{a}$ y ${\bf E}_{f}$ de la ecuación de campos completos
+${\bf D}_{p}$ y ${\bf E}_{f}$ de la ecuación de campos completos
 \eqref{CamposCompletos}. Usando las ecuaciones de Maxwell para
-los campos microscópicos se encuentra una relación entre ${\bf E}_{a}$
+los campos microscópicos se encuentra una relación entre ${\bf E}_{p}$
 y ${\bf E}_{f}$,
 \begin{equation}
   \begin{split}
@@ -781,21 +988,21 @@ y ${\bf E}_{f}$,
         i\omega}{c^{2}}{\bf j}_{ex} + \frac{\omega^{2}}{c^{2}}{\bf D}
       \\ \left[ \hat{\epsilon}_{ff} - \frac{c^{2}}{\omega^{2}}(\nabla
         \times \nabla \times)_{ff}\right] {\bf E}_{f} = \frac{4\pi}{i
-        \omega }{\bf j}_{f}^{ex}-\hat{\epsilon}_{fa}{\bf E}_{a}
+        \omega }{\bf j}_{f}^{ex}-\hat{\epsilon}_{fp}{\bf E}_{p}
   \end{split}
 \end{equation}
 asumiendo que ${\bf J}^{ex}_{f} = 0 $, sustituimos ${\bf E}_{f}$ en la
 ecuación \eqref{CamposCompletos},
 \begin{equation}
   {\bf
-    D}_{a}=\left(\hat{\epsilon}_{aa}-(\hat{\epsilon}_{af}(\hat{\epsilon}_{ff}-\frac{c^{2}}{\omega^{2}}(\nabla
-  \times \nabla)_{ff})^{-1}\hat{\epsilon}_{fa}\right){\bf E}_{a},
+    D}_{p}=\left(\hat{\epsilon}-{pp}-(\hat{\epsilon}-{pf}(\hat{\epsilon}_{ff}-\frac{c^{2}}{\omega^{2}}(\nabla
+  \times \nabla)_{ff})^{-1}\hat{\epsilon}_{fp}\right){\bf E}_{p},
   \label{MacroscopicRelation}
 \end{equation}
 comparando con la ecuación de campos macroscópicos obtenemos que
 \begin{equation}
-  \hat{\epsilon}_{M}=\hat{\epsilon}_{aa}-\hat{\epsilon}_{af}\left[(\hat{\epsilon}_{ff}-\frac{c^{2}}{\omega^{2}}(\nabla
-    \times \nabla)_{ff})\right]^{-1}\hat{\epsilon}_{fa},
+  \hat{\epsilon}_{M}=\hat{\epsilon}-{pp}-\hat{\epsilon}-{pf}\left[(\hat{\epsilon}_{ff}-\frac{c^{2}}{\omega^{2}}(\nabla
+    \times \nabla)_{ff})\right]^{-1}\hat{\epsilon}_{fp},
   \label{DielectricFunction}
 \end{equation}
 la respuesta macroscópica de un sistema está dada por el promedio de
@@ -824,7 +1031,7 @@ propiedades
     \hat{P}^{T}\hat{P}^{L}=\hat{P}^{L}\hat{P}^{T}=0, & \hat{P}^{T}+\hat{P}^{L}=\hat{1},
   \end{array}
 \end{equation}
-y communtan con $\hat{P}_{f}$ y $\hat{P}_{a}$.
+y communtan con $\hat{P}_{f}$ y $\hat{P}_{p}$.
 
 Al proyectar $\hat{\mathcal{W}}^{-1}=
 \left[(\hat{\epsilon}_{ff}-\frac{c^{2}}{\omega^{2}}(\nabla \times
@@ -922,10 +1129,10 @@ en los casos en que $l << \lambda $, solo nos quedamos con el primer
 termino de la expansión y sustituyéndolo en \eqref{DielectricFunction}
 la reescribimos como
 \begin{equation}
-  \hat{\epsilon}_{M}=\hat{\epsilon}_{aa}-\hat{\epsilon}_{af}(\hat{\epsilon}_{ff}^{LL})^{-1}\hat{\epsilon}_{fa}.
+  \hat{\epsilon}_{M}=\hat{\epsilon}-{pp}-\hat{\epsilon}-{pf}(\hat{\epsilon}_{ff}^{LL})^{-1}\hat{\epsilon}_{fp}.
 \end{equation}
 
-
+\fi %ifignora
 
 \section{Implementación}
 \section{Resultados}
