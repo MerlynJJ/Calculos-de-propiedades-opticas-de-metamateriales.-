@@ -1,6 +1,0 @@
-\babel@toc {spanish}{}
-\contentsline {section}{\numberline {1}Introducción}{1}{section.1}%
-\contentsline {subsection}{\numberline {1.1}Electrodinámica}{5}{subsection.1.1}%
-\contentsline {section}{\numberline {2}Teoría}{6}{section.2}%
-\contentsline {section}{\numberline {3}Implementación}{10}{section.3}%
-\contentsline {section}{\numberline {4}Resultados}{10}{section.4}%
