@@ -836,7 +836,7 @@ nada que ver con la composición del material ni con la disposición de
 sus componentes. En particular, $\bm D^L$ no tiene fluctuaciones
 espaciales derivadas de la textura del material, $\bm D^L=\bm D^L_p=
 \hat{\mathcal P_p} D^L$. Despejando el campo
-eléctrico de la ec. \eqref{DLvsEL} obtenemos
+eléctrico de la ec. \eqref{eq:DLvsEL} obtenemos
 \begin{equation}
   \label{eq:ELvsDL}
   \bm E^L=(\hat{\bm\epsilon}^{LL})^{-1}\bm D^L,
@@ -850,7 +850,7 @@ obtenemos
 \end{equation}
 Finalmente, identificando los campos promedios con los campos
 macroscópicos y su relación con la respuesta macroscópica,
-podemos identificar
+podemos identificar\cite{ElectromagneticResponseofSystemwithSpatialFluctuations}
 \begin{equation}
   \label{eq:epsLLM}
   (\hat{\bm \epsilon}_M^{LL})^{-1}=(\hat{\bm\epsilon}^{LL})^{-1}_{pp}.
@@ -858,7 +858,7 @@ podemos identificar
 Podemos leer este resultado de la siguiente manera: el inverso de la
 proyección longitudinal de la respuesta dieléctrica macroscópica es
 igual al promedio del inverso de la proyección longitudinal de la
-respuesta microscópica.
+respuesta microscópica.\cite{guilleOE}
 
 \subsection{Caso retardado}
 Una lección de este pequeño ejercicio es que para obtener la respuesta
@@ -869,13 +869,105 @@ encontrar un operador que responda a una excitación {\em externa},
 como ella no tiene fluctuaciones espaciales asociadas a la textura
 microscópica del sistema, entonces su promedio nos proporciona la
 respuesta correspondiente macroscópica. Para dar un ejemplo de éste
-proceder, a continuación obtendremos la respuesta macroscópica en el
+proceso, a continuación obtendremos la respuesta macroscópica en el
 caso en que no podemos ignorar el retardamiento.
+Tomando el rotacional de la ley de Faraday sustituyendo la ec. de
+Ampére-Maxwell podemos obtener una ecuación de onda con fuentes, que
+podemos escribir como
+\begin{equation}
+  \label{eq:onda}
+  \hat{\mathcal W}\bm E=\frac{4\pi}{i\omega}\bm j^{\text{ex}},
+\end{equation}
+donde
+\begin{equation}
+  \label{eq:opW}
+  \hat{\mathcal
+    W}=\hat{\bm\epsilon}+\frac{c^2}{\omega^2}\nabla^2\hat{\mathcal P}^T
+\end{equation}
+es el operador de onda actuando sobre campos transversales, aunque
+también tiene una parte que actúa sobre campos longitudinales.
+Podemos resolver la ec. \eqref{eq:onda} formalmente para obtener
+\begin{equation}
+  \label{eq:ondasol}
+  \bm E=\frac{4\pi}{i\omega}\hat{\mathcal W}^{-1} \bm j^{\text{ex}}.
+\end{equation}
+Esta ecuación nos muestra que el inverso del operador de onda
+$\hat{\mathcal W}^{-1}$ puede interpretarse como una respuesta a la
+excitación externa $\bm j^{\text{ex}}$. Por lo tanto, es un operador
+{\em promediable} y su promedio puede interpretarse como la respuesta
+macroscópica a la corriente externa macroscópica,
+\begin{equation}
+  \label{eq:WM}
+  \hat{\mathcal W_M}^{-1}=\hat{\mathcal W}^{-1}_{pp}.
+\end{equation}
+Interpretando el operador de onda macroscópico en términos de la
+permitividad macroscópica
+\begin{equation}
+  \label{eq:opWM}
+  \hat{\mathcal
+    W}_M=\hat{\bm\epsilon_M}+\frac{c^2}{\omega^2}\nabla^2\hat{\mathcal P}^T
+\end{equation}
+podemos extraer esta última invirtiendo la ecuación
+\eqref{eq:WM}. Entonces, formalmente, podemos obtener la permitividad
+macroscópica a partir de la permitividad microscópica siguiendo los
+pasos indicados en la figura \ref{fig:circulo}.
+\begin{figure}
+  \centering
+  \includegraphics[width=0.8\textwidth]{procedure-419}
+  \caption{Pasos para obtener la respuesta macroscópica $\hat{\bm
+      \epsilon}_M$ a partir de la respuesta microscópica $\epsilon(\bm
+    r)$. Primero construimos el operador de onda, lo invertimos, lo
+    promediamos, identificamos el operador de onda macroscópico
+    inverso, lo invertimos y finalmente identificamos el operador
+    dieléctrico macroscópico.}
+  \label{fig:circulo}
+\end{figure}
+A partir de la respuesta dieléctrica de las componentes de nuestro
+material podemos construir el operador de onda, lo invertimos, lo
+promediamos, lo identificamos en términos del operador de onda
+macroscópico, lo volvemos a invertir y finalmente obtenemos el
+operador de onda macroscópico.\cite{samuel}
 
-
-
-
-
+\subsection{Recursión de Haydock}
+Consideremos ahora un sistema periódico hecho de dos materiales,
+digamos, de partículas de un material $B$ embebidas en una matriz de
+un material $A$. La respuesta dieléctrica {\em microscópica} es en
+este caso
+\begin{equation}
+  \label{eq:epsmic}
+  \epsilon(\bm r)=\left\{
+      \begin{matrix}
+        \epsilon_A\,\quad\text{si $\bm r\in A$}\\
+        \epsilon_B\,\quad\text{si $\bm r\in B$}
+      \end{matrix}
+    \right.
+\end{equation}
+la cual puede escribirse como
+\begin{equation}
+  \label{eq:epsmic1}
+  \epsilon(\bm r)=\frac{\epsilon_A}{u}(u-B(\bm r)),
+\end{equation}
+donde
+\begin{equation}
+  \label{eq:u}
+  u\equiv\frac{1}{1-\epsilon_B/\epsilon_A}
+\end{equation}
+se conoce como la {\em variable espectral},
+y
+\begin{equation}
+  \label{eq:B}
+  B(\bm r)=\left\{
+      \begin{matrix}
+        0,\quad\text{si $\bm r\in A$}\\
+        1,\quad\text{si $\bm r\in B$}
+      \end{matrix}
+    \right.
+\end{equation}
+es la {\em función característica}. Notemos que $u$ depende de la
+composición del material y puede depender de la frecuencia a través de
+las funciones dieléctricas de las componentes, mientras que $B$ no
+depende de la composición ni de la frecuencia, sino únicamente de la
+geometría, la cual caracteriza totalmente.
 \ifignora
 
 \begin{equation}
@@ -1141,26 +1233,43 @@ la reescribimos como
 \bibitem{Metamorphose} Virtual Institute for Artificial
   Electromagnetic Materials and
   Meta-materials. \url{https://www.metamorphose-vi.org/}
-\bibitem{IntroductiontoMetamaterialsandNanophotonics} An introduction
-  to metamaterials and nanophotonics / Constantin Simovski and Sergei
+\bibitem{IntroductiontoMetamaterialsandNanophotonics} {\em An introduction
+  to metamaterials and nanophotonics} Constantin Simovski and Sergei
   Tretyakov, Department of Electronics and Nanoengineering, School of
   Electrical Engineering, Aalto University,
   Finland. \url{http://www.cambridge.org/9781108492645}
 \bibitem{ElectromagneticResponseofSystemwithSpatialFluctuations}
-  Electromagnetic response of systems with spatial
-  fluctuations. I. General formalism. W. Luis Mochán and Rubén
-  G. Barrera. Phys. Rev. B 32, 4984 – Published 15 October 1985
-\bibitem{Bulkplasmon} Mochán W.L., Plasmons. In: Saleem Hashmi
-  (editor-in-chief), Reference Module in Materials Science and
-  Materials. Engineering. Oxford: Elsevier; 2016. pp. 1-13. ISBN:
-  978-0-12-803581-8. Copyright © 2016 Elsevier Inc. unless otherwise
-  stated. All rights reserved.
-\bibitem{LycurgusInvestigation} Barber DJ, Freestone IC (1990) An
+  {\em Electromagnetic response of systems with spatial
+  fluctuations. I. General formalism}, W. Luis Mochán and Rubén
+  G. Barrera. Phys. Rev. B {\bf 32}, 4984 (1985).
+\bibitem{Bulkplasmon} {\em Plasmons}, W. Luis Mochán,
+        In Reference Module in Materials Science and Materials
+        Engineering, (Elsevier, Amsterdam, 2016)
+        ed. by Saleem Hashmi.
+	(por invitación).
+        ISBN 9780128035818,
+        \href{http://dx.doi.org/10.1016/B978-0-12-803581-8.01192-9}
+        {doi:10.1016/B978-0-12-803581-8.01192-9}.
+\bibitem{LycurgusInvestigation} {\em  An
   investigation of the origin of the color of the Lycurgus cup by
-  analytical transmission electron-microscopy. Archaeometry 32:33–45
-\bibitem{Fuchs}Theory of the optical properties of ionic crystal
-  cubes, Physical Review B {\bf 11}, 1732--1740, (1975),
+  analytical transmission electron-microscopy} Barber DJ, Freestone
+IC. Archaeometry {\bf 32} 33–45 (1990).
+\bibitem{Fuchs} {\em Theory of the optical properties of ionic crystal
+  cubes}, Ronald Fuchs, Physical Review B {\bf 11}, 1732--1740, (1975),
   \href{http://link.aps.org/doi/10.1103/PhysRevB.11.1732}{doi:10.1103/PhysRevB.11.1732}
+\bibitem{guilleOE}{\em Efficient homogenization procedure for the calculation of
+  optical properties of 3D nanostructured composites},
+ W. Luis Mochán, Guillemo P. Ortiz y Bernardo S. Mendoza,
+ Optics Express {\bf 18}(21) 22119-22127 (2010).
+ \href{https://www.osapublishing.org/oe/fulltext.cfm?uri=oe-18-21-22119&id=206120}
+ {doi:10.1364/OE.18.022119}.
+
+\bibitem{samuel}   {\em Macroscopic optical response and photonic
+    bands}, José Samuel Pérez-Huerta, Guillermo P. Ortiz, Bernardo
+  S. Mendoza y W. Luis Mochán, New Journal of Physics {\bf 15}(4),
+  043037 (2013).
+  \href{https://iopscience.iop.org/article/10.1088/1367-2630/15/4/043037}
+  {doi:10.1088/1367-2630/15/4/043037}.
 
 \end{thebibliography}
 
