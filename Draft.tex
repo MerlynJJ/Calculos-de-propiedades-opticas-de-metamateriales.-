@@ -58,103 +58,101 @@
 \section{Introducción}
 
 
-Un meta-material es un material diseñado artificialmente, formado por dos o más
-materiales, con propiedades determinadas por la geometría de sus
-componentes y su arreglo. Los meta-materiales se definen como ``{\em Un arreglo de
-  elementos estructurales artificiales, diseñados para alcanzar
-  propiedades electromagnéticas ventajosas e
+Un meta-material es un material diseñado artificialmente, formado por
+dos o más materiales, con propiedades determinadas por la geometría de
+sus componentes y su arreglo. Los meta-materiales se definen como
+``{\em Un arreglo de elementos estructurales artificiales, diseñados
+  para alcanzar propiedades electromagnéticas ventajosas e
   inusuales}''\cite{Metamorphose}. Esta definición es la adoptada en
 el {\em Virtual Institute for Artificial Electromagnetic Materials and
   Meta-Materials}.
 
-Las propiedades electromagnéticas de los
-meta-materiales están determinadas por sus constituyentes
-básicos, a los que se denomina ocasionalmente como meta-átomos, los cuales son
-objetos hechos de materiales usuales. Las propiedades de los
-meta-materiales pueden ser muy distintas a las de los materiales que
-los conforman y pueden llegar a ser muy exóticas. Pueden ser
-entonadas escogiendo las formas, estructuras internas, tamaños,
-orientaciones mutuas, etc., de sus meta-átomos.  Incluso sus repuestas
-individuales pueden ser controladas por señales externas e internas y
-por microprocesadores
+Las propiedades electromagnéticas de los meta-materiales están
+determinadas por sus constituyentes básicos, a los que se denomina
+ocasionalmente como meta-átomos, los cuales son objetos hechos de
+materiales usuales. Las propiedades de los meta-materiales pueden ser
+muy distintas a las de los materiales que los conforman y pueden
+llegar a ser muy exóticas. Pueden ser entonadas escogiendo las formas,
+estructuras internas, tamaños, orientaciones mutuas, etc., de sus
+meta-átomos.  Incluso sus repuestas individuales pueden ser
+controladas por señales externas e internas y por microprocesadores
 programables.\cite{IntroductiontoMetamaterialsandNanophotonics}
 
 \subsection{Materiales plasmónicos}
 Por ejemplo, si un meta-material tiene componentes metálicos, estos
 pueden presentar resonancias asociadas a un movimiento oscilatorio
-colectivo de sus electrones de conducción, denominado de acuerdo a
-sus características como plasmón de bulto, plasmón de superficie o
-plasmón localizados. La frecuencia de este movimiento se
-denomina como frecuencia de plasma $\omega_{p}$. Para estimar esta
-frecuencia, considere el modelo más simple de un conductor, un gas de
-electrones que en equilibrio tiene una densidad de número $n_{0}$,
-libre de moverse en un entorno positivamente cargado, de manera que el
-sistema sea neutro. Si debido a algún efecto como una
-compresión o rarefacción del gas de electrones se produce una
-acumulación de carga $Q$, localizada en alguna región $\mathcal{R}$,
-esta producirá un campo eléctrico $\bm{E} (\bm{r})$, como ilustra la
-figura \ref{Bulkplasmon}. De acuerdo
-a la segunda ley de Newton, los electrones adquieren una aceleración
-$\frac{d^{2}\bm{r}}{dt^{2}} = -e\bm{E}(\bm{r},t)/m$, donde $m$ y
-$-e$ son la masa y la carga eléctrica electrónica. La
-velocidad adquirida por los electrones resulta en una corriente
-eléctrica  $\bm{j}(\bm{r},t) = -n_0 e \bm v=-n_{0}e({d\bm{r}}/{dt})$
-que obedece la ecuación de movimiento
-por ${\partial \bm{j}(\bm{r},t)}/{\partial t}=
--\frac{n_{0}e^{2}}{m}\bm{E}(\bm{r},t)$. Integrando la ecuación diferencial de la
-corriente sobre una superficie $\Sigma$ que rodee completamente la carga y
-usando la ecuación de continuidad y la Ley de Gauss para el campo
-eléctrico obtenemos una ecuación diferencial para la carga $Q$
-encerrada en $\Sigma$,
+colectivo de sus electrones de conducción, denominado de acuerdo a sus
+características como plasmón de bulto, plasmón de superficie o plasmón
+localizados. La frecuencia de este movimiento se denomina como
+frecuencia de plasma $\omega_{p}$. Para estimar esta frecuencia,
+considere el modelo más simple de un conductor, un gas de electrones
+que en equilibrio tiene una densidad de número $n_{0}$, libres de
+moverse en un entorno positivamente cargado, de manera que el sistema
+sea neutro. Si debido a algún efecto como una compresión o rarefacción
+del gas de electrones se produce una acumulación de carga $Q$,
+localizada en alguna región $\mathcal{R}$, esta producirá un campo
+eléctrico $\bm{E} (\bm{r})$, como ilustra la figura
+\ref{Bulkplasmon}. De acuerdo a la segunda ley de Newton, los
+electrones adquieren una aceleración
+$\frac{d^{2}\bm{r}}{dt^{2}} = -e\bm{E}(\bm{r},t)/m$, donde $m$ y $-e$
+son la masa y la carga eléctrica electrónica. La velocidad adquirida
+por los electrones resulta en una corriente eléctrica
+$\bm{j}(\bm{r},t) = -n_0 e \bm v=-n_{0}e({d\bm{r}}/{dt})$ que obedece
+la ecuación de movimiento por
+${\partial \bm{j}(\bm{r},t)}/{\partial t}=
+-\frac{n_{0}e^{2}}{m}\bm{E}(\bm{r},t)$. Integrando la ecuación
+diferencial de la corriente sobre una superficie $\Sigma$ que rodee
+completamente la carga y usando la ecuación de continuidad y la Ley de
+Gauss para el campo eléctrico obtenemos una ecuación diferencial para
+la carga $Q$ encerrada en $\Sigma$,
 \begin{figure}
 \centering
 \input{Bulkplasmon.code.tex}
-\caption{Acumulación de carga $Q$ en cierta región
-  $\mathcal{R}$ dentro de un conductor homogéneo, rodeada
-  por una superficie $\Sigma$ sobre la cual se aplica la ley
-  de Gauss al campo producido por $Q$, campo que produce una densidad
-  de corriente que fluye a través de $\Sigma$. La corriente
-  modifica $Q$ conforme transcurre el tiempo $t$ produciendo las
-  llamadas oscilaciones de plasma.}
+\caption{Acumulación de carga $Q$ en cierta región $\mathcal{R}$
+  dentro de un conductor homogéneo, rodeada por una superficie
+  $\Sigma$ sobre la cual se aplica la ley de Gauss al campo producido
+  por $Q$, campo que produce una densidad de corriente que fluye a
+  través de $\Sigma$. La corriente modifica $Q$ conforme transcurre el
+  tiempo $t$ produciendo las llamadas oscilaciones de plasma.}
 \label{Bulkplasmon}
 \end{figure}
 \begin{equation}
   \label{ChargeDifEq}
   \frac{d^{2}Q}{dt^{2}}=-\frac{4\pi n_0 e^{2}}{m}Q,
 \end{equation}
-la cual es una ecuación diferencial idéntica a la de un
-oscilador armónico simple como el que se ilustra en la fig.
+la cual es una ecuación diferencial idéntica a la de un oscilador
+armónico simple como el que se ilustra en la fig.
 \ref{OscArmonicoSimple}:
 \begin{figure}
   \centering
   \input{Oscilador.code.tex}
-  \caption{\label{OscArmonicoSimple}
-    Oscilador armónico de masa $m$ y constante $k$ en su posición de
-    equilibrio y desplazado una distancia $y$.}
+  \caption{\label{OscArmonicoSimple} Oscilador armónico de masa $m$ y
+    constante $k$ en su posición de equilibrio y desplazado una
+    distancia $y$.}
 \end{figure}
-Sustituyendo la Ley de Hooke $F= -ky$ en la segunda ley
-de Newton $ma=F$ para un oscilador con constante $k$ y masa $m$ obtenemos
+Sustituyendo la Ley de Hooke $F= -ky$ en la segunda ley de Newton
+$ma=F$ para un oscilador con constante $k$ y masa $m$ obtenemos
 \begin{equation}
   \label{OAEq}
   \frac{d^{2}y}{dt^{2}}=-\omega^2y,
 \end{equation}
-donde $\omega=\sqrt{k/m}$, y cuya solución, $y(t)=y_{0}\cos(\omega t+\phi_0)$
-es un movimiento periódico con una frecuencia $\omega$ que depende de
-$k$ y $m$.
-Comparando las ecs.  y \eqref{ChargeDifEq} y \eqref{OAEq} notamos que
-puede existir carga en el seno de nuestro metal modelo, pero ésta
-oscila con la {\em frecuencia de plasma} $\omega_p$ dada por
+donde $\omega=\sqrt{k/m}$, y cuya solución,
+$y(t)=y_{0}\cos(\omega t+\phi_0)$ es un movimiento periódico con una
+frecuencia $\omega$ que depende de $k$ y $m$.  Comparando las ecs.  y
+\eqref{ChargeDifEq} y \eqref{OAEq} notamos que puede existir carga en
+el seno de nuestro metal modelo, pero ésta oscila con la {\em
+  frecuencia de plasma} $\omega_p$ dada por
 \begin{equation}
   \label{plasmafec}
   \omega _{p}^{2} = \frac{4\pi n_0e^{2}}{m}.
 \end{equation}
-La repulsión mutua entre electrones los impulsa lejos
-de regiones en que haya una densidad electrónica excedente, por arriba
-de su valor nominal. El movimiento consecuente prosigue aun después de
-que el sistema se neutralice debido a la inercia electrónica, que los
-hará proseguir su camino hasta que en la región orignal disminuya
-tanto la densidad de electrones que aparezca una carga neta positiva
-que frene a los electrones en fuga y los haga regresar, hasta que su repulsión
+La repulsión mutua entre electrones los impulsa lejos de regiones en
+que haya una densidad electrónica excedente, por arriba de su valor
+nominal. El movimiento consecuente prosigue aun después de que el
+sistema se neutralice debido a la inercia electrónica, que los hará
+proseguir su camino hasta que en la región orignal disminuya tanto la
+densidad de electrones que aparezca una carga neta positiva que frene
+a los electrones en fuga y los haga regresar, hasta que su repulsión
 mutua los frene al haber regresado a la configuración inicial. Este
 proceso se repetie periódicamente y su frecuencia $\omega_p$ está
 relacionada con la repulsión coulombiana, proporcional a $e^2$, la
@@ -162,29 +160,29 @@ densidad de de número electrónica $n_0$ y la inercia electrónica
 caracterizada por $m$.
 
 En lugar de un medio infinito, consideremos ahora un medio
-semiinfinito separado del vacío por una superficie plana.
-Un análisis análogo nos permite obtener la frecuencia del {\em plasmón de
-superficie}, considerando ahora un exceso de carga $Q$ en una región $R$ en
-la interfaz, como ilustra la fig.
-\ref{Surfplasmon}, el cual produce un campo eléctrico $\bm{E}(\bm{r},t)$
-que induce corrientes en el conductor.
+semiinfinito separado del vacío por una superficie plana.  Un análisis
+análogo nos permite obtener la frecuencia del {\em plasmón de
+  superficie}, considerando ahora un exceso de carga $Q$ en una región
+$R$ en la interfaz, como ilustra la fig.  \ref{Surfplasmon}, el cual
+produce un campo eléctrico $\bm{E}(\bm{r},t)$ que induce corrientes en
+el conductor.
 \begin{figure}
   \centering
   \input{SurfPlasmon.code.tex}
   \caption{Region $\mathcal{R}$ en la superficie de un conductor
-  semi-infinito en la que hay una carga $Q$, la cual produce un campo eléctrico
-  $\bm{E}(\bm{r},t)$ (líneas azules) y éste a su vez produce una densidad de
-  corriente (líneas verdes) que atraviesan aquella parte de la
-  superficie lejana $\Sigma$ que se halla dentro del
-  conductor.}
+    semi-infinito en la que hay una carga $Q$, la cual produce un
+    campo eléctrico $\bm{E}(\bm{r},t)$ (líneas azules) y éste a su vez
+    produce una densidad de corriente (líneas verdes) que atraviesan
+    aquella parte de la superficie lejana $\Sigma$ que se halla dentro
+    del conductor.}
 \label{Surfplasmon}
 \end{figure}
 
 Usando la ecuación dinámica de la densidad de corriente podemos
-escribir la ecuación dinámica de la carga como hicimos en el caso del plasmón de
-bulto, con la diferencia que la densidad de corriente en este caso
-sólo fluye a través de la mitad de la superficie $\Sigma $ que se
-halla en el interior del metal,
+escribir la ecuación dinámica de la carga como hicimos en el caso del
+plasmón de bulto, con la diferencia que la densidad de corriente en
+este caso sólo fluye a través de la mitad de la superficie $\Sigma $
+que se halla en el interior del metal,
 \begin{equation}
   \begin{split}
     \frac{d^{2}}{dt^{2}}Q = & -\int_{\Sigma}d\bm{a}\cdot\frac{\partial}{\partial t}\bm{j},\\
@@ -193,9 +191,9 @@ halla en el interior del metal,
     = & -\frac{2\pi ne^{2}}{m}Q.
   \end{split}
 \end{equation}
-Comparando esta ecuación con la ec. \eqref{OAEq}
-identificamos  la frecuencia del {\em plasmón de superficie}
-$\omega_{\text{sp}}$, dada por
+Comparando esta ecuación con la ec. \eqref{OAEq} identificamos la
+frecuencia del {\em plasmón de superficie} $\omega_{\text{sp}}$, dada
+por
 \begin{equation}
   \omega_{sp}^{2}=\frac{2\pi ne^{2}}{m} = \frac{\omega_{p}^{2}}{2}.
   \label{surfaceplasmonfrecuency}
@@ -205,36 +203,35 @@ En lugar de un sistema semiinfinito, consideremos ahora un sistema
 finito consistente en una partícula metálica separada del vacío por
 una superficie esférica. Supongamos que perturbamos esta esfera
 moviendo todos sus electrones una separación $\bm{\zeta}$ respecto a
-su posición de equilibrio, lo cual
-induce una polarización $\bm{\mathcal{P}}=-n_0 e\bm \zeta$, como ilustra la
-siguiente figura,
+su posición de equilibrio, lo cual induce una polarización
+$\bm{\mathcal{P}}=-n_0 e\bm \zeta$, como ilustra la siguiente figura,
 \begin{figure}
   \centering
   \input{polaritonesferico.code.tex}
 
-    \caption{Esfera metálica cuyos electrones han sido desplazados en la
-  dirección de $\bm{\zeta}$ (flecha negra), dejando una ausencia de
-  carga en la dirección opuesta induciendo polarización en el sistema
-  $\bm{\mathcal{P}}$ (flechas verdes) y una carga superficial la cual
-  produce un campo eléctrico $\bm{E}(\bm{r},t)$.}
+  \caption{Esfera metálica cuyos electrones han sido desplazados en la
+    dirección de $\bm{\zeta}$ (flecha negra), dejando una ausencia de
+    carga en la dirección opuesta induciendo polarización en el
+    sistema $\bm{\mathcal{P}}$ (flechas verdes) y una carga
+    superficial la cual produce un campo eléctrico
+    $\bm{E}(\bm{r},t)$.}
 \label{Polariton}
 
 \end{figure}
-El deplazamiento de los electrones hacia uno de los
-hemisferios de la esfera genera un exceso de carga negativa en su
-superficie y un exceso de carga positiva en el otro, descrita por la
-densidad de carga superficial $\sigma=\bm{\mathcal P}\cdot\hat n$,
-donde $\hat n$ es un vector unitario radial. Estas cargas producen un
-campo eléctrico
-$\bm{E}(\bm{r},t) = -(4\pi/3)\bm{\mathcal{P}}
-$ donde empleamos el {\em factor de depolarización} $-4\pi/3$ de una
-  esfera. Este campo acelera las cargas de acuerdo a
-$m\frac{d^{2}\bm{\zeta}}{d^{2}t}=-e\bm{E}(\bm{r},t)$. Escribiendo
-al campo en términos de $\bm\zeta$, $\bm{E}= -(4\pi n_0
-  e^{2}/3m)\bm{\zeta}$, la ecuación de movimiento para
-$\bm{\zeta}$ se convierte en,
+El deplazamiento de los electrones hacia uno de los hemisferios de la
+esfera genera un exceso de carga negativa en su superficie y un exceso
+de carga positiva en el otro, descrita por la densidad de carga
+superficial $\sigma=\bm{\mathcal P}\cdot\hat n$, donde $\hat n$ es un
+vector unitario radial. Estas cargas producen un campo eléctrico
+$\bm{E}(\bm{r},t) = -(4\pi/3)\bm{\mathcal{P}} $ donde empleamos el
+{\em factor de depolarización} $-4\pi/3$ de una esfera. Este campo
+acelera las cargas de acuerdo a
+$m\frac{d^{2}\bm{\zeta}}{d^{2}t}=-e\bm{E}(\bm{r},t)$. Escribiendo al
+campo en términos de $\bm\zeta$,
+$\bm{E}= -(4\pi n_0 e^{2}/3m)\bm{\zeta}$, la ecuación de movimiento
+para $\bm{\zeta}$ se convierte en,
 \begin{equation}
-  \frac{d^{2}\bm{\zeta}}{d^{2}t}= -\frac{4\pi_0 e^{2}}{3m}\bm{\zeta}
+  \frac{d^{2}\bm{\zeta}}{d^{2}t}= -\frac{4\pi n_0 e^{2}}{3m}\bm{\zeta}
   \label{polaritondifec}
 \end{equation}
 de la cual obtenemos la frecuencia de las oscilaciones de carga en una
@@ -246,14 +243,14 @@ esfera, a las que se les denominan como {\em plasmón dipolar},
 Estos ejemplos muestran que en un metal los electrones pueden animarse
 de movimientos colectivos asociados a ciertas frecuencias de
 resonancia, las cuales a su vez dependen de la geometría, como
-ilustramos estudiando
-el caso de un sistema infinito, uno semiinfinito y una esfera. Más
-aún, si colocamos las partículas metálicas en el seno de una matriz
-dieléctrica habría un corrimiento adicional en su frecuencia de
-resonancia debido a las cargas inducidas en la superficie del
-dieléctrico. Más aún, si hubiese un gran número de esferas, sus
-interacciones mutuas a través de los campos electromagnéticos
-inducidos podrían generar corrimientos adicionales de las resonancias.
+ilustramos estudiando el caso de un sistema infinito, uno semiinfinito
+y una esfera. Más aún, si colocamos las partículas metálicas en el
+seno de una matriz dieléctrica habría un corrimiento adicional en su
+frecuencia de resonancia debido a las cargas inducidas en la
+superficie del dieléctrico. Más aún, si hubiese un gran número de
+esferas, sus interacciones mutuas a través de los campos
+electromagnéticos inducidos podrían generar corrimientos adicionales
+de las resonancias.
 
 Un ejemplo excepcional de las propiedades que emergen al generar
 \textit{metamateriales} es la copa de Lycurgo, una copa de cristal
@@ -266,26 +263,26 @@ del trabajo artístico realizado en la decoración, la copa es de gran
 interés por las propiedades ópticas que muestra. El vidrio aparece de
 un rojo-vino profundo cuando la luz lo atraviesa y de un verde opaco
 cuando la luz que llega a nuestros ojos es reflejada por la superficie
-de la copa, como muestra la fig. \ref{Lycurgus}. A este fenómeno se
-le denomina \textit{dicroísmo}, y de los artefactos de vidrio romano
+de la copa, como muestra la fig. \ref{Lycurgus}. A este fenómeno se le
+denomina \textit{dicroísmo}, y de los artefactos de vidrio romano
 encontrados, la copa es la que muestra dicho efecto más
 intensamente. \cite{LycurgusInvestigation}
 \begin{figure}
     \centering
     \includegraphics[width = 0.6\textwidth]{Lycurguscup.jpg}
-    \caption{Copa de Lycurgo, fabricada en la Roma tardía del
-      siglo IV D.C., cuya fabricación resultante muestra propiedades
-      ópticas excepcionales.  Es una taza para beber de vidrio que se
-      ve verde o rojo, dependiendo de cómo es iluminada.
-      ©The Trustees of the British Museum.}
+    \caption{Copa de Lycurgo, fabricada en la Roma tardía del siglo IV
+      D.C., cuya fabricación resultante muestra propiedades ópticas
+      excepcionales.  Es una taza para beber de vidrio que se ve verde
+      o rojo, dependiendo de cómo es iluminada.  ©The Trustees of the
+      British Museum.}
     \label{Lycurgus}
 \end{figure}
-Estudios de la composición del vidrio muestran que
-tales propiedades son causadas por la presencia de finas partículas de
-oro, probablemente en una aleación con plata, dispersadas. Con estudios de
+Estudios de la composición del vidrio muestran que tales propiedades
+son causadas por la presencia de finas partículas de oro,
+probablemente en una aleación con plata, dispersadas. Con estudios de
 microscopía de transmisión de electrones, TEM, por sus siglas en
-inglés, se pudieron determinar tamaños de las partículas de $\approx
-10 nm $.  Se ha encontrado que contiene admás partículas de
+inglés, se pudieron determinar tamaños de las partículas de
+$\approx 10 nm $.  Se ha encontrado que contiene además partículas de
 diferentes metales y de materiales no metálicos. El color se debe al
 espectro de reflexión y de transmisión del medio compuesto formado por
 vidrio y por las partículas metálicas. Aunque el oro es amarillo, las
@@ -293,30 +290,31 @@ partículas de oro embebidas en una matriz de vidrio e interaccionando
 entre sí producen un color rojo.
 
 \subsection{Otras geometrías}
-Si consideráramos partículas con otras geometrías habría
-otras resonancias asociadas a la excitación de modos con patrones
-varios de distribución de carga. Por ejemplo, en la figura
-\ref{fig:Fuchs} mostramos resultados experimentales y los primeros
-resultados teóricos para los modos electromagnéticos esperados en
-pequeños cubos de sal \cite{Fuchs}, sus frecuencias de resonancia y su
-distribución asociada de carga superficial.
+Si consideráramos partículas con otras geometrías habría otras
+resonancias asociadas a la excitación de modos con patrones varios de
+distribución de carga. Por ejemplo, en la figura \ref{fig:Fuchs}
+mostramos resultados experimentales y los primeros resultados teóricos
+para los modos electromagnéticos esperados en pequeños cubos de sal
+\cite{Fuchs}, sus frecuencias de resonancia y su distribución asociada
+de carga superficial.
 \begin{figure}
   \centering
   \includegraphics[width=0.4\textwidth]{fuchs1}
   \includegraphics[width=0.5\textwidth]{fuchs2}
   \caption{Modos resonantes de un cristal de sal y espectro de
     absorción teórico y experimental. Del lado izquierdo mostramos los
-  signos de la polarización en una de las ocho esquinas del cubo de
-  sal correspondiente a los seis modos principales.}
+    signos de la polarización en una de las ocho esquinas del cubo de
+    sal correspondiente a los seis modos principales.}
   \label{fig:Fuchs}
 \end{figure}
 En este caso se encontraron en lugar de un modo dipolar, como vimos
 para el caso de la esfera, seis modos principales y unos modos
 adicionales con poca fuerza de oscilador, con una polarización cuya
 distribución espacial muestra bastante riqueza.
+
 \subsection{Cristales fotónicos}
 Consideremos ahora un dieléctrico transparente no dispersivo
-homogéneo, como en la figura \ref{fig:fotonico}a.
+homogéneo, como en la figura \ref{fig:fotonico}.
 \begin{figure}
   \centering
   \includegraphics[width=0.3\textwidth]{talk-9}
@@ -337,46 +335,45 @@ homogéneo, como en la figura \ref{fig:fotonico}a.
   \caption{(a)Medio dieléctrico homogéneo con respuesta $\epsilon$,
     (b) cristal fotónico unidimensional con funciones respuesta
     $\epsilon_a$ y $\epsilon_b$ y periodo $d$, y (c) cristal fotónico
-    con periodicidad en más dimensiones. (d)Relación de
-    dispersión $\omega$ vs $k$ de la luz del medio
-    homogéneo. (e)Relaciones de dispersión transladadas por $0, \pm
-    2\pi/d$ en el espacio recíproco mostrando cruzamientos en el borde
-    de la zona de Brillouin $k=\pm \pi/d$. (f)El acoplamiento abre una
-    brecha en los puntos de degeneración evitando el cruce y formando
-    brechas prohibidas.}
+    con periodicidad en más dimensiones. (d)Relación de dispersión
+    $\omega$ vs $k$ de la luz del medio homogéneo. (e)Relaciones de
+    dispersión transladadas por $0, \pm 2\pi/d$ en el espacio
+    recíproco mostrando cruzamientos en el borde de la zona de
+    Brillouin $k=\pm \pi/d$. (f)El acoplamiento abre una brecha en los
+    puntos de degeneración evitando el cruce y formando brechas
+    prohibidas.}
   \label{fig:fotonico}
 \end{figure}
-La relación de dispersión de la luz en este medio está dada por $k^2=
-\epsilon\omega^2/c^2$ que corresponde a las dos rectas mostradas en la
-fig. \ref{fig:fotonico}d. Si en vez de un dieléctrico homogéneo
-tuvieramos un cristal artificial formado por películas de dos
-materiales alternados
-(fig. \ref{fig:fotonico}b), el ímpetu y el vector de onda ya no
-serían cantidades conservadas. Las
-reflecciones múltiples en las interfaces producirían
-ondas esparcidas en que el vector de onda cambiaría $k\to k+2\pi n/d$
-para enteros positivos y negativos $n$
-(fig. \ref{fig:fotonico}e), dando lugares a puntos de degeneración en
-que se cruzan las distintas réplicas de la relación de dispersión. El
-acoplamiento entre los campos esparcidos rompe la degeneración y abre
-{\em brechas fotónicas}  evitando los cruces y dando origen a una
-relación de dispersión (fig. \ref{fig:fotonico}f) organizada en {\em
-  bandas fotónicas} análogas a las bandas electrónicas que describen
-la propagación de electrones en sólidos cristalinos. Algo similar
-suscedería si la periodicidad fuese bidimensional o
-tridimensional (fig. \ref{fig:fotonico}c) en cuyo caso podría
-producirse brechas omnidireccionales en las que la luz no se propaga
-en ninguna dirección. Las brechas fotónicas explican algunos fenómenos
-naturales, como la iridiscencia en los caparazones de diversos
-insectos y los colores de las alas de las mariposas, colores
-producidos no por pigmentos que absorben la luz, sino por pequeñas estructuras
+La relación de dispersión de la luz en este medio está dada por
+$k^2= \epsilon \omega^2/c^2$ que corresponde a las dos rectas
+mostradas en la (fig. \ref{fig:fotonico}d). Si en vez de un
+dieléctrico homogéneo tuvieramos un cristal artificial formado por
+películas de dos materiales alternados (fig. \ref{fig:fotonico}b), el
+ímpetu y el vector de onda ya no serían cantidades conservadas. Las
+reflecciones múltiples en las interfaces producirían ondas esparcidas
+en que el vector de onda cambiaría $k\to k+2\pi n/d$ para enteros
+positivos y negativos $n$ (fig. \ref{fig:fotonico}e), dando lugar a
+puntos de degeneración en que se cruzan las distintas réplicas de la
+relación de dispersión. El acoplamiento entre los campos esparcidos
+rompe la degeneración y abre {\em brechas fotónicas} evitando los
+cruces y dando origen a una relación de dispersión
+(fig. \ref{fig:fotonico}f) organizada en {\em bandas fotónicas}
+análogas a las bandas electrónicas que describen la propagación de
+electrones en sólidos cristalinos. Algo similar suscedería si la
+periodicidad fuese bidimensional o tridimensional
+(fig. \ref{fig:fotonico}c) en cuyo caso podría producirse brechas
+omnidireccionales en las que la luz no se propaga en ninguna
+dirección. Las brechas fotónicas explican algunos fenómenos naturales,
+como la iridiscencia en los caparazones de diversos insectos y los
+colores de las alas de las mariposas, colores producidos no por
+pigmentos que absorben la luz, sino por pequeñas estructuras
 dieléctricas transparentes que forman cristales fotónicos con regiones
 de frecuencia en que la luz es fuertemente reflejada por corresponder
 a brechas en que no se puede propagar. Estos colores se llaman por su
-origen {\em colores estructurales}. Introduciendo {\em defectos} en cristales
-fotónicos se pueden generarse sitios en que la luz puede ser atrapada,
-hecho que ha encontrado aplicaciones tal
-y como la elaboración de fibras ópticas fotónicas.
+origen {\em colores estructurales}. Introduciendo {\em defectos} en
+cristales fotónicos pueden generarse sitios en que la luz puede ser
+atrapada, hecho que ha encontrado aplicaciones tal y como la
+elaboración de fibras ópticas fotónicas.
 
 \subsection{Materiales izquierdos}
 Consideremos ahora un material cuya permitividad $\epsilon(\omega)$
@@ -385,38 +382,36 @@ relación de dispersión $k^2=\epsilon\omega^2/c^2$ implica que al pasar
 la resonancia, cuando $\epsilon$ adquiere valores negativos, $k$ se
 vuelve imaginario y la luz no puede propgarse. Esto explica la
 aparición del color en los materiales comunes, en que hay frecuencias
-características de cada material en absorben la luz y justo arriba hay
-frecuencias en que no la pueden propagar. Si el material tuviera
+características de cada material en que absorben luz y justo arriba
+hay frecuencias en que no se puede propagar. Si el material tuviera
 además una respuesta magnética $\mu\ne 1$ la relación de dispersión
-cambiaría a $k^2=\epsilon\mu\omega^2/c^2$. Si tanto
-$\epsilon$ como $\mu$ tuvieran resonancias cercanas, arriba de éstas
-podría suceder que ambas fueran negativas, $\epsilon<0$ y $\mu<0$. En
-este caso, su producto $\epsilon\mu>0$ sería positivo y sí podría
-haber propagación con un vector de onda real. Sin embargo, esta
-propagación sería curiosa. Sabemos que a partir de las
-ecuaciones de Maxwell, por ejemplo, de las leyes de Faraday y de Gauss magnética,
-que para una onda plana, el campo eléctrico $\bm E$, la densidad de
-flujo magnético
-$\bm B$ y el vector de onda $\bm k$ forman una triada ordenada
-derecha, como ilustra la figura \ref{fig:triada}.
+cambiaría a $k^2=\epsilon\mu\omega^2/c^2$. Si tanto $\epsilon$ como
+$\mu$ tuvieran resonancias cercanas, arriba de éstas podría suceder
+que ambas fueran negativas, $\epsilon<0$ y $\mu<0$. En este caso, su
+producto $\epsilon\mu>0$ sería positivo y sí podría haber propagación
+con un vector de onda real. Sin embargo, esta propagación sería
+curiosa. A partir de las ecuaciones de Maxwell, por ejemplo,
+de las leyes de Faraday y de Gauss magnética, sabemos que para una onda plana,
+el campo eléctrico $\bm E$, la densidad de flujo magnético $\bm B$ y
+el vector de onda $\bm k$ forman una triada ordenada derecha, como
+ilustra la figura \ref{fig:triada}.
 \begin{figure}
   \centering
   \includegraphics{talk-13}
-  \caption{Relación entre las direcciones del campo eléctrico
-    $\bm E$, densidad de flujo magnético $\bm B$, vector de onda
-    $\bm k$, campo magnético $\bm H$ y vector de Poynting $\bm S$
-    en un metamaterial izquierdo isotrópico. Como $(\bm E, \bm B,
-    \bm k)$ y $(\bm E, \bm H,\bm S)$ son triadas ordenadas
-    derechas, y $\bm B$ y $\bm H$ son antiparalelos, entonces $\bm
-    k$ y $\bm S$ son antiparalelos.  }
+  \caption{Relación entre las direcciones del campo eléctrico $\bm E$,
+    densidad de flujo magnético $\bm B$, vector de onda $\bm k$, campo
+    magnético $\bm H$ y vector de Poynting $\bm S$ en un metamaterial
+    izquierdo isotrópico. Como $(\bm E, \bm B, \bm k)$ y
+    $(\bm E, \bm H,\bm S)$ son triadas ordenadas derechas, y $\bm B$ y
+    $\bm H$ son antiparalelos, entonces $\bm k$ y $\bm S$ son
+    antiparalelos.  }
   \label{fig:triada}
 \end{figure}
 Sin embargo, la definición del vector de Poynting y la ley de
 Ampere-Maxwell implican que el campo eléctrico $\bm E$, el campo
-magnético
-$\bm H$ y el flujo de energía $\bm S$ también forman una triada
-ordenada derecha. Sin embargo, si $\mu<0$, entonces $\bm B$ y $\bm
-H$ apuntan en direcciones opuestas. Luego, $\bm S$ ¡apunta en la
+magnético $\bm H$ y el flujo de energía $\bm S$ también forman una
+triada ordenada derecha. Sin embargo, si $\mu<0$, entonces $\bm B$ y
+$\bm H$ apuntan en direcciones opuestas. Luego, $\bm S$ ¡apunta en la
 dirección opuesta a $\bm k$! La dirección en que avanza la fase de la
 onda es opuesta a la dirección en que avanza la energía. Esto sólo
 puede ser posible si la velocidad de grupo es opuesta a la velocidad
@@ -430,9 +425,9 @@ Snell. Sin embargo, la {\em causalidad} implica que las ondas
 esparcidas por la superficie, la onda incidente y la onda reflejada,
 deben tener un flujo de energía que se aleja de la superficie. Ello
 implica que cuando incide luz desde un medio ordinario hacia un medio
-con $\epsilon<0$ y $\mu<0$, la componente normal del vector de onda
-de la onda transmitida ¡debe apuntar hacia la superficie!, como
-ilustrar la fig. \ref{fig:refneg}.
+con $\epsilon<0$ y $\mu<0$, la componente normal del vector de onda de
+la onda transmitida ¡debe apuntar hacia la superficie!, como ilustra
+la fig. \ref{fig:refneg}.
 \begin{figure}
   \centering
   \includegraphics{talk-17}
@@ -450,7 +445,7 @@ ilustrar la fig. \ref{fig:refneg}.
 \end{figure}
 De esta figura podemos inferir que una onda que incide viajando hacia
 arriba se refracta hacia abajo y vieversa. Eso lleva a plantear
-dispositivos como el ilustrado en la fig. \ref{fig:lenteplana}
+dispositivos como el ilustrado en la fig. \ref{fig:lenteplana},
 consistente en una película plana de un metamaterial izquierdo con
 $\epsilon<0$ y $\mu<0$.
 \begin{figure}
@@ -458,8 +453,8 @@ $\epsilon<0$ y $\mu<0$.
   \includegraphics{talk-24}
   \caption{Lente consistente en una película plana de un metamaterial
     izquierdo (rojo) en el seno de un material ordinario (verde). Se
-    ilustra la trayectoria de varios rayos que emergen de una fuente puntual de
-    luz y convergen en un punto imagen. }
+    ilustra la trayectoria de varios rayos que emergen de una fuente
+    puntual de luz y convergen en un punto imagen. }
   \label{fig:lenteplana}
 \end{figure}
 La luz que emerge de una fuente puntual y viaja hacia la derecha y
@@ -483,49 +478,48 @@ cumplan esta condición. La figura \ref{fig:rings} muestra un ejemplo
   \label{fig:rings}
 \end{figure}
 formado por un arreglo de parejas de anillos interrumpidos que
-funcionan como un circuito LC resonante. La corriente recorriendo los anillos
-produce un dipolo magnético, y debido a su interrupción, produce una
-acumulación de cargas que lo acopla con el otro anillo. Este circuito
-tiene una resonancia arriba de la cual la permeabilidad macroscópica
-es negativa. Por otro lado, una serie de pistas rectas permiten que el
-material se comporte en la dirección vertical como un conductor, por
-lo cual la permitividad es negativa abajo de la frecuencia de plasma
-efectiva.
+funcionan como un circuito LC resonante. La corriente recorriendo los
+anillos produce un dipolo magnético, y debido a su interrupción,
+produce una acumulación de cargas que lo acopla con el otro
+anillo. Este circuito tiene una resonancia arriba de la cual la
+permeabilidad macroscópica es negativa. Por otro lado, una serie de
+pistas rectas permiten que el material se comporte en la dirección
+vertical como un conductor, por lo cual la permitividad es negativa
+abajo de la frecuencia de plasma efectiva.
 \subsection{Metasuperficies}
-Hemos visto arriba que partículas metálicas pequeñas pueden tener resonancias
-plasmónicas cuyas frecuencias dependen en general de su composición y
-de su geometría. También partículas dieléctricas pueden tener
-resonancias aunque estén formadas por materiales no dispersivos,
+Hemos visto arriba que partículas metálicas pequeñas pueden tener
+resonancias plasmónicas cuyas frecuencias dependen en general de su
+composición y de su geometría. También partículas dieléctricas pueden
+tener resonancias aunque estén formadas por materiales no dispersivos,
 siempre y cuando la longitud de onda de la luz en su interior sea
 conmensurable con su tamaño. Estas resonancias se deben a la
 interferencia constructiva entre ondas múltiplemente reflejadas por
 sus superficies. Por ejemplo, partículas esféricas o cilíndricas
 muestran {\em resonancias de Mie} cuando el perímetro de su sección
-transversal es cercano a un múltipolo de la longitud de onda.
-Una ventaja de estas resonancias  sobre las
-resonancias plasmónicas para diseñar y
-construir dispositivos fotónicos  es
-que las pérdidas de energía debidas a la absorción dentro del material
-son menores que las pérdidas ohmicas que suelen mostrar los
-metales. Sin embargo, estas resonancias requieren que las partículas
-tengan un tamaño relativamente grande conmensurable con la longitud de
-onda en su interior. Sin embargo, si se emplean
-materiales con un índice de refracción alto, la longitud de onda
-dentro de estos materiales puede ser mucho menor que la
-correspondiente al espacio vacío, permitiéndo así resonancias
-dieléctricas en partículas de tamaño muy pequeñas, en analogía a las
-resonancias plasmónicas.
+transversal es cercano a un múltiplo de la longitud de onda.  Una
+ventaja de estas resonancias sobre las resonancias plasmónicas para
+diseñar y construir dispositivos fotónicos es que las pérdidas de
+energía debidas a la absorción dentro del material son menores que las
+pérdidas ohmicas que suelen mostrar los metales. Sin embargo, estas
+resonancias requieren que las partículas tengan un tamaño
+relativamente grande conmensurable con la longitud de onda en su
+interior. Sin embargo, si se emplean materiales con un índice de
+refracción alto, la longitud de onda dentro de estos materiales puede
+ser mucho menor que la correspondiente al espacio vacío, permitiéndo
+así resonancias dieléctricas en partículas de tamaño muy pequeñas, en
+analogía a las resonancias plasmónicas.
 
-Las funciones respuesta de una partícula cambian de
-signo conforme la frecuencia de la luz pasa de ser menor a ser mayor a
-su frecuencia de resonancia. Por tanto, la fase que adquiere un haz
-luminoso al pasar a través de una superficie cubierta por partículas
-depende muy sensiblemente de la cercanía de la frecuencia a la
-frecuencia de resonancia de las partículas, la cual a su vez, depende de
-la geometría. Por tanto, modulando la geometría de las partículas a lo
+Las funciones respuesta de una partícula cambian de signo conforme la
+frecuencia de la luz pasa de ser menor a ser mayor a su frecuencia de
+resonancia. Por tanto, la fase que adquiere un haz luminoso al pasar a
+través de una superficie cubierta por partículas depende muy
+sensiblemente de la cercanía de la frecuencia a la frecuencia de
+resonancia de las partículas, la cual a su vez, depende de la
+geometría. Por tanto, modulando la geometría de las partículas a lo
 largo de la superficie, puede modularse la fase que adquiere la luz en
 forma análoga a como el ancho variable de una lente o de un prisma
 modula la fase de los rayos de luz que los atraviesan.
+
 
 La ley de Snell usual implica que a lo largo de una interface uniforme
 hay un empatamiento de fases $\phi^\alpha(\bm r_\|)=\bm k^\alpha_\|\cdot\bm
@@ -551,14 +545,14 @@ sobre una superficie ordinaria y modificar a lo largo de esta su
 geometría, orientación o densidad, dando lugar a una {\em metasuperficie}.
 
 
-Como las
-resonancias dependen también de la polarización de la luz, este efecto
-puede usarse para desviar haces de luz de acuerdo a su
-polarización. En la fig. \ref{fig:metasup} mostramos una
-{\em metasuperficie} formada por partículas en forma de $L$ cuya
+Como las resonancias dependen también de la polarización de la luz,
+este efecto puede usarse para desviar haces de luz de acuerdo a su
+polarización. En la fig. \ref{fig:metasup} mostramos una {\em
+  metasuperficie} formada por partículas en forma de $L$ cuya
 respuesta difiere cuando es iluminada con polarización circular
 derecha o polarización circular izquierda, y que por tanto puede
-separa un haz de luz no polarizada en dos haces con polarizaciones opuestas.
+separa un haz de luz no polarizada en dos haces con polarizaciones
+opuestas.
 \begin{figure}
   \centering
   \includegraphics[width=0.5\textwidth,angle=90,valign=c]{metasup1}
@@ -571,8 +565,8 @@ separa un haz de luz no polarizada en dos haces con polarizaciones opuestas.
 \end{figure}
 Mediante otros arreglos se puede variar la fase a lo largo de la
 dirección radial, de forma de hacer converger rayos que arriben en la
-dirección normal sobre un punto, su foco, creando así una metalente, como la
-que ilustra la figura \ref{fig:metalente}.
+dirección normal sobre un punto, su foco, creando así una metalente,
+como la que ilustra la figura \ref{fig:metalente}.
 \begin{figure}
   \centering
   \includegraphics[width=.5\textwidth,angle=90, valign=c]{metasup3}
@@ -590,8 +584,8 @@ que ilustra la figura \ref{fig:metalente}.
 La descripción de los fenomenos electromagnéticos es provista por las
 ecuaciones de Maxwell las cuales describen la propagación de los
 campos electromagnéticos en el vacío y en la materia, su interacción
-con las cargas eléctricas de los materiales, y la interacción entre las
-misma cargas, las ecuaciones en forma diferencial son,
+con las cargas eléctricas de los materiales, y la interacción entre
+las mismas cargas, las ecuaciones en forma diferencial son,
 \begin{equation}
   \label{Maxwell-eqs}
   \begin{array}{cc}
@@ -606,8 +600,8 @@ densidad de carga externas, respectivamente. Por ejemplo, el siguiente
 sistema que consiste de circuitos de alambre a los que se aplica un
 campo magnético a lo largo de la dirección perpendicular al plano en
 el que está el circuito y un campo eléctrico que reside en el mismo
-plano y cuyo efecto sobre los circuitos es el movimiento de sus
-caragas eléctricas, como ilustra la figura \ref{Circuitos}.
+plano y cuyo efecto sobre los circuitos es el movimiento de sus cargas
+eléctricas, como ilustra la figura \ref{Circuitos}.
 \begin{figure}
   \centering
   \input{circuitos.code.tex}
@@ -652,7 +646,8 @@ de dispersión en el vacío.
 
   \caption{(a) Medio homogéneo con permitividad constante $\epsilon$,
     (b) relaciones de dipersión de la propagación de la onda, línea
-    roja propagación en el vacío, línea azul propagación dentro del material.}
+    roja propagación en el vacío, línea azul propagación dentro del
+    material.}
 \label{mediohomogneo}
 
 \end{figure}
@@ -662,19 +657,19 @@ de dispersión en el vacío.
 \section{Teoría}
 
 Las propiedades ópticas de materiales compuestos como los presentados
-arriba, metamateriales, cristales fotónicos, materiales izquierdos, etc., con propiedades
-en ocasiones exóticas, están determinadas no sólo por su
-composición, sino también por su geometría. Propiedades como las relaciones de dispersión
-de los modos electromagnéticos que se propagan a través de un
-metamaterial extendido, las amplitudes de reflexión y transmisión,
-y relaciones de dispersión de modos electromagnéticos confinados a la superficie
-de sistemas con fronteras, las secciones transversales de dispersión,
-absorción y extinción de partículas formadas por partículas, pueden
-ser expresadas en términos del operador dieléctrico macroscópico del
-compuesto a través de las soluciones de las ecuaciones
-de Maxwell en dicho material. En esta sección presentaremos un
-formalismo para obtener la respuesta macroscópica en términos de la
-respuesta microscópica.
+arriba, metamateriales, cristales fotónicos, materiales izquierdos,
+etc., con propiedades en ocasiones exóticas, están determinadas no
+sólo por su composición, sino también por su geometría. Propiedades
+como las relaciones de dispersión de los modos electromagnéticos que
+se propagan a través de un metamaterial extendido, las amplitudes de
+reflexión y transmisión, y relaciones de dispersión de modos
+electromagnéticos confinados a la superficie de sistemas con
+fronteras, las secciones transversales de dispersión, absorción y
+extinción de partículas formadas por partículas, pueden ser expresadas
+en términos del operador dieléctrico macroscópico del compuesto a
+través de las soluciones de las ecuaciones de Maxwell en dicho
+material. En esta sección presentaremos un formalismo para obtener la
+respuesta macroscópica en términos de la respuesta microscópica.
 
 \subsection{Proyectores promedio y fluctuación}
 Primero notamos que el campo electromagnético dentro de un material
@@ -808,6 +803,7 @@ Análogamente, podemos identificar al proyector transversal
   \label{eq:PT}
   \hat{\mathcal P}^T=\hat{\bm 1}-\hat{\mathcal P}^L=-\hat\nabla\times \hat\nabla^{-2}\hat\nabla\times.
 \end{equation}
+
 \subsection{Caso no retardado}
 Regresando a nuestro problema, notamos a partir de las ecuaciones de
 Maxwell que la proyección longitudinal del desplazamiento, $\bm
@@ -827,17 +823,17 @@ externo,
     \nabla\cdot\bm D^L&=4\pi\rho^{\text{ex}}=\nabla\cdot\bm E^{\text{ex,}L}.
   \end{split}
 \end{equation}
-Aquí, hemos definido $\hat{\bm O}^{\alpha\beta}=\hat{\mathcal
-  P}^\alpha\hat {\bm O} \hat{\mathcal P}^\beta$ ($\alpha,\beta=L,T$)
-para cualquier operador $\hat{\bm O}$.
-Por lo tanto, podemos identificar a $\bm D^L$ con el campo eléctrico
-longitudinal externo. Siendo un campo externo, sus fuentes son
-unicamente las cargas externas $\rho^{\text{ex}}$, las cuales no tienen absolutamente
-nada que ver con la composición del material ni con la disposición de
-sus componentes. En particular, $\bm D^L$ no tiene fluctuaciones
-espaciales derivadas de la textura del material, $\bm D^L=\bm D^L_p=
-\hat{\mathcal P_p} D^L$. Despejando el campo
-eléctrico de la ec. \eqref{eq:DLvsEL} obtenemos
+Aquí, hemos definido
+$\hat{\bm O}^{\alpha\beta}=\hat{\mathcal P}^\alpha\hat {\bm O}
+\hat{\mathcal P}^\beta$ ($\alpha,\beta=L,T$) para cualquier operador
+$\hat{\bm O}$.  Por lo tanto, podemos identificar a $\bm D^L$ con el
+campo eléctrico longitudinal externo. Siendo un campo externo, sus
+fuentes son unicamente las cargas externas $\rho^{\text{ex}}$, las
+cuales no tienen absolutamente nada que ver con la composición del
+material ni con la disposición de sus componentes. En particular,
+$\bm D^L$ no tiene fluctuaciones espaciales derivadas de la textura
+del material, $\bm D^L=\bm D^L_p= \hat{\mathcal P_p} D^L$. Despejando
+el campo eléctrico de la ec. \eqref{eq:DLvsEL} obtenemos
 \begin{equation}
   \label{eq:ELvsDL}
   \bm E^L=(\hat{\bm\epsilon}^{LL})^{-1}\bm D^L,
@@ -871,10 +867,10 @@ como ella no tiene fluctuaciones espaciales asociadas a la textura
 microscópica del sistema, entonces su promedio nos proporciona la
 respuesta correspondiente macroscópica. Para dar un ejemplo de éste
 proceso, a continuación obtendremos la respuesta macroscópica en el
-caso en que no podemos ignorar el retardamiento.
-Tomando el rotacional de la ley de Faraday sustituyendo la ec. de
-Ampére-Maxwell podemos obtener una ecuación de onda con fuentes, que
-podemos escribir como
+caso en que no podemos ignorar el retardamiento.  Tomando el
+rotacional de la ley de Faraday sustituyendo la ec. de Ampére-Maxwell
+podemos obtener una ecuación de onda con fuentes, que podemos escribir
+como
 \begin{equation}
   \label{eq:onda}
   \hat{\mathcal W}\bm E=\frac{4\pi}{i\omega}\bm j^{\text{ex}},
@@ -915,12 +911,12 @@ pasos indicados en la figura \ref{fig:circulo}.
 \begin{figure}
   \centering
   \includegraphics[width=0.8\textwidth]{procedure-419}
-  \caption{Pasos para obtener la respuesta macroscópica $\hat{\bm
-      \epsilon}_M$ a partir de la respuesta microscópica $\epsilon(\bm
-    r)$. Primero construimos el operador de onda, lo invertimos, lo
-    promediamos, identificamos el operador de onda macroscópico
-    inverso, lo invertimos y finalmente identificamos el operador
-    dieléctrico macroscópico.}
+  \caption{Pasos para obtener la respuesta macroscópica
+    $\hat{\bm \epsilon}_M$ a partir de la respuesta microscópica
+    $\epsilon(\bm r)$. Primero construimos el operador de onda, lo
+    invertimos, lo promediamos, identificamos el operador de onda
+    macroscópico inverso, lo invertimos y finalmente identificamos el
+    operador dieléctrico macroscópico.}
   \label{fig:circulo}
 \end{figure}
 A partir de la respuesta dieléctrica de las componentes de nuestro
@@ -953,8 +949,7 @@ donde
   \label{eq:u}
   u\equiv\frac{1}{1-\epsilon_B/\epsilon_A}
 \end{equation}
-se conoce como la {\em variable espectral},
-y
+se conoce como la {\em variable espectral}, y
 \begin{equation}
   \label{eq:B}
   B(\bm r)=\left\{
@@ -968,7 +963,7 @@ es la {\em función característica}. Notemos que $u$ depende de la
 composición del material y puede depender de la frecuencia a través de
 las funciones dieléctricas de las componentes, mientras que $B$ no
 depende de la composición ni de la frecuencia, sino únicamente de la
-geometría, la cual caracteriza totalmente.
+geometría.
 
 Ahora supongamos que nuestro sistema es periódico, caracterizado por
 una {\em red de Bravais} $\{\bm R\}$, tal que $\epsilon(\bm r+\bm
@@ -1389,13 +1384,13 @@ asumiendo que ${\bf J}^{ex}_{f} = 0 $, sustituimos ${\bf E}_{f}$ en la
 ecuación \eqref{CamposCompletos},
 \begin{equation}
   {\bf
-    D}_{p}=\left(\hat{\epsilon}-{pp}-(\hat{\epsilon}-{pf}(\hat{\epsilon}_{ff}-\frac{c^{2}}{\omega^{2}}(\nabla
+    D}_{p}=\left(\hat{\epsilon}_{pp}-(\hat{\epsilon}_{pf}(\hat{\epsilon}_{ff}-\frac{c^{2}}{\omega^{2}}(\nabla
   \times \nabla)_{ff})^{-1}\hat{\epsilon}_{fp}\right){\bf E}_{p},
   \label{MacroscopicRelation}
 \end{equation}
 comparando con la ecuación de campos macroscópicos obtenemos que
 \begin{equation}
-  \hat{\epsilon}_{M}=\hat{\epsilon}-{pp}-\hat{\epsilon}-{pf}\left[(\hat{\epsilon}_{ff}-\frac{c^{2}}{\omega^{2}}(\nabla
+  \hat{\epsilon}_{M}=\hat{\epsilon}_{pp}-\hat{\epsilon}_{pf}\left[(\hat{\epsilon}_{ff}-\frac{c^{2}}{\omega^{2}}(\nabla
     \times \nabla)_{ff})\right]^{-1}\hat{\epsilon}_{fp},
   \label{DielectricFunction}
 \end{equation}
@@ -1523,7 +1518,7 @@ en los casos en que $l << \lambda $, solo nos quedamos con el primer
 termino de la expansión y sustituyéndolo en \eqref{DielectricFunction}
 la reescribimos como
 \begin{equation}
-  \hat{\epsilon}_{M}=\hat{\epsilon}-{pp}-\hat{\epsilon}-{pf}(\hat{\epsilon}_{ff}^{LL})^{-1}\hat{\epsilon}_{fp}.
+  \hat{\epsilon}_{M}=\hat{\epsilon}_{pp}-\hat{\epsilon}_{pf}(\hat{\epsilon}_{ff}^{LL})^{-1}\hat{\epsilon}_{fp}.
 \end{equation}
 
 \fi %ifignora

@@ -1,0 +1,731 @@
+\documentclass[12pt]{article}
+\usepackage{graphicx}
+\usepackage[spanish]{babel}
+\usepackage{float}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{outline}
+\usepackage{pmgraph}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{amsfonts,amssymb,amsthm}
+\usepackage{fancyhdr}
+\usepackage{multicol}
+\usepackage{vmargin}
+\usepackage{tikz}
+\usepackage{multicol}
+\usepackage{bm}
+\usepackage{hyperref}
+\usepackage[scaled]{helvet}
+%\renewcommand\familydefault{\sfdefault} 
+%\usepackage{showkeys}
+%\usepackage{showlabel}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    filecolor=magenta,
+    urlcolor=blue,
+}
+
+\title{Metamateriales \\
+  XVIII Escuela de Verano en Física}
+\author{ Instituto de Ciencias Físicas \\
+      \small Wolf Luis Mochán Backal }
+\date{}
+    
+
+\begin{document}
+\maketitle 
+\tableofcontents
+
+\section{Introducción}
+
+
+Un meta-material es un material diseñado artificialmente con dos o más
+materiales, con propiedades determinadas por la geometría de las
+componentes y los periodos de disposición de los materiales en el
+arreglo. Los meta-materiales se definen como ``{\em Un arreglo de
+  elementos estructurales artificiales, diseñados para alcanzar
+  propiedades electromagnéticas ventajosas e
+  inusuales}''\cite{Metamorphose}, esta definición es la adoptada en
+el {\em Virtual Institute for Artificial Electromagnetic Materials and
+  Meta-materials}.
+
+Análogo a los materiales usuales, las propiedades electromagnéticas de
+meta-materiales son determinadas por sus elementos constituyentes
+básicos, a los que se le denomina como meta-átomos, los cuales son
+objetos hechos de materiales usuales.Las propiedades de los
+meta-materiales pueden ser muy distintas a las de los materiales que
+los conforman y pueden llegar a ser muy exóticas y pueden ser
+especificadas escogiendo las formas, estructuras internas, tamaños,
+orientaciones mutuas, etc., de sus meta-átomos.  Incluso sus repuestas
+individuales pueden ser controladas por señales externas e internas y
+por microprocesadores
+programables.\cite{IntroductiontoMetamaterialsandNanophotonics}
+
+Por ejemplo si un meta-material tiene componentes metálicos, estos
+pueden presentar resonancias debidas a un movimiento oscilatorio
+colectivo de sus electrones de conducción, denominadas de acuerdo a
+sus características como, plasmones de bulto, plasmones de superficie
+o plasmones localizados. La frecuencia de dichas oscilaciones se
+denomina como frecuencia de plasma $\omega_{p}$. Para estimar esta
+frecuencia, considere el modelo más simple de un conductor, ilustrado
+en la figura \ref{Bulkplasmon}; un gas de electrones de densidad de
+número $n_{0}$, moviendose libremente en un entorno positivamente
+cargado. Si debido a algún efecto como una compresión o rarefacción
+del gas de electrones se produce una acumulación de carga $Q$,
+localizada en alguna región $\mathcal{R}$, esta producirá una campo
+eléctrico de Coulomb $\vec{E} (\vec{r}) = Q\vec{r}/r^{3} $. De acuerdo
+a la segunda ley de Newton, los electrones obtienen una aceleración
+$d\frac{d^{2}\vec{r}}{dt^{2}} = -e\vec{E}(\vec{r},t)$, donde $m$ y
+$-e$ son la masa y la carga eléctrica del electrón acelerado. La
+aceleración de los electrones resulta en una corriente eléctrica dada
+por $\frac{\partial \vec{j}(\vec{r},t)}{\partial t}=
+\frac{n_{0}e^{2}}{m}\vec{E}(\vec{r},t)$, como $\vec{j}(\vec{r},t) =
+-n_{0}e\frac{d\vec{r}}{dt}$. Integrando la ecuación diferencial de la
+corriente sobre una superficie que rodee completamente la carga y
+usando la ecuación de continuidad y la Ley de Gauss para el campo
+eléctrico obtenemos una ecuación diferencial para la carga,
+\begin{figure}[H]
+\centering
+
+\tikzset{every picture/.style={line width=0.85pt}} %set default line
+                                                   %width to 0.75pt
+
+\begin{tikzpicture}[x=0.90pt,y=0.90pt,yscale=-1,xscale=1]
+%uncomment if require: \path (0,300); %set diagram left start at 0,
+%and has height of 300
+
+%Shape: Rectangle [id:dp9312711604006443] 
+\draw [draw opacity=0][fill={rgb, 255:red, 176; green, 158; blue, 239
+  } ,fill opacity=0.15 ] (286.53,15.53) -- (519.68,15.53) --
+(519.68,201.51) -- (286.53,201.51) -- cycle ;
+%Shape: Circle [id:dp41229967716015803] 
+\draw [dash pattern={on 0.84pt off 2.51pt}] (347.04,108.52)
+.. controls (347.04,77.56) and (372.14,52.46) .. (403.1,52.46)
+.. controls (434.07,52.46) and (459.17,77.56) .. (459.17,108.52)
+.. controls (459.17,139.48) and (434.07,164.58) .. (403.1,164.58)
+.. controls (372.14,164.58) and (347.04,139.48) .. (347.04,108.52) --
+cycle ;
+%Shape: Polygon Curved [id:ds6883393998203343] 
+\draw [fill={rgb, 255:red, 248; green, 231; blue, 28 } ,fill opacity=1
+] (407.08,93.5) .. controls (426.08,108.5) and (423.08,111.5)
+.. (399.08,109.5) .. controls (378.08,135.5) and (384.08,85.5)
+.. (407.08,93.5) -- cycle ;
+%Straight Lines [id:da6571151500360679] 
+\draw [color={rgb, 255:red, 0; green, 13; blue, 255 } ,draw opacity=1
+] (380.37,123.61) -- (363.46,137.22) ; \draw [shift={(361.9,138.48)},
+  rotate = 321.15999999999997] [color={rgb, 255:red, 0; green, 13;
+    blue, 255 } ,draw opacity=1 ][line width=0.75] (6.56,-1.97)
+.. controls (4.17,-0.84) and (1.99,-0.18) .. (0,0) .. controls
+(1.99,0.18) and (4.17,0.84) .. (6.56,1.97) ;
+%Straight Lines [id:da5050378485919282] 
+\draw [color={rgb, 255:red, 65; green, 117; blue, 5 } ,draw opacity=1
+] (386.82,130.49) -- (377.21,140.4) ; \draw [shift={(375.82,141.84)},
+  rotate = 314.11] [color={rgb, 255:red, 65; green, 117; blue, 5 }
+  ,draw opacity=1 ][line width=0.75] (6.56,-1.97) .. controls
+(4.17,-0.84) and (1.99,-0.18) .. (0,0) .. controls (1.99,0.18) and
+(4.17,0.84) .. (6.56,1.97) ;
+%Straight Lines [id:da4470317873115821] 
+\draw [color={rgb, 255:red, 4; green, 0; blue, 255 } ,draw opacity=1 ]
+(420.5,127.75) -- (436.35,142.58) ; \draw [shift={(437.81,143.95)},
+  rotate = 223.09] [color={rgb, 255:red, 4; green, 0; blue, 255 }
+  ,draw opacity=1 ][line width=0.75] (6.56,-1.97) .. controls
+(4.17,-0.84) and (1.99,-0.18) .. (0,0) .. controls (1.99,0.18) and
+(4.17,0.84) .. (6.56,1.97) ;
+%Straight Lines [id:da5395277787635806] 
+\draw [color={rgb, 255:red, 65; green, 117; blue, 5 } ,draw opacity=1
+] (426.41,120.39) -- (437.57,128.52) ; \draw [shift={(439.19,129.7)},
+  rotate = 216.04] [color={rgb, 255:red, 65; green, 117; blue, 5 }
+  ,draw opacity=1 ][line width=0.75] (6.56,-1.97) .. controls
+(4.17,-0.84) and (1.99,-0.18) .. (0,0) .. controls (1.99,0.18) and
+(4.17,0.84) .. (6.56,1.97) ;
+%Straight Lines [id:da6542608567140464] 
+\draw [color={rgb, 255:red, 41; green, 51; blue, 241 } ,draw opacity=1
+] (400.3,133.49) -- (400.4,155.19) ; \draw [shift={(400.41,157.19)},
+  rotate = 269.72] [color={rgb, 255:red, 41; green, 51; blue, 241 }
+  ,draw opacity=1 ][line width=0.75] (6.56,-1.97) .. controls
+(4.17,-0.84) and (1.99,-0.18) .. (0,0) .. controls (1.99,0.18) and
+(4.17,0.84) .. (6.56,1.97) ;
+%Straight Lines [id:da31853023392828206] 
+\draw [color={rgb, 255:red, 65; green, 117; blue, 5 } ,draw opacity=1
+] (409.7,132.73) -- (411.46,146.42) ; \draw [shift={(411.72,148.41)},
+  rotate = 262.67] [color={rgb, 255:red, 65; green, 117; blue, 5 }
+  ,draw opacity=1 ][line width=0.75] (6.56,-1.97) .. controls
+(4.17,-0.84) and (1.99,-0.18) .. (0,0) .. controls (1.99,0.18) and
+(4.17,0.84) .. (6.56,1.97) ;
+%Straight Lines [id:da29462149470746113] 
+\draw [color={rgb, 255:red, 4; green, 0; blue, 255 } ,draw opacity=1 ]
+(377.34,104.12) -- (355.65,103.27) ; \draw [shift={(353.65,103.19)},
+  rotate = 362.25] [color={rgb, 255:red, 4; green, 0; blue, 255 }
+  ,draw opacity=1 ][line width=0.75] (6.56,-1.97) .. controls
+(4.17,-0.84) and (1.99,-0.18) .. (0,0) .. controls (1.99,0.18) and
+(4.17,0.84) .. (6.56,1.97) ;
+%Straight Lines [id:da2432710985346096] 
+\draw [color={rgb, 255:red, 65; green, 117; blue, 5 } ,draw opacity=1
+] (377.69,113.55) -- (363.92,114.7) ; \draw [shift={(361.93,114.87)},
+  rotate = 355.2] [color={rgb, 255:red, 65; green, 117; blue, 5 }
+  ,draw opacity=1 ][line width=0.75] (6.56,-1.97) .. controls
+(4.17,-0.84) and (1.99,-0.18) .. (0,0) .. controls (1.99,0.18) and
+(4.17,0.84) .. (6.56,1.97) ;
+%Straight Lines [id:da237706712312177] 
+\draw [color={rgb, 255:red, 4; green, 0; blue, 255 } ,draw opacity=1 ]
+(426.59,93.57) -- (443.23,79.63) ; \draw [shift={(444.76,78.34)},
+  rotate = 500.02] [color={rgb, 255:red, 4; green, 0; blue, 255 }
+  ,draw opacity=1 ][line width=0.75] (6.56,-1.97) .. controls
+(4.17,-0.84) and (1.99,-0.18) .. (0,0) .. controls (1.99,0.18) and
+(4.17,0.84) .. (6.56,1.97) ;
+%Straight Lines [id:da6100725468954159] 
+\draw [color={rgb, 255:red, 65; green, 117; blue, 5 } ,draw opacity=1
+] (420,86.82) -- (429.42,76.72) ; \draw [shift={(430.78,75.26)},
+  rotate = 492.97] [color={rgb, 255:red, 65; green, 117; blue, 5 }
+  ,draw opacity=1 ][line width=0.75] (6.56,-1.97) .. controls
+(4.17,-0.84) and (1.99,-0.18) .. (0,0) .. controls (1.99,0.18) and
+(4.17,0.84) .. (6.56,1.97) ;
+%Straight Lines [id:da670122590631461] 
+\draw [color={rgb, 255:red, 4; green, 0; blue, 255 } ,draw opacity=1 ]
+(384.98,87.05) -- (370.02,71.33) ; \draw [shift={(368.64,69.88)},
+  rotate = 406.4] [color={rgb, 255:red, 4; green, 0; blue, 255 } ,draw
+  opacity=1 ][line width=0.75] (6.56,-1.97) .. controls (4.17,-0.84)
+and (1.99,-0.18) .. (0,0) .. controls (1.99,0.18) and (4.17,0.84)
+.. (6.56,1.97) ;
+%Straight Lines [id:da2522228807678757] 
+\draw [color={rgb, 255:red, 65; green, 117; blue, 5 } ,draw opacity=1
+] (378.67,94.06) -- (367.99,85.3) ; \draw [shift={(366.44,84.03)},
+  rotate = 399.35] [color={rgb, 255:red, 65; green, 117; blue, 5 }
+  ,draw opacity=1 ][line width=0.75] (6.56,-1.97) .. controls
+(4.17,-0.84) and (1.99,-0.18) .. (0,0) .. controls (1.99,0.18) and
+(4.17,0.84) .. (6.56,1.97) ;
+%Straight Lines [id:da3588532567739561] 
+\draw [color={rgb, 255:red, 0; green, 13; blue, 255 } ,draw opacity=1
+] (406.23,77.96) -- (407.24,56.27) ; \draw [shift={(407.33,54.28)},
+  rotate = 452.65] [color={rgb, 255:red, 0; green, 13; blue, 255 }
+  ,draw opacity=1 ][line width=0.75] (6.56,-1.97) .. controls
+(4.17,-0.84) and (1.99,-0.18) .. (0,0) .. controls (1.99,0.18) and
+(4.17,0.84) .. (6.56,1.97) ;
+%Straight Lines [id:da23210708766609578] 
+\draw [color={rgb, 255:red, 65; green, 117; blue, 5 } ,draw opacity=1
+] (396.8,78.24) -- (395.75,64.47) ; \draw [shift={(395.59,62.47)},
+  rotate = 445.6] [color={rgb, 255:red, 65; green, 117; blue, 5 }
+  ,draw opacity=1 ][line width=0.75] (6.56,-1.97) .. controls
+(4.17,-0.84) and (1.99,-0.18) .. (0,0) .. controls (1.99,0.18) and
+(4.17,0.84) .. (6.56,1.97) ;
+%Straight Lines [id:da6718259445801716] 
+\draw [color={rgb, 255:red, 4; green, 0; blue, 255 } ,draw opacity=1 ]
+(427.28,112.57) -- (448.97,113.32) ; \draw [shift={(450.97,113.39)},
+  rotate = 181.97] [color={rgb, 255:red, 4; green, 0; blue, 255 }
+  ,draw opacity=1 ][line width=0.75] (6.56,-1.97) .. controls
+(4.17,-0.84) and (1.99,-0.18) .. (0,0) .. controls (1.99,0.18) and
+(4.17,0.84) .. (6.56,1.97) ;
+%Straight Lines [id:da30812765593632196] 
+\draw [color={rgb, 255:red, 65; green, 117; blue, 5 } ,draw opacity=1
+] (426.89,103.15) -- (440.64,101.92) ; \draw [shift={(442.64,101.75)},
+  rotate = 534.9200000000001] [color={rgb, 255:red, 65; green, 117;
+    blue, 5 } ,draw opacity=1 ][line width=0.75] (6.56,-1.97)
+.. controls (4.17,-0.84) and (1.99,-0.18) .. (0,0) .. controls
+(1.99,0.18) and (4.17,0.84) .. (6.56,1.97) ;
+%Straight Lines [id:da13788980423854613] 
+\draw [color={rgb, 255:red, 0; green, 13; blue, 255 } ,draw opacity=1
+] (349.17,148) -- (335.78,157.82) ; \draw [shift={(334.17,159)},
+  rotate = 323.75] [color={rgb, 255:red, 0; green, 13; blue, 255 }
+  ,draw opacity=1 ][line width=0.75] (6.56,-1.97) .. controls
+(4.17,-0.84) and (1.99,-0.18) .. (0,0) .. controls (1.99,0.18) and
+(4.17,0.84) .. (6.56,1.97) ;
+%Straight Lines [id:da20715028492937027] 
+\draw [color={rgb, 255:red, 65; green, 117; blue, 5 } ,draw opacity=1
+] (363.08,158.87) -- (356.48,166.49) ; \draw [shift={(355.17,168)},
+  rotate = 310.94] [color={rgb, 255:red, 65; green, 117; blue, 5 }
+  ,draw opacity=1 ][line width=0.75] (6.56,-1.97) .. controls
+(4.17,-0.84) and (1.99,-0.18) .. (0,0) .. controls (1.99,0.18) and
+(4.17,0.84) .. (6.56,1.97) ;
+%Straight Lines [id:da45297622412354654] 
+\draw [color={rgb, 255:red, 4; green, 0; blue, 255 } ,draw opacity=1 ]
+(449.86,154.07) -- (459.76,164.08) ; \draw [shift={(461.17,165.5)},
+  rotate = 225.31] [color={rgb, 255:red, 4; green, 0; blue, 255 }
+  ,draw opacity=1 ][line width=0.75] (6.56,-1.97) .. controls
+(4.17,-0.84) and (1.99,-0.18) .. (0,0) .. controls (1.99,0.18) and
+(4.17,0.84) .. (6.56,1.97) ;
+%Straight Lines [id:da6590644356442671] 
+\draw [color={rgb, 255:red, 65; green, 117; blue, 5 } ,draw opacity=1
+] (460.42,140.47) -- (468.39,144.58) ; \draw [shift={(470.17,145.5)},
+  rotate = 207.31] [color={rgb, 255:red, 65; green, 117; blue, 5 }
+  ,draw opacity=1 ][line width=0.75] (6.56,-1.97) .. controls
+(4.17,-0.84) and (1.99,-0.18) .. (0,0) .. controls (1.99,0.18) and
+(4.17,0.84) .. (6.56,1.97) ;
+%Straight Lines [id:da18094922068842434] 
+\draw [color={rgb, 255:red, 4; green, 0; blue, 255 } ,draw opacity=1 ]
+(338.09,102.96) -- (322.16,102.11) ; \draw [shift={(320.17,102)},
+  rotate = 363.07] [color={rgb, 255:red, 4; green, 0; blue, 255 }
+  ,draw opacity=1 ][line width=0.75] (6.56,-1.97) .. controls
+(4.17,-0.84) and (1.99,-0.18) .. (0,0) .. controls (1.99,0.18) and
+(4.17,0.84) .. (6.56,1.97) ;
+%Straight Lines [id:da7157990668409282] 
+\draw [color={rgb, 255:red, 65; green, 117; blue, 5 } ,draw opacity=1
+] (338,115.95) -- (328.17,115.99) ; \draw [shift={(326.17,116)},
+  rotate = 359.77] [color={rgb, 255:red, 65; green, 117; blue, 5 }
+  ,draw opacity=1 ][line width=0.75] (6.56,-1.97) .. controls
+(4.17,-0.84) and (1.99,-0.18) .. (0,0) .. controls (1.99,0.18) and
+(4.17,0.84) .. (6.56,1.97) ;
+%Straight Lines [id:da8703055523557971] 
+\draw [color={rgb, 255:red, 4; green, 0; blue, 255 } ,draw opacity=1 ]
+(455.09,71.6) -- (465.44,65.51) ; \draw [shift={(467.17,64.5)}, rotate
+  = 509.55] [color={rgb, 255:red, 4; green, 0; blue, 255 } ,draw
+  opacity=1 ][line width=0.75] (6.56,-1.97) .. controls (4.17,-0.84)
+and (1.99,-0.18) .. (0,0) .. controls (1.99,0.18) and (4.17,0.84)
+.. (6.56,1.97) ;
+%Straight Lines [id:da9400113744247152] 
+\draw [color={rgb, 255:red, 65; green, 117; blue, 5 } ,draw opacity=1
+] (442.53,58.67) -- (449.71,51.87) ; \draw [shift={(451.17,50.5)},
+  rotate = 496.58] [color={rgb, 255:red, 65; green, 117; blue, 5 }
+  ,draw opacity=1 ][line width=0.75] (6.56,-1.97) .. controls
+(4.17,-0.84) and (1.99,-0.18) .. (0,0) .. controls (1.99,0.18) and
+(4.17,0.84) .. (6.56,1.97) ;
+%Straight Lines [id:da9453691970158182] 
+\draw [color={rgb, 255:red, 4; green, 0; blue, 255 } ,draw opacity=1 ]
+(362.17,60) -- (348.49,44.5) ; \draw [shift={(347.17,43)}, rotate =
+  408.58000000000004] [color={rgb, 255:red, 4; green, 0; blue, 255 }
+  ,draw opacity=1 ][line width=0.75] (6.56,-1.97) .. controls
+(4.17,-0.84) and (1.99,-0.18) .. (0,0) .. controls (1.99,0.18) and
+(4.17,0.84) .. (6.56,1.97) ;
+%Straight Lines [id:da07678476676412771] 
+\draw [color={rgb, 255:red, 65; green, 117; blue, 5 } ,draw opacity=1
+] (350.59,70.62) -- (342.8,65.15) ; \draw [shift={(341.17,64)}, rotate
+  = 395.12] [color={rgb, 255:red, 65; green, 117; blue, 5 } ,draw
+  opacity=1 ][line width=0.75] (6.56,-1.97) .. controls (4.17,-0.84)
+and (1.99,-0.18) .. (0,0) .. controls (1.99,0.18) and (4.17,0.84)
+.. (6.56,1.97) ;
+%Straight Lines [id:da24296360656734972] 
+\draw [color={rgb, 255:red, 0; green, 13; blue, 255 } ,draw opacity=1
+] (408.17,44) -- (409.07,26) ; \draw [shift={(409.17,24)}, rotate =
+  452.86] [color={rgb, 255:red, 0; green, 13; blue, 255 } ,draw
+  opacity=1 ][line width=0.75] (6.56,-1.97) .. controls (4.17,-0.84)
+and (1.99,-0.18) .. (0,0) .. controls (1.99,0.18) and (4.17,0.84)
+.. (6.56,1.97) ;
+%Straight Lines [id:da8532009481168894] 
+\draw [color={rgb, 255:red, 65; green, 117; blue, 5 } ,draw opacity=1
+] (393.17,45) -- (392.39,37.99) ; \draw [shift={(392.17,36)}, rotate =
+  443.66] [color={rgb, 255:red, 65; green, 117; blue, 5 } ,draw
+  opacity=1 ][line width=0.75] (6.56,-1.97) .. controls (4.17,-0.84)
+and (1.99,-0.18) .. (0,0) .. controls (1.99,0.18) and (4.17,0.84)
+.. (6.56,1.97) ;
+%Straight Lines [id:da043427298627468525] 
+\draw [color={rgb, 255:red, 4; green, 0; blue, 255 } ,draw opacity=1 ]
+(465.91,113.88) -- (477.17,114.41) ; \draw [shift={(479.17,114.5)},
+  rotate = 182.66] [color={rgb, 255:red, 4; green, 0; blue, 255 }
+  ,draw opacity=1 ][line width=0.75] (6.56,-1.97) .. controls
+(4.17,-0.84) and (1.99,-0.18) .. (0,0) .. controls (1.99,0.18) and
+(4.17,0.84) .. (6.56,1.97) ;
+%Straight Lines [id:da9558143980537667] 
+\draw [color={rgb, 255:red, 65; green, 117; blue, 5 } ,draw opacity=1
+] (467.69,100.9) -- (475.19,99.79) ; \draw [shift={(477.17,99.5)},
+  rotate = 531.61] [color={rgb, 255:red, 65; green, 117; blue, 5 }
+  ,draw opacity=1 ][line width=0.75] (6.56,-1.97) .. controls
+(4.17,-0.84) and (1.99,-0.18) .. (0,0) .. controls (1.99,0.18) and
+(4.17,0.84) .. (6.56,1.97) ;
+%Straight Lines [id:da4944903353409009] 
+\draw [color={rgb, 255:red, 4; green, 0; blue, 255 } ,draw opacity=1 ]
+(400.17,174) -- (399.63,188.1) ; \draw [shift={(399.55,190.1)}, rotate
+  = 272.19] [color={rgb, 255:red, 4; green, 0; blue, 255 } ,draw
+  opacity=1 ][line width=0.75] (6.56,-1.97) .. controls (4.17,-0.84)
+and (1.99,-0.18) .. (0,0) .. controls (1.99,0.18) and (4.17,0.84)
+.. (6.56,1.97) ;
+%Straight Lines [id:da2489341211743067] 
+\draw [color={rgb, 255:red, 65; green, 117; blue, 5 } ,draw opacity=1
+] (415.64,170.91) -- (417.72,180.05) ; \draw [shift={(418.17,182)},
+  rotate = 257.17] [color={rgb, 255:red, 65; green, 117; blue, 5 }
+  ,draw opacity=1 ][line width=0.75] (6.56,-1.97) .. controls
+(4.17,-0.84) and (1.99,-0.18) .. (0,0) .. controls (1.99,0.18) and
+(4.17,0.84) .. (6.56,1.97) ;
+
+
+
+% Text Node
+\draw (334,80.4) node [anchor=north west][inner sep=0.75pt]    {$\Sigma $};
+% Text Node
+\draw (403.23,99.14) node  [font=\scriptsize]  {$\boldsymbol{Q}$};
+% Text Node
+\draw (394,104) node  [font=\scriptsize]  {$\boldsymbol{\mathcal{R}}$};
+\end{tikzpicture}
+\caption{Representación de la acumulación de carga en una región
+  $\mathcal{R}$ especifica dentro de un conductor homogéneo, rodeada
+  por una superficie $\Sigma $ ficticia sobre la cual se aplica la ley
+  de Gauss al campo producido por $Q$, campo que produce una densidad
+  de corriente que fluye a través de $\Sigma $. El flujo de carga
+  modifica $Q$ en el tiempo $t$ produciendo las llamadas oscilaciones
+  de plasma.}
+\end{figure}
+
+\begin{equation}
+  \label{ChargeDifEq}
+  \frac{d^{2}Q}{dt^{2}}=-\frac{4\pi n e^{2}}{m}Q,
+\end{equation}
+la cual es una ecuación diferencial idéntica a la ecuación de un
+oscilador armónico simple, cuya derivación se muestra en seguida,
+\begin{multicols}{2}
+\begin{figure}[H]
+      
+\begin{tikzpicture}[x=0.9pt,y=0.9pt,yscale=-1,xscale=1]
+%uncomment if require: \path (0,193); %set diagram left start at 0,
+%and has height of 193
+
+%Shape: Inductor (Air Core) [id:dp34048340969550106] 
+\draw (119.21,42.46) -- (119.25,59.21) .. controls (131.85,59.42) and
+(142.62,61.72) .. (146.39,65.01) .. controls (150.17,68.29) and
+(146.17,71.88) .. (136.32,74.06) .. controls (128.64,75.74) and
+(118.71,76.44) .. (109.06,75.98) .. controls (105.3,75.99) and
+(102.24,75.16) .. (102.24,74.14) .. controls (102.24,73.11) and
+(105.29,72.27) .. (109.05,72.26) .. controls (118.7,71.76) and
+(128.63,72.42) .. (136.32,74.06) .. controls (144.52,75.98) and
+(149.16,78.66) .. (149.17,81.48) .. controls (149.18,84.29) and
+(144.54,87) .. (136.36,88.95) .. controls (128.68,90.63) and
+(118.74,91.33) .. (109.09,90.87) .. controls (105.33,90.88) and
+(102.27,90.05) .. (102.27,89.03) .. controls (102.27,88) and
+(105.32,87.16) .. (109.08,87.15) .. controls (118.73,86.65) and
+(128.67,87.3) .. (136.36,88.95) .. controls (144.55,90.86) and
+(149.2,93.55) .. (149.2,96.36) .. controls (149.21,99.18) and
+(144.57,101.88) .. (136.39,103.84) .. controls (128.71,105.52) and
+(118.77,106.22) .. (109.13,105.76) .. controls (105.36,105.77) and
+(102.31,104.94) .. (102.31,103.91) .. controls (102.3,102.89) and
+(105.36,102.05) .. (109.12,102.04) .. controls (118.76,101.54) and
+(128.7,102.19) .. (136.39,103.84) .. controls (146.25,105.97) and
+(150.26,109.55) .. (146.5,112.85) .. controls (142.74,116.15) and
+(131.98,118.49) .. (119.38,118.76) -- (119.42,135.51) ;
+%Shape: Rectangle [id:dp47577099884182095] 
+\draw [fill={rgb, 255:red, 245; green, 166; blue, 35 } ,fill opacity=1
+] (87,27.5) -- (151.17,27.5) -- (151.17,43) -- (87,43) -- cycle ;
+%Shape: Circle [id:dp24543618839132486] 
+\draw [fill={rgb, 255:red, 126; green, 211; blue, 33 } ,fill opacity=1
+] (109.67,145.26) .. controls (109.67,139.88) and (114.04,135.51)
+.. (119.42,135.51) .. controls (124.8,135.51) and (129.17,139.88)
+.. (129.17,145.26) .. controls (129.17,150.65) and (124.8,155.01)
+.. (119.42,155.01) .. controls (114.04,155.01) and (109.67,150.65)
+.. (109.67,145.26) -- cycle ;
+%Shape: Inductor (Air Core) [id:dp8275323218505621] 
+\draw (42.21,42.46) -- (42.23,51.56) .. controls (54.83,51.66) and
+(65.6,52.9) .. (69.37,54.68) .. controls (73.14,56.46) and
+(69.14,58.41) .. (59.29,59.61) .. controls (51.61,60.53) and
+(41.67,60.92) .. (32.02,60.68) .. controls (28.26,60.69) and
+(25.21,60.24) .. (25.21,59.68) .. controls (25.2,59.13) and
+(28.26,58.67) .. (32.02,58.66) .. controls (41.67,58.37) and
+(51.6,58.72) .. (59.29,59.61) .. controls (67.48,60.64) and
+(72.12,62.09) .. (72.13,63.62) .. controls (72.13,65.15) and
+(67.49,66.62) .. (59.31,67.69) .. controls (51.63,68.61) and
+(41.69,69) .. (32.04,68.76) .. controls (28.28,68.77) and
+(25.23,68.33) .. (25.22,67.77) .. controls (25.22,67.21) and
+(28.28,66.75) .. (32.04,66.74) .. controls (41.68,66.46) and
+(51.62,66.81) .. (59.31,67.69) .. controls (67.5,68.72) and
+(72.14,70.18) .. (72.15,71.71) .. controls (72.15,73.24) and
+(67.51,74.71) .. (59.33,75.78) .. controls (51.64,76.7) and
+(41.71,77.09) .. (32.06,76.85) .. controls (28.3,76.86) and
+(25.24,76.41) .. (25.24,75.86) .. controls (25.24,75.3) and
+(28.29,74.84) .. (32.06,74.83) .. controls (41.7,74.55) and
+(51.64,74.89) .. (59.33,75.78) .. controls (69.18,76.93) and
+(73.19,78.86) .. (69.43,80.66) .. controls (65.67,82.46) and
+(54.9,83.74) .. (42.3,83.9) -- (42.32,93) ;
+%Shape: Rectangle [id:dp7392561467625306] 
+\draw [fill={rgb, 255:red, 245; green, 166; blue, 35 } ,fill opacity=1
+] (10,27.5) -- (74.17,27.5) -- (74.17,43) -- (10,43) -- cycle ;
+%Shape: Circle [id:dp15959587945734588] 
+\draw [fill={rgb, 255:red, 126; green, 211; blue, 33 } ,fill opacity=1
+] (32.57,102.75) .. controls (32.57,97.36) and (36.94,93)
+.. (42.32,93) .. controls (47.71,93) and (52.07,97.36)
+.. (52.07,102.75) .. controls (52.07,108.13) and (47.71,112.5)
+.. (42.32,112.5) .. controls (36.94,112.5) and (32.57,108.13)
+.. (32.57,102.75) -- cycle ;
+
+%Straight Lines [id:da8898992399758622] 
+\draw (95.32,102.75) -- (95.17,147) ; \draw [shift={(95.17,147)},
+  rotate = 270.2] [color={rgb, 255:red, 0; green, 0; blue, 0 } ][line
+  width=0.75] (0,5.59) -- (0,-5.59) ; \draw [shift={(95.32,102.75)},
+  rotate = 270.2] [color={rgb, 255:red, 0; green, 0; blue, 0 } ][line
+  width=0.75] (0,5.59) -- (0,-5.59) ;
+
+
+% Text Node
+\draw (5,58.4) node [anchor=north west][inner sep=0.75pt]    {$k$};
+% Text Node
+\draw (57,100.4) node [anchor=north west][inner sep=0.75pt]    {$m$};
+% Text Node
+\draw (132,134.4) node [anchor=north west][inner sep=0.75pt]    {$m$};
+% Text Node
+\draw (83,113.4) node [anchor=north west][inner sep=0.75pt]    {$y$};
+
+
+\end{tikzpicture}
+\caption{Oscilador armónico en equilibrio y acelerado.}
+\end{figure}
+
+\begin{equation}
+  \begin{split}
+    \vec{F} &= -k\vec{r} \\
+    m\vec{a}&=\vec{F} \\
+    m\frac{d^{2}y}{dt^{2}}&=-ky,\\
+    y(t)&=y_{0}\cos(\omega t),\\
+    \omega^{2} &= k/m,\\
+    \frac{d^{2}y}{dt^{2}}&=-\omega^{2} y,
+    \label{OAEq}
+  \end{split}
+\end{equation} 
+
+\end{multicols}
+
+con lo que se obtiene la frecuencia de plasma como,
+\begin{equation}
+  \label{plasmafec}
+  \omega _{p}^{2} = \frac{4\pi ne^{2}}{m}.
+\end{equation}
+
+ 
+\section{Teoría}
+
+Las propiedades ópticas de estos materiales están determinadas por su
+composición y geometría. Propiedades como las relaciones de dispersión
+de los modos electromagnéticos que se propagan a través del material
+en un sistema semiinfinito, las amplitudes de reflexión y transmisión,
+y relaciones de dispersión de modos electromagnéticos en la superficie
+de un sistema bordeado pueden ser expresadas en términos del operador
+dieléctrico macroscópico a través de las soluciones de las ecuaciones
+de Maxwell en dicho material.
+
+Las ecuaciones de Maxwell con las cuales se asume una descripción
+macroscópica de los campos en un medio son
+\begin{equation}
+  \label{Maxwell-eqs}
+  \begin{array}{cc}
+    \nabla \cdot {\bf D} = 4\pi \rho_{ex}, & \nabla \cdot {\bf B} =0, \\
+    \nabla \times {\bf E} = -\frac{1}{c}\frac{\partial {\bf B}}{\partial t}, &
+    \nabla \times {\bf H} = \frac{4\pi}{c}{\bf
+      J}_{ex} + \frac{1}{c}\frac{\partial {\bf D}}{\partial t},
+  \end{array}
+\end{equation}
+donde ${\bf J}_{ex}$ y $\rho_{ex}$ son la densidad de corriente y
+densidad de carga externas, respectivamente. Y para calcular
+respuestas ópticas de un sistema se define al operador dieléctrico
+$\hat{\epsilon}_{M}$ a través de la relación
+\begin{equation}
+  {\bf D}_{a} = \hat{\epsilon}_{M} {\bf E}_{a}
+  \label{Def-Dilectric-Op}
+\end{equation}
+donde ${\bf D}_{a}$ y ${\bf E}_{a}$ representan los promedios macroscópicos del
+campo desplazamiento y eléctrico, respectivamente.
+
+Sin embargo es posible definir ${\bf D}$ y ${\bf H}$ para incluir
+fluctuaciones microscópicas y que sigan obedeciendo las ecuaciones de
+Maxwell \eqref{Maxwell-eqs}.
+
+Para poder describir la respuesta óptica de un sistema que incluye
+fluctuaciones locales de los campos inducidas por inhomogeneidades del
+sistema, consideramos primero una respuesta dieléctrica,
+$\hat{\epsilon}$, microscópica
+\begin{equation}
+  {\bf D} = \hat{\epsilon} {\bf E},
+  \label{MicroscopicDielectric-Op}
+\end{equation}
+la cual acopla las fluctuaciones locales de los campos ${\bf D}$ y
+${\bf E}$ totales y a la cual se le aplica un procedimiento de
+promediación para relacionar $\hat{\epsilon}$ con
+$\hat{\epsilon}_{M}$, de tal manera que las fluctuaciones
+microscópicas sean incorporadas en la respuesta macroscópica. Para tal
+proposito seguimos el procedimiento descrito en
+\cite{ElectromagneticResponseofSystemwithSpatialFluctuations}, por
+Mochán et al.
+
+Formalmente se definen los operadores 
+\begin{equation}
+  \begin{array}{cc}
+    \label{operadoresPromedio-Fluctuaciones}
+    \hat{P}_{a}, & \hat{P}_{f} = \hat{1} - \hat{P}_{a}, 
+  \end{array}
+\end{equation}
+los cuales extraen la componente promedio $F_{a}=\hat{P}_{a}F$ y
+fluctuante $F_{f}=\hat{P}_{f}F$ de una función $F = F_{a}+F_{f}$
+arbitraria. Tales operadores son idempotentes
+\begin{equation}
+  \begin{array}{cc}
+    \label{Op-Idempotentes}
+    \hat{P}^{2}_{a}=\hat{P}_{a}, & \hat{P}^{2}_{f} =\hat{P}_{f},
+  \end{array}
+\end{equation}
+\begin{equation}
+  \hat{P}_{a}\hat{P}_{f}=\hat{P}_{f}\hat{P}_{a}=0,
+\end{equation}
+lo cual significa que son operadores de proyección.
+
+Consideremos un campo eléctrico consistente de una parte promedio y
+una parte fluctuante
+\begin{equation}
+  {\bf E} = \left(\begin{split} {\bf E}_{a} \\
+    {\bf E}_{f} \end{split}\right),
+\end{equation}
+respresentado como en la siguiente imagen reescribiendo
+\eqref{MicroscopicDielectric-Op} proyectada en los subespacios $a$ y
+$f$,
+\begin{equation}
+  \label{CamposCompletos}
+  \left(\begin{split} {\bf D}_{a} \\  {\bf D}_{f} \end{split}\right) =
+  \left(\begin{matrix} \hat{\epsilon}_{aa} & \hat{\epsilon}_{af} \\
+    \hat{\epsilon}_{fa} & \hat{\epsilon}_{ff} \end{matrix}\right)
+  \left(\begin{split} {\bf E}_{a} \\ {\bf E}_{f} \end{split}\right),
+\end{equation}
+donde se ha definido
+\begin{equation}
+  \begin{array}{cc}
+    \hat{O}_{\alpha \beta}\equiv \hat{P}_{\alpha}\hat{O}\hat{P}_{\beta}, & \alpha,\beta =a,f,
+  \end{array}
+\end{equation}
+para cualquier operador.
+
+Para calcular la respuesta macroscópica del sistema desacoplamos
+${\bf D}_{a}$ y ${\bf E}_{f}$ de la ecuación de campos completos
+\eqref{CamposCompletos}. Usando las ecuaciones de Maxwell para
+los campos microscópicos se encuentra una relación entre ${\bf E}_{a}$
+y ${\bf E}_{f}$,
+\begin{equation}
+  \begin{split}
+      \nabla \times \nabla \times {\bf E} = \frac{4\pi i\omega}{c^{2}}{\bf
+    j}_{ex} + \frac{\omega^{2}}{c^{2}}{\bf D} \\
+    \left[ \hat{\epsilon}_{ff} - \frac{c^{2}}{\omega^{2}}(\nabla \times \nabla \times)_{ff}\right] {\bf E}_{f} = \frac{4\pi}{i \omega }{\bf j}_{f}^{ex}-\hat{\epsilon}_{fa}{\bf E}_{a}     
+  \end{split}
+\end{equation}
+asumiendo que ${\bf J}^{ex}_{f} = 0 $, sustituimos ${\bf E}_{f}$ en la
+ecuación \eqref{CamposCompletos},
+\begin{equation}
+  {\bf D}_{a}=\left(\hat{\epsilon}_{aa}-(\hat{\epsilon}_{af}(\hat{\epsilon}_{ff}-\frac{c^{2}}{\omega^{2}}(\nabla \times \nabla)_{ff})^{-1}\hat{\epsilon}_{fa}\right){\bf E}_{a},
+  \label{MacroscopicRelation}
+\end{equation}
+comparando con la ecuación de campos macroscópicos obtenemos que
+\begin{equation}
+  \hat{\epsilon}_{M}=\hat{\epsilon}_{aa}-\hat{\epsilon}_{af}\left[(\hat{\epsilon}_{ff}-\frac{c^{2}}{\omega^{2}}(\nabla \times \nabla)_{ff})\right]^{-1}\hat{\epsilon}_{fa},
+  \label{DielectricFunction}
+\end{equation}
+la respuesta macroscópica de un sistema está dada por el promedio de
+su respuesta microscópica, más una corrección debida al acoplamiento
+entre las componentes fluctuante y promedio de los campos, éste
+resultado se presume exacto.
+
+Para analizar el resultado de \eqref{DielectricFunction} nos
+restringimos a una longitud de escala característica de las
+fluctuaciones mucho menor a la longitud de onda. Convenitntemente se definen los  operadores de proyección longitudinal
+\begin{equation}
+  \hat{P}^{L} = \hat{\nabla} \hat{\nabla}^{-2} \hat{\nabla}\times,
+\end{equation}
+y transversal
+\begin{equation}
+  \hat{P}^{T}=-\hat{\nabla}\times \hat{\nabla}^{-2} \hat{\nabla}\times,
+\end{equation}
+tales que extraen las partes irrotacional ${\bf F}^{L}=\hat{P}^{L}{\bf
+  F} $ y solenoidal ${\bf F}^{T}=\hat{P}^{T}{\bf F}$ de una campo
+vectorial arbitrario. Estos operadores cumplen las siguiente
+propiedades
+\begin{equation}
+  \begin{array}{cc}
+    \hat{P}^{T}\hat{P}^{T}=\hat{P}^{T}, & \hat{P}^{L}\hat{P}^{L}=\hat{P}^{L},\\
+    \hat{P}^{T}\hat{P}^{L}=\hat{P}^{L}\hat{P}^{T}=0, & \hat{P}^{T}+\hat{P}^{L}=\hat{1},
+  \end{array}
+\end{equation}
+y communtan con $\hat{P}_{f}$ y $\hat{P}_{a}$.
+
+Al proyectar $\hat{\mathcal{W}}^{-1}=
+\left[(\hat{\epsilon}_{ff}-\frac{c^{2}}{\omega^{2}}(\nabla \times
+  \nabla \times)_{ff})\right]^{-1}$ en los subespacios longitudina y
+transversal
+\[\hat{\mathcal{W}}^{-1}=\left[
+    \begin{array}{cc}
+    \mathcal{W}_{LL} &  \mathcal{W}_{LT} \\
+    \mathcal{W}_{TL} &  \mathcal{W}_{TT}
+    \end{array}
+    \right]^{-1}, \]
+y reescribiendo el termino de operadores nabla como, $(\nabla \times \nabla \times)_{ff} = \nabla ^{2}\hat{P}^{T}\hat{P}_{f}$,
+tenemos
+\begin{equation}
+  \label{MatrizdeProyeccionesdeW}
+  \left[(\hat{\epsilon}_{ff}-\frac{c^{2}}{\omega^{2}}(\nabla \times \nabla \times)_{ff})\right]^{-1} = \left[
+  \begin{array}{cc}
+    \hat{\epsilon}_{ff}^{LL} & \hat{\epsilon}_{ff}^{LT} \\
+    \hat{\epsilon}_{ff}^{TL} &  \hat{\epsilon}_{ff}^{TT}+ \frac{c^{2}}{\omega^{2}}\nabla ^{2}\hat{P}^{T}\hat{P}_{f}
+  \end{array}
+  \right]^{-1}.
+\end{equation}
+
+La manera en que obtenemos las componentes de la matriz es la
+siguiente, definimos una matriz y su inversa
+
+\[ \hat{M} = \left(
+\begin{array}{cc}
+  \hat{A} &  \hat{B} \\
+   \hat{C} &  \hat{D}
+\end{array}\right),
+\] 
+\[ \hat{m} =\left( 
+\begin{array}{cc}
+   \hat{a} &  \hat{b} \\
+   \hat{c} &  \hat{d}
+\end{array}\right) = \hat{M}^{-1},
+\] 
+la cuales deben cumplir con las ecuaciones
+\begin{equation}
+  \begin{split}
+    \hat{A} \hat{a}+ \hat{B} \hat{c} = 1, \\
+    \hat{A} \hat{b}+ \hat{B} \hat{d} = 0, \\
+    \hat{C} \hat{a}+ \hat{D} \hat{c} = 0, \\
+    \hat{C} \hat{b}+ \hat{D} \hat{d} = 1,
+  \end{split}
+\end{equation}
+de las cuales uno despeja
+\begin{equation}
+  \label{eqsalgebraicas}
+  \begin{split}
+    \hat{a} = \hat{A}^{-1}(1-\hat{B}\hat{D}^{-1}\hat{C}\hat{A}^{-1})^{-1}, \\
+    \hat{b} = \hat{C}^{-1}(1-\hat{D}\hat{B}^{-1}\hat{A}\hat{C}^{-1})^{-1}, \\
+    \hat{c} = - \hat{D}^{-1}\hat{C}\hat{A}^{-1}(1-\hat{B}\hat{D}^{-1}\hat{C}\hat{A}^{-1})^{-1}, \\
+    \hat{d} = - \hat{B}^{-1}\hat{A} \hat{C}^{-1}(1-\hat{D}\hat{B}^{-1}\hat{A}\hat{C}^{-1})^{-1}.
+  \end{split}
+\end{equation}
+
+Para usar este desarrollo definimos $\hat{M} = \hat{\mathcal{W}}$ por
+lo que los elementos respectivos son
+\[
+\begin{split}
+  \hat{A} = \hat{\epsilon}_{ff}^{LL}, \\
+  \hat{B} = \hat{\epsilon}_{ff}^{LT}, \\
+  \hat{C} = \hat{\epsilon}_{ff}^{TL}, \\
+  \hat{D} = \hat{\epsilon}_{ff}^{TT}+\frac{c^{2}}{\omega^{2}}\nabla ^{2}\hat{P}^{T}\hat{P}_{f},
+\end{split}
+\]
+y asumiendo que $\lambda^{2}/l^{2} >> ||\hat{\epsilon}||$ donde $l$ es
+la longitud de escala de las fluctuaciones, y que $||(\omega^{2}/c^{2})\hat{\nabla}^{-2}\hat{P}_{f}||\approx l^{2}/\lambda ^{2}$, entonces el segundo termino del
+elemento $\hat{D}$ es mucho mayor que el primero. Para hacer el cálculo más explícito lo reescribimos como
+\[ \frac{c^{2}}{\omega^{2}}\nabla ^{2}\hat{P}^{T}\hat{P}_{f}(1+\frac{\omega^{2}}{c^{2}}\nabla ^{-2}\hat{P}^{T}\hat{P}_{f}\hat{\epsilon}_{ff}^{TT}) \]
+y al sustituir en las ecuaciones \eqref{eqsalgebraicas}, obtenemos
+\begin{equation}
+  \begin{split}
+    &\left[(\hat{\epsilon}_{ff}- \frac{c^{2}}{\omega^{2}}(\nabla \times
+      \nabla \times)_{ff})\right]^{-1}  =
+    \left[ \begin{array}{cc}
+        (\hat{\epsilon}_{ff}^{LL})^{-1} & 0 \\ 0 & 0 \\
+    \end{array}
+      \right] \\
+   & + \frac{\omega^{2}}{c^{2}}\left[ \begin{array}{cc}
+      (\hat{\epsilon}_{ff}^{LL})^{-1}(\hat{\epsilon}_{ff}^{LT})\hat{\nabla}^{-2}(\hat{\epsilon}_{ff}^{TL})(\hat{\epsilon}_{ff}^{LL})^{-1}  & -(\hat{\epsilon}_{ff}^{LL})^{-1}(\hat{\epsilon}_{ff}^{LT})\hat{\nabla}^{-2} \\ -\hat{\nabla}^{-2}(\hat{\epsilon}_{ff}^{TL})(\hat{\epsilon}_{ff}^{LL})^{-1}
+      & \nabla^{-2}\hat{P}^{T}\hat{P}_{f}
+      \end{array} \right] + ...,
+    \end{split}
+\end{equation}
+en los casos en que $l << \lambda $, solo nos quedamos con el primer
+termino de la expansión y sustituyendolo en \eqref{DielectricFunction} la reescribimos como
+\begin{equation}
+  \hat{\epsilon}_{M}=\hat{\epsilon}_{aa}-\hat{\epsilon}_{af}(\hat{\epsilon}_{ff}^{LL})^{-1}\hat{\epsilon}_{fa}.
+\end{equation}
+
+
+
+\section{Implementación}
+\section{Resultados}
+
+\begin{thebibliography}{0000}
+\bibitem{Metamorphose}
+\bibitem{IntroductiontoMetamaterialsandNanophotonics}
+\bibitem{ElectromagneticResponseofSystemwithSpatialFluctuations}
+  \end{thebibliography}
+
+\end{document}
