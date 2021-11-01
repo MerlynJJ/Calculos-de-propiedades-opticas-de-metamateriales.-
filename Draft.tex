@@ -27,6 +27,7 @@
 \usepackage{extarrows}
 \usepackage{booktabs}
 \usepackage[export]{adjustbox}
+\usepackage{braket}
 \newif{\ifignora}
 \usetikzlibrary{fadings}
 \usetikzlibrary{patterns}
@@ -384,7 +385,7 @@ relación de dispersión $k^2=\epsilon\omega^2/c^2$ implica que al pasar
 la resonancia, cuando $\epsilon$ adquiere valores negativos, $k$ se
 vuelve imaginario y la luz no puede propgarse. Esto explica la
 aparición del color en los materiales comunes, en que hay frecuencias
-caracterizticas de cada material en absorben la luz y justo arriba hay
+características de cada material en absorben la luz y justo arriba hay
 frecuencias en que no la pueden propagar. Si el material tuviera
 además una respuesta magnética $\mu\ne 1$ la relación de dispersión
 cambiaría a $k^2=\epsilon\mu\omega^2/c^2$. Si tanto
@@ -845,7 +846,7 @@ y promediando ambos lados de la ecuación, usando el hecho de que $\bm
 D^L$ no tiene fluctuaciones y que $\hat{\mathcal P}_p$ es idempotente,
 obtenemos
 \begin{equation}
-  \label{eq:ELvsDL}
+  \label{eq:ELpvsDLp}
   \bm E^L_p=(\hat{\bm\epsilon}^{LL})^{-1}_{pp}\bm D^L_p.
 \end{equation}
 Finalmente, identificando los campos promedios con los campos
@@ -928,7 +929,7 @@ promediamos, lo identificamos en términos del operador de onda
 macroscópico, lo volvemos a invertir y finalmente obtenemos el
 operador de onda macroscópico.\cite{samuel}
 
-\subsection{Recursión de Haydock}
+\subsection{Sistema binario periódico sin retardamiento}
 Consideremos ahora un sistema periódico hecho de dos materiales,
 digamos, de partículas de un material $B$ embebidas en una matriz de
 un material $A$. La respuesta dieléctrica {\em microscópica} es en
@@ -968,6 +969,307 @@ composición del material y puede depender de la frecuencia a través de
 las funciones dieléctricas de las componentes, mientras que $B$ no
 depende de la composición ni de la frecuencia, sino únicamente de la
 geometría, la cual caracteriza totalmente.
+
+Ahora supongamos que nuestro sistema es periódico, caracterizado por
+una {\em red de Bravais} $\{\bm R\}$, tal que $\epsilon(\bm r+\bm
+R)=\epsilon(\bm r)$. A esta red corresponde una {\em red recíproca}
+$\{\bm K\}$, formada por todos aquellos vectores de onda tales que el
+producto escalar $\bm K\cdot\bm R=2\pi n$, con $n$ un número entero
+para cualquier vector real $\bm R$ y vector recíproco $\bm K$.
+
+Entonces, podemos describir a $\hat \epsilon$
+como una matriz en el espacio recíproco mediante una integral de Fourier,
+\begin{equation}
+  \label{eq:eKK}
+  \epsilon_{\bm K\bm K'}=\epsilon_{\bm K-\bm K'}=\frac{1}{\Omega}\int_0
+  d^3r\, \epsilon(\bm r) e^{-i\bm K\cdot\bm r}.
+\end{equation}
+donde la integral se realiza sobre una celda primitiva cualquiera, cuyo
+volumen es $\Omega$. La relación conversa es
+\begin{equation}
+  \label{eq:er}
+  \epsilon(\bm r)=\sum_{\bm K}\epsilon_{\bm K} e^{i\bm K\cdot\bm r}.
+\end{equation}
+El teorema de Bloch nos permite escribir a los campos en el interior
+de un sistema periódico como una superposición de ondas de Block, cada
+una de las cuales cambia por una fase $e^{i\bm k\cdot\bm R}$ cuando
+nos desplazamos un vector de la red, donde $\bm k$ es el {\em vector
+  de Bloch}, una especie de vector de onda, que es una {\em cantidad
+  conservada}. Por tanto, eligiendo un valor cualquiera de $\bm k$
+podemos escribir cualquier campo en términos de una suma de Fourier
+como
+\begin{equation}
+  \label{eq:blochFourier}
+  \bm F(\bm r)=\sum_{\bm K}\bm F_{K} e^{i(\bm k+\bm K)\cdot\bm r}.
+\end{equation}
+El {\em teorema de convolución} nos permite entonces escribir la
+ecuación material $\bm D(\bm r)=\epsilon(\bm r)\bm E(\bm r)$ en el
+espacio recíproco como la ecuación matricial
+\begin{equation}
+  \label{eq:DKvsEK}
+  \bm D_{\bm K}=\sum_{\bm K'}\epsilon_{\bm K\bm K'} \bm E_{\bm K'}.
+\end{equation}
+Como la respuesta del material puede representarse en distintos
+espacios, como son el espacio real o el espacio recíproco, es que
+conviene abstraer la acción de la respuesta dieléctrica y tratarla
+como un operador $\hat{\bm \epsilon}$ abstracto, más que como una
+función de la posición.
+
+En el espacio recíproco, el operador $\nabla$ se puede representar por
+un producto con el vector $\nabla\to i(\bm k+\bm K)$, por lo cual el laplaciano
+es $\nabla^2\to-|\bm k+\bm K|^2$ y su inverso es simplemente
+$\nabla^{-2}\to -1/|\bm k+\bm K|^2$. Por lo tanto, el proyector
+longitudinal \eqref{eq:PL} se puede representar por la matriz
+\begin{equation}
+  \label{eq:PLKK}
+  \mathcal P^L_{\bm K\bm K'}=\delta_{\bm K\bm K'}\hat{\bm K}\hat{\bm K}\cdot,
+\end{equation}
+donde definimos los vectores unitarios
+\begin{equation}
+  \label{eq:hatK}
+  \hat{\bm K}\equiv\frac{\bm k+\bm K}{|\bm k+\bm K|},
+\end{equation}
+y $\delta_{\bm K\bm K'}$ es una función delta de Kronecker.
+
+Los vectores recíprocos $\bm K\ne0$ corresponden a oscilaciones
+con longitudes de onda del orden de el parámetro de red del sistema
+periódico. Es conveniente entonces {\em definir} el promedio como
+un filtro pasabajos en el espacio recíproco que elimina todos los vectores
+recíprocos, exceptuando $\bm K=0$, convirtiendo una onda de Bloch en
+una onda plana con vector de onda $\bm k$. Escribimos entonces
+\begin{equation}
+  \label{eq:PaKK}
+  \mathcal P_{p,\bm K\bm K'}=\delta_{\bm K\bm 0}\delta_{\bm K'\bm0}.
+\end{equation}
+
+De acuerdo a la ec. \eqref{eq:epsLLM}, podemos hallar la respuesta
+macroscópica siguiendo los siguientes pasos:
+\begin{enumerate}
+\item Expresamos la permitividad como una matriz $\epsilon_{\bm K\bm
+    K'}$ en el espacio recíproco haciendo una
+  transformación de Fourier (ec. \eqref{eq:eKK}).
+\item Tomamos su proyección longitudinal, $\epsilon^{LL}_{\bm K\bm
+    k'}$  multiplicando a izquierda y derecha por el proyector
+  longitudinal (ec. \eqref{eq:PLKK}).
+\item Invertimos la matriz resultante en el subespacio de campos
+  vectoriales longitudinales $\epsilon^{-1}_{\bm K\bm K'}$.
+\item Promediamos la inversa tomando el elemento $\bm K=\bm K'=0$.
+\item Interpretamos el resultado como el inverso de la proyección
+  longitudinal del tensor dieléctrico macroscópico.
+\end{enumerate}
+El procedimiento anterior puede resumirse como
+$\bm\epsilon^{LL}_M=\hat{\bm k}\epsilon^{LL}_M\hat{\bm k}$, donde la
+{\em componente longitudinal} de la respuesta es
+\begin{equation}
+  \label{eq:kek}
+  \epsilon_M^{LL}=\hat{\bm k}\cdot\bm\epsilon_M\cdot\hat{\bm k}=\left(\left.\left(\hat{\bm
+    K}\cdot\epsilon_{\bm K\bm K'}\hat{\bm
+    K'}\right)^{-1}\right|_{\bm K=\bm K'=\bm 0}\right)^{-1}.
+\end{equation}
+Repitiéndo el cálculo indicado por la ec. \eqref{eq:kek} para
+distintas direcciones $\hat{\bm k}$ del vector de onda, podemos hallar
+todas las componentes del tensor dieléctrico macroscópico
+$\bm\epsilon_M$.
+\subsection{Recursión de Haydock}
+De acuerdo a la sección anterior, para obtener la respuesta
+macroscópica de un medio binario arbitrario en el límite de longitud
+de onda larga, basta invertir la matriz $\bm K\cdot\epsilon_{\bm K\bm
+  K'}$ y tomar el elemento $\bm 0\bm 0$ del resultado. Sustituyendo la
+ec. \eqref{eq:epsmic1}, obtenemos
+\begin{equation}
+  \label{eq:evsG}
+  \frac{1}{\epsilon_M^{LL}}=\frac{u}{\epsilon_A}(u\delta_{\bm K\bm
+    K'}-B^{LL}_{\bm K\bm K'})^{-1}_{\bm K=\bm K'=0},
+\end{equation}
+donde introdujimos la componente longitudinal de la función
+característica en el espacio recíproco
+\begin{equation}
+  \label{eq:BLL}
+  B^{LL}_{\bm K\bm K'}=\hat{\bm K}\cdot B_{\bm K-\bm K'}\hat{\bm K'},
+\end{equation}
+y $B_{\bm K-\bm K'}$ es el coeficiente de Fourier de la función
+característica $B(\bm r)$ correspondiente al vector recíproco $\bm
+K-\bm K'$.
+
+Notamos que en la ec. \eqref{eq:evsG} debemos calcular el inverso de un
+operador $(u-\hat B^{LL})$ representado como una matriz en el espacio
+recíproco, donde $u$ es un número complejo y $\hat B^{LL}$ es un
+operador hermitiano, y luego proyectar el resultado sobre un estado
+$\ket{0}$ correspondiente a una onda plana con vector de onda $\bm
+k$. Esto es análogo al cálculo del operador de Green proyectado
+$\braket{0|\hat{\mathcal G}(\varepsilon)|0}$ en mecánica cuántica, donde
+$\hat{\mathcal G}(\varepsilon)=(\varepsilon-\hat{\mathcal H})^{-1}$ es el operador
+de Green correspondiente a un operador hamiltoniano ${\mathcal H}$
+evaluado para un valor $\varepsilon$ de una energía compleja. Entre
+las aplicaciones del operador de Green proyectado se encuentra el
+cálculo de la densidad de estados cuánticos proyectada. Podemos
+entonces tomar prestado el método recursivo de Haydock
+\cite{haydock}. De acuerdo a nuestra analogía, $u$ juega el papel de
+energía compleja $\varepsilon$ y $\hat B^{LL}$ juega el papel de
+hamiltoniano.
+
+Hemos definido el estado $\ket{0}$ como el correspondiente a una onda
+plana con vector de onda $\bm k$, i.e., un estado cuya representación
+en el espacio recíproco es $\braket{\bm K}|\bm 0>=\delta_{\bm K\bm 0}$,
+pues no tiene contribuciones de ondas con $\bm K\ne0$. Ahora, podemos
+generar un nuevo estado haciendo actuar a nuestro hamiltoniona sobre
+el estado inicial, $\ket{\tilde 1}=\hat{\mathcal
+  H}\ket{0}$. Escribimos este estado como una combinación lineal del
+estado que ya teníamos $\ket{0}$ y un estado nuevo $\ket{1}$ del cual
+pedimos que sea ortogonal a $\ket{0}$ y que esté normalizado,
+$\ket{\tilde 1}=b_1\ket{1}+a_0\ket{0}$. Ahora repetimos el
+procedimiento con el estado $\ket{1}$, i.e., $\ket{\tilde
+  2}=\hat{\mathcal H}\ket{1}=b_2\ket{2}+a_1\ket{1}+b_1\ket{0}$. El
+caso genérico sería
+\begin{equation}
+  \label{eq:tilden}
+  \ket{\tilde n}=\hat{\mathcal
+    H}\ket{n-1}=b_n\ket{n}+a_{n-1}\ket{n-1}+b_{n-1}\ket{n-2},
+\end{equation}
+donde exigimos que todos los estados sean ortonormales, es decir,
+\begin{equation}
+  \label{eq:n|m}
+  \braket{n|m}=\delta_{nm}.
+\end{equation}
+Aquí empleamos el producto escalar
+\begin{equation}
+  \label{eq:braket}
+  \braket{n|m}=\sum_{\bm K}\phi_n^*(\bm K)\phi_m(\bm K)
+  =\frac{1}{\Omega}\int_0 d^3r\, \phi_n^*(\bm r)\phi_m(\bm r)
+\end{equation}
+donde, copiando el lenguaje de la mecánica cuántica, $\phi_m(\bm
+K)=\braket{\bm K|n}$ es la {\em función de onda}
+correspondiente al estado $\ket{n}$ evaluada en el vector recíproco
+$\bm K$, y $\phi_m(\bm r)=\braket{\bm r|n}$ es la función de onda
+correspondiente al mismo estado pero evaluada en la posición $\bm r$,
+y donde hemos empleado la identidad de Parseval.
+
+Notamos que en la ec. \eqref{eq:tilden} no aparecen los términos
+$\ket{n-3}$, $\ket{n-4}$, etc. pues nuestro operador es
+hermitiano. Por ejemplo,
+i.e., $\braket{n-3|\tilde
+  n}=\braket{n-3|H|n-1} = \braket{n-1|H|n-3} =
+\bra{n-1}\left(b_{n-2}\ket{n-2} + a_{n-3}\ket{n-3}+b_{n-3}\ket{n-4}\right) = 0$.
+Los coeficientes de Haydock son reales y pueden obtenerse de la condición de ortonormalidad,
+\begin{equation}
+  \label{eq:qn}
+  a_{n-1}=\braket{n-1|\hat{\mathcal H}|n-1}
+\end{equation}
+y
+\begin{equation}
+  \label{eq:bn}
+    \ket{n}=(\ket{\tilde n}-a_{n-1}\ket{n-1}-b_{n-1}\ket{n-1})/b_n,
+    \quad \braket{n|n}=1.
+\end{equation}
+De esta manera podemos construir una {\em base} $\{\ket{n}\}$ en la
+cual el {\em hamiltoniano} puede $\hat{\mathcal H}$ representarse por
+una matriz tridiagonal
+\begin{equation}
+  \label{eq:trid}
+  \mathcal H_{nn'}=
+  \begin{pmatrix}
+    a_0   &b_1   &0     &0     &0\ldots\\
+    b_1   &a_1   &b_2   &0     &0\ldots\\
+    0     &b_2   &a_2   &b_3   &0\ldots\\
+    0     &0     &b_3   &a_3   &b_4\ldots\\
+    \vdots&\vdots&\vdots&\ddots&\ddots\ddots\\
+  \end{pmatrix}
+\end{equation}
+De acuerdo a la ec. \eqref{eq:evsG}, la respuesta macroscópica está
+dada por la proyección de la inversa $\mathcal G_{nn'}$ de la matriz tridiagonal
+$\varepsilon-\mathcal H_{nn'}$ sobre el estado $\ket{0}$, i.e., no
+necesitamos toda la inversa, sino sólo su elemento $\mathcal G_{00}$.
+Notamos que el vector columna $\mathcal G_{n0}$ obedece la ecuación
+\begin{equation}
+  \label{eq:Gn0}
+  \sum_{m} (\varepsilon\delta_{nm}-\mathcal H_{nm})\mathcal G_{m0}=\delta_{n0}.
+\end{equation}
+Si truncamos la ecuación después de $N$ renglones, el último renglón
+de la ecuación sería de la forma
+\begin{equation}
+  \label{eq:GN}
+  -b_N\mathcal G_{N-1,0} +(u-a_N)\mathcal G_{N,0}=0,
+\end{equation}
+que nos permite despejar
+\begin{equation}
+  \label{eq:GN1}
+  \mathcal G_{N,0}=\frac{b_N}{u-a_N}\mathcal G_{N-1,0}.
+\end{equation}
+Sustituyendo esta solución en la penúltima ecuación
+\begin{equation}
+  \label{eq:GN2}
+  \begin{split}
+    -b_{N-1}\mathcal \mathcal_{N-2,0}
+    &+(u-a_{N-1})\mathcal G_{N-1,0}-b_{N}\mathcal
+    G_{N,0}\\
+    &=-b_{N-1}\mathcal G_{N-2,0}+
+    \left(u-a_{N-1}-\frac{b_N^2}{u-a_N}\right)\mathcal G_{N-1}=0,
+  \end{split}
+\end{equation}
+podemos despejar
+\begin{equation}
+  \label{eq:GN3}
+  \mathcal G_{N-1,0}=\frac{b_{N-1}}{u-a_{N-1}-\frac{b_N^2}{u-a_N}}\mathcal G_{N-2,0}.
+\end{equation}
+Prosiguiendo de esta forma con todas las ecuaciones correspondientes a $n>0$,
+\begin{equation}
+  \label{eq:Gnne0}
+  -b_n\mathcal G_{n-1,0} +(u-a_n)\mathcal G_{n,0}-b_{n+1}\mathcal G_{n+1,0}=0,
+\end{equation}
+llegamos a
+\begin{equation}
+  \label{eq:GN4}
+  \mathcal
+  G_{1,0}=\frac{b_{1}}{u-a_{1}-\frac{b_2^2}{u-a_2-\frac{b_3^2}{u-a_3-\ddots}}}
+  \mathcal G_{N-2,0}.
+\end{equation}
+Sustituyendo en la ecuación correspondiente a $n=0$,
+\begin{equation}
+  \label{eq:Gneq0}
+  (u-a_0)\mathcal G_{00}-b_{n+1}\mathcal G_{1,0}=1,
+\end{equation}
+obtenemos una expresión para $\mathcal G_{00}$ en forma de una
+fracción continuada
+\begin{equation}
+  \label{eq:G00}
+  \mathcal
+  G_{00}=\frac{1}{u-a_0-\frac{b_{1}^2}{u-a_{1}-\frac{b_2^2}{u-a_2-\frac{b_3^2}{u-a_3-\ddots}}}},
+\end{equation}
+la cual podemos emplear en la ec. \eqref{eq:evsG} para finalmente
+obtener la respuesta macroscópica
+\begin{equation}
+  \label{eq:eMLL}
+  \epsilon_M^{LL}=\frac{\epsilon_A}{u}\left(
+    u-a_0-\frac{b_{1}^2}{u-a_{1}-\frac{b_2^2}{u-a_2-\frac{b_3^2}{u-a_3-\ddots}}}\right).
+\end{equation}
+
+Debemos enfatizar que en esta exprersión, los coeficientes de Haydock
+dependen exclusivamente de la geometría, a través de la función
+característica $B(r)$ y no dependen de la composición del material ni
+de la frecuencia. Por lo tanto, sólo es necesario calcularlos una vez
+para una geometría dada y posteriormente pueden emplearse
+para calcular la respuesta de cualquier metamaterial con dicha
+geometría con cualquier composición y a cualquier frecuencia,
+simplemente sustituyendo la variable espectral adecuada $u$
+(ec. \eqref{eq:u}. Así, con este formalismo podemos calcular la
+respuesta de sistemas formados por aislantes o metales, con o sin
+dispersión y con o sin disipación; el operador $\hat B^{LL}$ es
+hermitiano haya o no haya dispersión o disipación.
+
+Por otro lado, podemos  aplicar el hamiltoniano $\hat
+B^{LL}$ (\eqref{eq:BLL}) en
+etapas, notando que multiplicar por $\hat{\bm K'}$ es trivial en el
+espacio recíproco. El producto matricial del vector resultante con
+$B_{\bm K\bm K'}=B_{\bm K-\bm K'}$ corresponde a una convolución, por lo
+cual, tras una transformada de Fourier hacia el espacio real, se
+convierte  en un producto trivial por la función
+característca $B(\bm r)$. Finalmente, tomando una transformada de
+Fourier de regreso al espacio recíproco, el producto escalar por los vectores
+unitarios $\hat{\bm K}\cdot$ se vuelve trivial. Esto muestra que podemos
+aplicar nuestro hamiltoniano repetidas veces para obtener los
+coeficientes de Haydock sin necesidad de multiplicar ninguna
+matriz. Eso vuelve muy eficiente el proceso aquí descrito.
+
 \ifignora
 
 \begin{equation}
@@ -1270,6 +1572,10 @@ IC. Archaeometry {\bf 32} 33–45 (1990).
   043037 (2013).
   \href{https://iopscience.iop.org/article/10.1088/1367-2630/15/4/043037}
   {doi:10.1088/1367-2630/15/4/043037}.
+
+\bibitem{haydock}{\em The Recursive Solution of the Schrödinger Equation},
+R.~Haydock, Solid State Physics  {\bf 35}, 215 (1980) ed. por
+H. Ehrenreich, F. Seitz y D. Turnbull.
 
 \end{thebibliography}
 
