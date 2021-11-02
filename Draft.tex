@@ -867,12 +867,12 @@ macroscópica de un sistema no basta con promediar cualquier función
 respuesta. Por ejemplo, el promedio de $\bm\epsilon$ no tiene
 significado como respuesta macroscópica. Sin embargo, si logramos
 encontrar un operador que responda a una excitación {\em externa},
-como ella no tiene fluctuaciones espaciales asociadas a la textura
-microscópica del sistema, entonces su promedio nos proporciona la
+la cual no tiene fluctuaciones espaciales asociadas a la textura
+microscópica del material, su promedio nos proporciona la
 respuesta correspondiente macroscópica. Para dar un ejemplo de éste
 proceso, a continuación obtendremos la respuesta macroscópica en el
-caso en que no podemos ignorar el retardamiento.  Tomando el
-rotacional de la ley de Faraday sustituyendo la ec. de Ampére-Maxwell
+caso en que no podemos ignorar el retardamiento. Tomando el
+rotacional de la ley de Faraday y sustituyendo la ec. de Ampére-Maxwell
 podemos obtener una ecuación de onda con fuentes, que podemos escribir
 como
 \begin{equation}
@@ -885,31 +885,31 @@ donde
   \hat{\mathcal
     W}=\hat{\bm\epsilon}+\frac{c^2}{\omega^2}\nabla^2\hat{\mathcal P}^T
 \end{equation}
-es el operador de onda actuando sobre campos transversales, aunque
-también tiene una parte que actúa sobre campos longitudinales.
+es el operador de onda actuando sobre campos transversales, y que
+también actúa sobre campos longitudinales.
 Podemos resolver la ec. \eqref{eq:onda} formalmente para obtener
+el campo en el material
 \begin{equation}
   \label{eq:ondasol}
-  \bm E=\frac{4\pi}{i\omega}\hat{\mathcal W}^{-1} \bm j^{\text{ex}}.
+  \bm E=\frac{4\pi}{i\omega}\hat{\mathcal W}^{-1} \bm j^{\text{ex}},
 \end{equation}
-Esta ecuación nos muestra que el inverso del operador de onda
-$\hat{\mathcal W}^{-1}$ puede interpretarse como una respuesta a la
-excitación externa $\bm j^{\text{ex}}$. Por lo tanto, es un operador
-{\em promediable} y su promedio puede interpretarse como la respuesta
-macroscópica a la corriente externa macroscópica,
+e interpretar al inverso del operador de onda
+$\hat{\mathcal W}^{-1}$ como una respuesta a la excitación externa
+$\bm j^{\text{ex}}$, y a su promedio como la
+respuesta macroscópica a la corriente externa,
 \begin{equation}
   \label{eq:WM}
   \hat{\mathcal W_M}^{-1}=\hat{\mathcal W}^{-1}_{pp}.
 \end{equation}
-Interpretando el operador de onda macroscópico en términos de la
+Interpretando al operador de onda macroscópico en términos de la
 permitividad macroscópica
 \begin{equation}
   \label{eq:opWM}
   \hat{\mathcal
-    W}_M=\hat{\bm\epsilon_M}+\frac{c^2}{\omega^2}\nabla^2\hat{\mathcal P}^T
+    W}_M=\hat{\bm\epsilon}_M+\frac{c^2}{\omega^2}\nabla^2\hat{\mathcal P}^T
 \end{equation}
-podemos extraer esta última invirtiendo la ecuación
-\eqref{eq:WM}. Entonces, formalmente, podemos obtener la permitividad
+podemos despejarla invirtiendo la ecuación
+\eqref{eq:WM}. Formalmente, podemos obtener la permitividad
 macroscópica a partir de la permitividad microscópica siguiendo los
 pasos indicados en la figura \ref{fig:circulo}.
 \begin{figure}
