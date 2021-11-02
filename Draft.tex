@@ -673,46 +673,48 @@ respuesta macroscópica en términos de la respuesta microscópica.
 
 \subsection{Proyectores promedio y fluctuación}
 Primero notamos que el campo electromagnético dentro de un material
-tiene oscilaciones asociadas a la {\em textura} del material, con una
-escala de distancias de variación del orden del tamaño de las
-partículas que forman el compuesto y de la distancia entre una
-partícula y partículas vecinas. Llamamos campo macroscópico a aquel
-del cual hemos eliminado dichas fluctuaciones. El campo macroscópico
-puede tener oscilaciones espaciales, pero éstas están asociadas a las
-oscilaciones temporales del campo y a la longitud de onda finita de
-los campos que se propagan. En todo caso, es conveniente introducir
-dos operadores, el {\em promedio} $\hat {\mathcal
-  P}_p$ y las {\em fluctuación} $\hat {\mathcal P}_f$, tales
-que al actuar sobre un campo arbitrario $\bm F$ producen el campo
-promedio $\bm F_p=\hat {\mathcal P}_p \bm F$ y el campo fluctuante
-$\bm F_f=\hat {\mathcal P}_f \bm F$. Existen muchas formas de definir
-promedio. En sistemas desordenados, podríamos usar el promedio de
-ensamble, es decir, sumar sobre $N$ realizaciones del sistema y
-dividir entre $N$, tomando el límite $N\to\infty$. En sistemas
-dinámicos como un fluido, y para campos que oscilen lentamente con
-respecto a los tiempos característicos en que cambia el sistema,
-podríamos emplear un promedio temporal. Para otro tipo de sistemas
-podríamos tomar un promedio espacial o aplicar un filtro pasabajo en el espacio
-recíproco. Lo que debe ser claro es que un campo se promedia cuando se
-le remueven las fluctuaciones, i.e., $\hat{\mathcal P}_p=\hat
-{\bm 1}-\hat{\mathcal P}_f$, con $\hat {\bm 1}$ el operador identidad. Si
-pretendemos remover las fluctuaciones a un campo al
-cual ya hemos promediado, nos encontraríamos que no queda nada por
-remover. Esto implica que el operador promedio es idempotente
-$\hat{\mathcal P}_p^2=\hat{\mathcal P}_p$, i.e., el promedio del
-promedio es el promedio. Análogamente, las
-fluctuaciones son lo que queda al remover el promedio. Por tanto, el
-operador fluctuación también es idempotente, $\hat{\mathcal
-  P}_f^2=\hat{\mathcal P}_f$. Finalmente, si eliminamos las
-fluctuaciones y eliminamos el promedio, no nos queda nada, por lo cual
-$\hat{\mathcal P}_p\hat{\mathcal P}_f=0$ y
-$\hat{\mathcal P}_f\hat{\mathcal P}_p=0$. Los resultados previos
-muestran que $\hat{\mathcal P}_p$ y $\hat{\mathcal P}_f$ son
-proyectores que mandan a un campo al subespacio de los campos
-promedios y al subespacio de los campos fluctuantes respectivamente, y que el espacio
-donde vive originalmente el campo vectorial es una suma directa de
-estos dos subespacios. Esto permite escribir formalmente a un campo
-arbitrario como si fuera un vector de dos componentes,
+tiene oscilaciones relacionadas con la {\em textura} del material y la
+escala de variación espacial de estas oscilaciones es del orden del
+tamaño de las partículas que forman el compuesto así como de las
+distancias entre partículas vecinas.  Llamamos campo macroscópico a
+aquel del cual hemos eliminado dichas fluctuaciones. El campo
+macroscópico puede tener oscilaciones espaciales, pero éstas están
+asociadas a las oscilaciones temporales del campo y a la longitud de
+onda finita de los campos que se propagan. En todo caso, es
+conveniente introducir dos operadores, el {\em promedio}
+$\hat {\mathcal P}_p$ y la {\em fluctuación} $\hat {\mathcal P}_f$,
+tales que al actuar sobre un campo arbitrario $\bm F$ producen el
+campo promedio $\bm F_p=\hat {\mathcal P}_p \bm F$ y el campo
+fluctuante $\bm F_f=\hat {\mathcal P}_f \bm F$. Existen muchas formas
+de definir promedio. En sistemas desordenados podríamos usar el
+promedio de ensamble, es decir, sumar sobre $N$ realizaciones del
+sistema y dividir entre $N$, tomando el límite $N\to\infty$. En
+sistemas dinámicos como un fluido, y para campos que oscilen
+lentamente con respecto a los tiempos característicos en que cambia el
+sistema, podríamos emplear un promedio temporal. Para otro tipo de
+sistemas podríamos tomar un promedio espacial o aplicar un filtro
+pasabajo en el espacio recíproco. Lo que debe ser claro es que un
+campo se promedia cuando se le remueven las fluctuaciones, i.e.,
+$\hat{\mathcal P}_p=\hat {\bm 1}-\hat{\mathcal P}_f$, con
+$\hat {\bm 1}$ el operador identidad. Si pretendemos remover las
+fluctuaciones de un campo el cual ya hemos promediado, encontraríamos
+que no queda nada por remover. Esto implica que el operador promedio
+es idempotente $\hat{\mathcal P}_p^2=\hat{\mathcal P}_p$, i.e., el
+promedio del promedio es el promedio. Análogamente, las fluctuaciones
+son lo que queda al remover el promedio. Por lo tanto, el operador
+fluctuación también es idempotente,
+$\hat{\mathcal P}_f^2=\hat{\mathcal P}_f$. Finalmente, si eliminamos las
+fluctuaciones y el promedio, no nos queda nada,
+$\hat{\mathcal P}_p\hat{\mathcal P}_f=0$,
+$\hat{\mathcal P}_f\hat{\mathcal P}_p=0$.
+
+Los resultados previos muestran que $\hat{\mathcal P}_p$ y
+$\hat{\mathcal P}_f$ son proyectores que mandan a un campo al
+subespacio de los campos promedio y al subespacio de los campos
+fluctuantes respectivamente, y que el espacio donde vive originalmente
+el campo vectorial es una suma directa de estos dos subespacios. Esto
+permite escribir formalmente a un campo arbitrario como si fuera un
+vector de dos componentes,
 \begin{equation}
   \label{eq:vectorpf}
   \bm F=
@@ -720,11 +722,11 @@ arbitrario como si fuera un vector de dos componentes,
     \bm F_p\\\bm F_f
   \end{pmatrix},
 \end{equation}
-aunque cada componente es en sí no es un  número sino un campo
-vectorial. Análogamente, las funciones respuesta pueden interpretarse
-como operadores lineales los cuales a su vez pueden expresarse en
-términos de matrices de dos por dos. Así, la ecuación $\bm
-D=\hat{\bm\epsilon} \bm E$ puede escribirse como una ecuación matricial
+aunque cada componente en sí no es un número sino un campo
+vectorial. Análogamente, las funciones respuesta pueden representarse
+como operadores lineales en términos de matrices de dos por dos. Así,
+la ecuación $\bm D=\hat{\bm\epsilon} \bm E$ puede escribirse como una
+ecuación matricial
 \begin{equation}
   \label{eq:DeE}
   \begin{pmatrix}
@@ -748,14 +750,17 @@ de la textura del material. La correspondiente ecuación macroscópica
 sería
 \begin{equation}
   \label{eq:DeEmacro}
-  \bm D_M=\bm \epsilon_M\bm E_M,
+  \bm D_M=\hat{\bm \epsilon}_M\bm E_M,
 \end{equation}
-donde identificamos a los campo macroscópicos como los campos
-promediados y por tanto, libres de fluctuaciones, $\bm D_M\equiv \bm D_p$,
-$\bm E_M\equiv\bm E_p$. Notamos que en general, $\hat{\bm\epsilon}_M$ no es el
+donde identificamos a los campos macroscópicos como los campos
+promediados y por lo tanto, libres de fluctuaciones, $\bm D_M\equiv \bm D_p$,
+$\bm E_M\equiv\bm E_p$. En general, $\hat{\bm\epsilon}_M$ no es el
 promedio $\hat{\bm\epsilon}_{pp}$ de $\hat{\bm \epsilon}$, pues puede
 haber {\em correlaciones} entre las fluctuaciones espaciales de $\epsilon(\bm r)$
 y del campo eléctrico $\bm E(\bm r)$.
+
+% cambié a, por lo tanto, por que en este caso, por lo que antes se ha
+% dicho, los campos promediados son libres de fluctuaciones.
 
 \subsection{Proyectores longitudinal y transversal}
 Para obtener la respuesta macroscópica $\hat{\bm \epsilon}_M$, que
@@ -1239,21 +1244,21 @@ obtener la respuesta macroscópica
     u-a_0-\frac{b_{1}^2}{u-a_{1}-\frac{b_2^2}{u-a_2-\frac{b_3^2}{u-a_3-\ddots}}}\right).
 \end{equation}
 
-Debemos enfatizar que en esta exprersión, los coeficientes de Haydock
-dependen exclusivamente de la geometría, a través de la función
-característica $B(r)$ y no dependen de la composición del material ni
+Debemos enfatizar que en esta expresión, los coeficientes de Haydock
+dependen exclusivamente de la geometría a través de la función
+característica $B(r)$ y no de la composición del material ni
 de la frecuencia. Por lo tanto, sólo es necesario calcularlos una vez
 para una geometría dada y posteriormente pueden emplearse
 para calcular la respuesta de cualquier metamaterial con dicha
 geometría con cualquier composición y a cualquier frecuencia,
 simplemente sustituyendo la variable espectral adecuada $u$
-(ec. \eqref{eq:u}. Así, con este formalismo podemos calcular la
+(ec. \eqref{eq:u}). Así, con este formalismo podemos calcular la
 respuesta de sistemas formados por aislantes o metales, con o sin
 dispersión y con o sin disipación; el operador $\hat B^{LL}$ es
 hermitiano haya o no haya dispersión o disipación.
 
 Por otro lado, podemos  aplicar el hamiltoniano $\hat
-B^{LL}$ (\eqref{eq:BLL}) en
+B^{LL}$ \eqref{eq:BLL} en
 etapas, notando que multiplicar por $\hat{\bm K'}$ es trivial en el
 espacio recíproco. El producto matricial del vector resultante con
 $B_{\bm K\bm K'}=B_{\bm K-\bm K'}$ corresponde a una convolución, por lo
