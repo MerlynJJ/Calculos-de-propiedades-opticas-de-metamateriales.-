@@ -27,6 +27,7 @@
 \usepackage{extarrows}
 \usepackage{booktabs}
 \usepackage[export]{adjustbox}
+\usepackage{braket}
 \newif{\ifignora}
 \usetikzlibrary{fadings}
 \usetikzlibrary{patterns}
@@ -57,24 +58,15 @@
 \section{Introducción}
 
 
-<<<<<<< HEAD
 Un meta-material es un material diseñado artificialmente, formado por
 dos o más materiales, con propiedades determinadas por la geometría de
 sus componentes y su arreglo. Los meta-materiales se definen como
 ``{\em Un arreglo de elementos estructurales artificiales, diseñados
   para alcanzar propiedades electromagnéticas ventajosas e
-=======
-Un meta-material es un material diseñado artificialmente, formado por dos o más
-materiales, con propiedades determinadas por la geometría de sus
-componentes y su arreglo. Los meta-materiales se definen como ``{\em Un arreglo de
-  elementos estructurales artificiales, diseñados para alcanzar
-  propiedades electromagnéticas ventajosas e
->>>>>>> wlmb
   inusuales}''\cite{Metamorphose}. Esta definición es la adoptada en
 el {\em Virtual Institute for Artificial Electromagnetic Materials and
   Meta-Materials}.
 
-<<<<<<< HEAD
 Las propiedades electromagnéticas de los meta-materiales están
 determinadas por sus constituyentes básicos, a los que se denomina
 ocasionalmente como meta-átomos, los cuales son objetos hechos de
@@ -84,24 +76,11 @@ llegar a ser muy exóticas. Pueden ser entonadas escogiendo las formas,
 estructuras internas, tamaños, orientaciones mutuas, etc., de sus
 meta-átomos.  Incluso sus repuestas individuales pueden ser
 controladas por señales externas e internas y por microprocesadores
-=======
-Las propiedades electromagnéticas de los
-meta-materiales están determinadas por sus constituyentes
-básicos, a los que se denomina ocasionalmente como meta-átomos, los cuales son
-objetos hechos de materiales usuales. Las propiedades de los
-meta-materiales pueden ser muy distintas a las de los materiales que
-los conforman y pueden llegar a ser muy exóticas. Pueden ser
-entonadas escogiendo las formas, estructuras internas, tamaños,
-orientaciones mutuas, etc., de sus meta-átomos.  Incluso sus repuestas
-individuales pueden ser controladas por señales externas e internas y
-por microprocesadores
->>>>>>> wlmb
 programables.\cite{IntroductiontoMetamaterialsandNanophotonics}
 
 \subsection{Materiales plasmónicos}
 Por ejemplo, si un meta-material tiene componentes metálicos, estos
 pueden presentar resonancias asociadas a un movimiento oscilatorio
-<<<<<<< HEAD
 colectivo de sus electrones de conducción, denominado de acuerdo a sus
 características como plasmón de bulto, plasmón de superficie o plasmón
 localizados. La frecuencia de este movimiento se denomina como
@@ -135,98 +114,38 @@ la carga $Q$ encerrada en $\Sigma$,
   por $Q$, campo que produce una densidad de corriente que fluye a
   través de $\Sigma$. La corriente modifica $Q$ conforme transcurre el
   tiempo $t$ produciendo las llamadas oscilaciones de plasma.}
-=======
-colectivo de sus electrones de conducción, denominado de acuerdo a
-sus características como plasmón de bulto, plasmón de superficie o
-plasmón localizados. La frecuencia de este movimiento se
-denomina como frecuencia de plasma $\omega_{p}$. Para estimar esta
-frecuencia, considere el modelo más simple de un conductor, un gas de
-electrones que en equilibrio tiene una densidad de número $n_{0}$,
-libre de moverse en un entorno positivamente cargado, de manera que el
-sistema sea neutro. Si debido a algún efecto como una
-compresión o rarefacción del gas de electrones se produce una
-acumulación de carga $Q$, localizada en alguna región $\mathcal{R}$,
-esta producirá un campo eléctrico $\bm{E} (\bm{r})$, como ilustra la
-figura \ref{Bulkplasmon}. De acuerdo
-a la segunda ley de Newton, los electrones adquieren una aceleración
-$\frac{d^{2}\bm{r}}{dt^{2}} = -e\bm{E}(\bm{r},t)/m$, donde $m$ y
-$-e$ son la masa y la carga eléctrica electrónica. La
-velocidad adquirida por los electrones resulta en una corriente
-eléctrica  $\bm{j}(\bm{r},t) = -n_0 e \bm v=-n_{0}e({d\bm{r}}/{dt})$
-que obedece la ecuación de movimiento
-por ${\partial \bm{j}(\bm{r},t)}/{\partial t}=
--\frac{n_{0}e^{2}}{m}\bm{E}(\bm{r},t)$. Integrando la ecuación diferencial de la
-corriente sobre una superficie $\Sigma$ que rodee completamente la carga y
-usando la ecuación de continuidad y la Ley de Gauss para el campo
-eléctrico obtenemos una ecuación diferencial para la carga $Q$
-encerrada en $\Sigma$,
-\begin{figure}
-\centering
-\input{Bulkplasmon.code.tex}
-\caption{Acumulación de carga $Q$ en cierta región
-  $\mathcal{R}$ dentro de un conductor homogéneo, rodeada
-  por una superficie $\Sigma$ sobre la cual se aplica la ley
-  de Gauss al campo producido por $Q$, campo que produce una densidad
-  de corriente que fluye a través de $\Sigma$. La corriente
-  modifica $Q$ conforme transcurre el tiempo $t$ produciendo las
-  llamadas oscilaciones de plasma.}
->>>>>>> wlmb
 \label{Bulkplasmon}
 \end{figure}
 \begin{equation}
   \label{ChargeDifEq}
   \frac{d^{2}Q}{dt^{2}}=-\frac{4\pi n_0 e^{2}}{m}Q,
 \end{equation}
-<<<<<<< HEAD
 la cual es una ecuación diferencial idéntica a la de un oscilador
 armónico simple como el que se ilustra en la fig.
-=======
-la cual es una ecuación diferencial idéntica a la de un
-oscilador armónico simple como el que se ilustra en la fig.
->>>>>>> wlmb
 \ref{OscArmonicoSimple}:
 \begin{figure}
   \centering
   \input{Oscilador.code.tex}
-<<<<<<< HEAD
   \caption{\label{OscArmonicoSimple} Oscilador armónico de masa $m$ y
     constante $k$ en su posición de equilibrio y desplazado una
     distancia $y$.}
 \end{figure}
 Sustituyendo la Ley de Hooke $F= -ky$ en la segunda ley de Newton
 $ma=F$ para un oscilador con constante $k$ y masa $m$ obtenemos
-=======
-  \caption{\label{OscArmonicoSimple}
-    Oscilador armónico de masa $m$ y constante $k$ en su posición de
-    equilibrio y desplazado una distancia $y$.}
-\end{figure}
-Sustituyendo la Ley de Hooke $F= -ky$ en la segunda ley
-de Newton $ma=F$ para un oscilador con constante $k$ y masa $m$ obtenemos
->>>>>>> wlmb
 \begin{equation}
   \label{OAEq}
   \frac{d^{2}y}{dt^{2}}=-\omega^2y,
 \end{equation}
-<<<<<<< HEAD
 donde $\omega=\sqrt{k/m}$, y cuya solución,
 $y(t)=y_{0}\cos(\omega t+\phi_0)$ es un movimiento periódico con una
 frecuencia $\omega$ que depende de $k$ y $m$.  Comparando las ecs.  y
 \eqref{ChargeDifEq} y \eqref{OAEq} notamos que puede existir carga en
 el seno de nuestro metal modelo, pero ésta oscila con la {\em
   frecuencia de plasma} $\omega_p$ dada por
-=======
-donde $\omega=\sqrt{k/m}$, y cuya solución, $y(t)=y_{0}\cos(\omega t+\phi_0)$
-es un movimiento periódico con una frecuencia $\omega$ que depende de
-$k$ y $m$.
-Comparando las ecs.  y \eqref{ChargeDifEq} y \eqref{OAEq} notamos que
-puede existir carga en el seno de nuestro metal modelo, pero ésta
-oscila con la {\em frecuencia de plasma} $\omega_p$ dada por
->>>>>>> wlmb
 \begin{equation}
   \label{plasmafec}
   \omega _{p}^{2} = \frac{4\pi n_0e^{2}}{m}.
 \end{equation}
-<<<<<<< HEAD
 La repulsión mutua entre electrones los impulsa lejos de regiones en
 que haya una densidad electrónica excedente, por arriba de su valor
 nominal. El movimiento consecuente prosigue aun después de que el
@@ -234,15 +153,6 @@ sistema se neutralice debido a la inercia electrónica, que los hará
 proseguir su camino hasta que en la región orignal disminuya tanto la
 densidad de electrones que aparezca una carga neta positiva que frene
 a los electrones en fuga y los haga regresar, hasta que su repulsión
-=======
-La repulsión mutua entre electrones los impulsa lejos
-de regiones en que haya una densidad electrónica excedente, por arriba
-de su valor nominal. El movimiento consecuente prosigue aun después de
-que el sistema se neutralice debido a la inercia electrónica, que los
-hará proseguir su camino hasta que en la región orignal disminuya
-tanto la densidad de electrones que aparezca una carga neta positiva
-que frene a los electrones en fuga y los haga regresar, hasta que su repulsión
->>>>>>> wlmb
 mutua los frene al haber regresado a la configuración inicial. Este
 proceso se repetie periódicamente y su frecuencia $\omega_p$ está
 relacionada con la repulsión coulombiana, proporcional a $e^2$, la
@@ -250,53 +160,29 @@ densidad de de número electrónica $n_0$ y la inercia electrónica
 caracterizada por $m$.
 
 En lugar de un medio infinito, consideremos ahora un medio
-<<<<<<< HEAD
 semiinfinito separado del vacío por una superficie plana.  Un análisis
 análogo nos permite obtener la frecuencia del {\em plasmón de
   superficie}, considerando ahora un exceso de carga $Q$ en una región
 $R$ en la interfaz, como ilustra la fig.  \ref{Surfplasmon}, el cual
 produce un campo eléctrico $\bm{E}(\bm{r},t)$ que induce corrientes en
 el conductor.
-=======
-semiinfinito separado del vacío por una superficie plana.
-Un análisis análogo nos permite obtener la frecuencia del {\em plasmón de
-superficie}, considerando ahora un exceso de carga $Q$ en una región $R$ en
-la interfaz, como ilustra la fig.
-\ref{Surfplasmon}, el cual produce un campo eléctrico $\bm{E}(\bm{r},t)$
-que induce corrientes en el conductor.
->>>>>>> wlmb
 \begin{figure}
   \centering
   \input{SurfPlasmon.code.tex}
   \caption{Region $\mathcal{R}$ en la superficie de un conductor
-<<<<<<< HEAD
     semi-infinito en la que hay una carga $Q$, la cual produce un
     campo eléctrico $\bm{E}(\bm{r},t)$ (líneas azules) y éste a su vez
     produce una densidad de corriente (líneas verdes) que atraviesan
     aquella parte de la superficie lejana $\Sigma$ que se halla dentro
     del conductor.}
-=======
-  semi-infinito en la que hay una carga $Q$, la cual produce un campo eléctrico
-  $\bm{E}(\bm{r},t)$ (líneas azules) y éste a su vez produce una densidad de
-  corriente (líneas verdes) que atraviesan aquella parte de la
-  superficie lejana $\Sigma$ que se halla dentro del
-  conductor.}
->>>>>>> wlmb
 \label{Surfplasmon}
 \end{figure}
 
 Usando la ecuación dinámica de la densidad de corriente podemos
-<<<<<<< HEAD
 escribir la ecuación dinámica de la carga como hicimos en el caso del
 plasmón de bulto, con la diferencia que la densidad de corriente en
 este caso sólo fluye a través de la mitad de la superficie $\Sigma $
 que se halla en el interior del metal,
-=======
-escribir la ecuación dinámica de la carga como hicimos en el caso del plasmón de
-bulto, con la diferencia que la densidad de corriente en este caso
-sólo fluye a través de la mitad de la superficie $\Sigma $ que se
-halla en el interior del metal,
->>>>>>> wlmb
 \begin{equation}
   \begin{split}
     \frac{d^{2}}{dt^{2}}Q = & -\int_{\Sigma}d\bm{a}\cdot\frac{\partial}{\partial t}\bm{j},\\
@@ -305,15 +191,9 @@ halla en el interior del metal,
     = & -\frac{2\pi ne^{2}}{m}Q.
   \end{split}
 \end{equation}
-<<<<<<< HEAD
 Comparando esta ecuación con la ec. \eqref{OAEq} identificamos la
 frecuencia del {\em plasmón de superficie} $\omega_{\text{sp}}$, dada
 por
-=======
-Comparando esta ecuación con la ec. \eqref{OAEq}
-identificamos  la frecuencia del {\em plasmón de superficie}
-$\omega_{\text{sp}}$, dada por
->>>>>>> wlmb
 \begin{equation}
   \omega_{sp}^{2}=\frac{2\pi ne^{2}}{m} = \frac{\omega_{p}^{2}}{2}.
   \label{surfaceplasmonfrecuency}
@@ -323,19 +203,12 @@ En lugar de un sistema semiinfinito, consideremos ahora un sistema
 finito consistente en una partícula metálica separada del vacío por
 una superficie esférica. Supongamos que perturbamos esta esfera
 moviendo todos sus electrones una separación $\bm{\zeta}$ respecto a
-<<<<<<< HEAD
 su posición de equilibrio, lo cual induce una polarización
 $\bm{\mathcal{P}}=-n_0 e\bm \zeta$, como ilustra la siguiente figura,
-=======
-su posición de equilibrio, lo cual
-induce una polarización $\bm{\mathcal{P}}=-n_0 e\bm \zeta$, como ilustra la
-siguiente figura,
->>>>>>> wlmb
 \begin{figure}
   \centering
   \input{polaritonesferico.code.tex}
 
-<<<<<<< HEAD
   \caption{Esfera metálica cuyos electrones han sido desplazados en la
     dirección de $\bm{\zeta}$ (flecha negra), dejando una ausencia de
     carga en la dirección opuesta induciendo polarización en el
@@ -359,31 +232,6 @@ $\bm{E}= -(4\pi n_0 e^{2}/3m)\bm{\zeta}$, la ecuación de movimiento
 para $\bm{\zeta}$ se convierte en,
 \begin{equation}
   \frac{d^{2}\bm{\zeta}}{d^{2}t}= -\frac{4\pi n_0 e^{2}}{3m}\bm{\zeta}
-=======
-    \caption{Esfera metálica cuyos electrones han sido desplazados en la
-  dirección de $\bm{\zeta}$ (flecha negra), dejando una ausencia de
-  carga en la dirección opuesta induciendo polarización en el sistema
-  $\bm{\mathcal{P}}$ (flechas verdes) y una carga superficial la cual
-  produce un campo eléctrico $\bm{E}(\bm{r},t)$.}
-\label{Polariton}
-
-\end{figure}
-El deplazamiento de los electrones hacia uno de los
-hemisferios de la esfera genera un exceso de carga negativa en su
-superficie y un exceso de carga positiva en el otro, descrita por la
-densidad de carga superficial $\sigma=\bm{\mathcal P}\cdot\hat n$,
-donde $\hat n$ es un vector unitario radial. Estas cargas producen un
-campo eléctrico
-$\bm{E}(\bm{r},t) = -(4\pi/3)\bm{\mathcal{P}}
-$ donde empleamos el {\em factor de depolarización} $-4\pi/3$ de una
-  esfera. Este campo acelera las cargas de acuerdo a
-$m\frac{d^{2}\bm{\zeta}}{d^{2}t}=-e\bm{E}(\bm{r},t)$. Escribiendo
-al campo en términos de $\bm\zeta$, $\bm{E}= -(4\pi n_0
-  e^{2}/3m)\bm{\zeta}$, la ecuación de movimiento para
-$\bm{\zeta}$ se convierte en,
-\begin{equation}
-  \frac{d^{2}\bm{\zeta}}{d^{2}t}= -\frac{4\pi_0 e^{2}}{3m}\bm{\zeta}
->>>>>>> wlmb
   \label{polaritondifec}
 \end{equation}
 de la cual obtenemos la frecuencia de las oscilaciones de carga en una
@@ -395,7 +243,6 @@ esfera, a las que se les denominan como {\em plasmón dipolar},
 Estos ejemplos muestran que en un metal los electrones pueden animarse
 de movimientos colectivos asociados a ciertas frecuencias de
 resonancia, las cuales a su vez dependen de la geometría, como
-<<<<<<< HEAD
 ilustramos estudiando el caso de un sistema infinito, uno semiinfinito
 y una esfera. Más aún, si colocamos las partículas metálicas en el
 seno de una matriz dieléctrica habría un corrimiento adicional en su
@@ -404,16 +251,6 @@ superficie del dieléctrico. Más aún, si hubiese un gran número de
 esferas, sus interacciones mutuas a través de los campos
 electromagnéticos inducidos podrían generar corrimientos adicionales
 de las resonancias.
-=======
-ilustramos estudiando
-el caso de un sistema infinito, uno semiinfinito y una esfera. Más
-aún, si colocamos las partículas metálicas en el seno de una matriz
-dieléctrica habría un corrimiento adicional en su frecuencia de
-resonancia debido a las cargas inducidas en la superficie del
-dieléctrico. Más aún, si hubiese un gran número de esferas, sus
-interacciones mutuas a través de los campos electromagnéticos
-inducidos podrían generar corrimientos adicionales de las resonancias.
->>>>>>> wlmb
 
 Un ejemplo excepcional de las propiedades que emergen al generar
 \textit{metamateriales} es la copa de Lycurgo, una copa de cristal
@@ -426,19 +263,13 @@ del trabajo artístico realizado en la decoración, la copa es de gran
 interés por las propiedades ópticas que muestra. El vidrio aparece de
 un rojo-vino profundo cuando la luz lo atraviesa y de un verde opaco
 cuando la luz que llega a nuestros ojos es reflejada por la superficie
-<<<<<<< HEAD
 de la copa, como muestra la fig. \ref{Lycurgus}. A este fenómeno se le
 denomina \textit{dicroísmo}, y de los artefactos de vidrio romano
-=======
-de la copa, como muestra la fig. \ref{Lycurgus}. A este fenómeno se
-le denomina \textit{dicroísmo}, y de los artefactos de vidrio romano
->>>>>>> wlmb
 encontrados, la copa es la que muestra dicho efecto más
 intensamente. \cite{LycurgusInvestigation}
 \begin{figure}
     \centering
     \includegraphics[width = 0.6\textwidth]{Lycurguscup.jpg}
-<<<<<<< HEAD
     \caption{Copa de Lycurgo, fabricada en la Roma tardía del siglo IV
       D.C., cuya fabricación resultante muestra propiedades ópticas
       excepcionales.  Es una taza para beber de vidrio que se ve verde
@@ -452,31 +283,15 @@ probablemente en una aleación con plata, dispersadas. Con estudios de
 microscopía de transmisión de electrones, TEM, por sus siglas en
 inglés, se pudieron determinar tamaños de las partículas de
 $\approx 10 nm $.  Se ha encontrado que contiene además partículas de
-=======
-    \caption{Copa de Lycurgo, fabricada en la Roma tardía del
-      siglo IV D.C., cuya fabricación resultante muestra propiedades
-      ópticas excepcionales.  Es una taza para beber de vidrio que se
-      ve verde o rojo, dependiendo de cómo es iluminada.
-      ©The Trustees of the British Museum.}
-    \label{Lycurgus}
-\end{figure}
-Estudios de la composición del vidrio muestran que
-tales propiedades son causadas por la presencia de finas partículas de
-oro, probablemente en una aleación con plata, dispersadas. Con estudios de
-microscopía de transmisión de electrones, TEM, por sus siglas en
-inglés, se pudieron determinar tamaños de las partículas de $\approx
-10 nm $.  Se ha encontrado que contiene admás partículas de
->>>>>>> wlmb
 diferentes metales y de materiales no metálicos. El color se debe al
 espectro de reflexión y de transmisión del medio compuesto formado por
 vidrio y por las partículas metálicas. Aunque el oro es amarillo, las
 partículas de oro embebidas en una matriz de vidrio e interaccionando
 entre sí producen un color rojo.
-<<<<<<< HEAD
 
 \subsection{Otras geometrías}
 Si consideráramos partículas con otras geometrías habría otras
-resonancias asociadas a la excitación de modos con varios patrones de
+resonancias asociadas a la excitación de modos con patrones varios de
 distribución de carga. Por ejemplo, en la figura \ref{fig:Fuchs}
 mostramos resultados experimentales y los primeros resultados teóricos
 para los modos electromagnéticos esperados en pequeños cubos de sal
@@ -556,7 +371,7 @@ dieléctricas transparentes que forman cristales fotónicos con regiones
 de frecuencia en que la luz es fuertemente reflejada por corresponder
 a brechas en que no se puede propagar. Estos colores se llaman por su
 origen {\em colores estructurales}. Introduciendo {\em defectos} en
-cristales fotónicos se pueden generar sitios en que la luz puede ser
+cristales fotónicos pueden generarse sitios en que la luz puede ser
 atrapada, hecho que ha encontrado aplicaciones tal y como la
 elaboración de fibras ópticas fotónicas.
 
@@ -567,16 +382,16 @@ relación de dispersión $k^2=\epsilon\omega^2/c^2$ implica que al pasar
 la resonancia, cuando $\epsilon$ adquiere valores negativos, $k$ se
 vuelve imaginario y la luz no puede propgarse. Esto explica la
 aparición del color en los materiales comunes, en que hay frecuencias
-características de cada material en que absorben la luz y justo arriba
-hay frecuencias en que no la pueden propagar. Si el material tuviera
+características de cada material en que absorben luz y justo arriba
+hay frecuencias en que no se puede propagar. Si el material tuviera
 además una respuesta magnética $\mu\ne 1$ la relación de dispersión
 cambiaría a $k^2=\epsilon\mu\omega^2/c^2$. Si tanto $\epsilon$ como
 $\mu$ tuvieran resonancias cercanas, arriba de éstas podría suceder
 que ambas fueran negativas, $\epsilon<0$ y $\mu<0$. En este caso, su
 producto $\epsilon\mu>0$ sería positivo y sí podría haber propagación
 con un vector de onda real. Sin embargo, esta propagación sería
-curiosa. Sabemos a partir de las ecuaciones de Maxwell, por ejemplo,
-de las leyes de Faraday y de Gauss magnética, que para una onda plana,
+curiosa. A partir de las ecuaciones de Maxwell, por ejemplo,
+de las leyes de Faraday y de Gauss magnética, sabemos que para una onda plana,
 el campo eléctrico $\bm E$, la densidad de flujo magnético $\bm B$ y
 el vector de onda $\bm k$ forman una triada ordenada derecha, como
 ilustra la figura \ref{fig:triada}.
@@ -705,303 +520,6 @@ largo de la superficie, puede modularse la fase que adquiere la luz en
 forma análoga a como el ancho variable de una lente o de un prisma
 modula la fase de los rayos de luz que los atraviesan.
 
-La ley de Snell usual implica que a lo largo de una interface uniforme
-hay un empatamiento de fases
-$\phi^\alpha(\bm r_\|)=\bm k^\alpha_\|\cdot\bm r_\|$ entre la onda
-incidente, la onda reflejada y la onda transmitida, por lo cual los
-vectores de onda $\bm k^\alpha_\|$ proyectados sobre la superficie son
-iguales para las tres ondas $\alpha=i,r,t$. Sin embargo, si la
-superficie no es uniforme y a lo largo de ésta la onda transmitida y/o
-reflejada adquiere una fase adicional $\psi^\alpha(\bm r_\|)$ a la de
-la onda incidente,
-$\phi^\alpha(\bm r_\|)=\bm k^i_\|\cdot\bm r_\|+\psi^\alpha(\bm
-r_\|)\approx (\bm k^i_\|+\nabla_\|\psi^\alpha(0))\cdot\bm r_\|$ la ley
-de Snell debe generalizarse,
-\begin{equation}
-  \label{eq:snell}
-  \bm k^\alpha_\|=\bm k^i_\|+\nabla_\|\psi^\alpha,\quad(\alpha=r,t)
-\end{equation}
-i.e., el ímpetu paralelo a la interfase adquiere una contribución
-debida a la variación de la fase adicional $\psi^\alpha$. Por lo
-tanto, modulando la fase de una onda a lo largo de una superficie
-podemos manipular la dirección de la luz transmitida o reflejada. Para
-esto se pueden colocar partículas con un índice de refracción grande
-sobre una superficie ordinaria y modificar a lo largo de esta su
-geometría, orientación o densidad, dando lugar a una {\em
-  metasuperficie}.
-
-
-Como las resonancias dependen también de la polarización de la luz,
-este efecto puede usarse para desviar haces de luz de acuerdo a su
-polarización. En la fig. \ref{fig:metasup} mostramos una {\em
-  metasuperficie} formada por partículas en forma de $L$ cuya
-respuesta difiere cuando es iluminada con polarización circular
-derecha o polarización circular izquierda, y que por tanto puede
-separar un haz de luz no polarizada en dos haces con polarizaciones
-opuestas.
-\begin{figure}
-  \centering
-  \includegraphics[width=0.5\textwidth,angle=90,valign=c]{metasup1}
-  \includegraphics[width=0.4\textwidth,valign=c]{metasup2a}
-  \caption{Metasuperficie formada por un arreglo de partículas en
-    forma de L con ángulos variables (izquierda), capaz de separar un
-    haz luminoso en sus componentes con polarización circular derecha
-    e izquierda (derecha).}
-  \label{fig:metasup}
-\end{figure}
-Mediante otros arreglos se puede variar la fase a lo largo de la
-dirección radial, para hacer converger rayos que arriben en la
-dirección normal sobre un punto, su foco, creando así una metalente,
-como la que ilustra la figura \ref{fig:metalente}.
-\begin{figure}
-  \centering
-  \includegraphics[width=.5\textwidth,angle=90, valign=c]{metasup3}
-  \includegraphics[height=.3\textwidth,valign=c]{metasup5}
-  \includegraphics[height=.5\textwidth,valign=c]{metasup4}
-  \caption{Metalente formada por un arreglo de prismas de alto índice
-    de refracción con direcciones variables (izquierda). Imagen de una
-    fuente puntual formada por la metalente y por una lente
-    convencional (derecha). }
-  \label{fig:metalente}
-\end{figure}
-\ifignora
-=======
-
-\subsection{Otras geometrías}
-Si consideráramos partículas con otras geometrías habría
-otras resonancias asociadas a la excitación de modos con patrones
-varios de distribución de carga. Por ejemplo, en la figura
-\ref{fig:Fuchs} mostramos resultados experimentales y los primeros
-resultados teóricos para los modos electromagnéticos esperados en
-pequeños cubos de sal \cite{Fuchs}, sus frecuencias de resonancia y su
-distribución asociada de carga superficial.
-\begin{figure}
-  \centering
-  \includegraphics[width=0.4\textwidth]{fuchs1}
-  \includegraphics[width=0.5\textwidth]{fuchs2}
-  \caption{Modos resonantes de un cristal de sal y espectro de
-    absorción teórico y experimental. Del lado izquierdo mostramos los
-  signos de la polarización en una de las ocho esquinas del cubo de
-  sal correspondiente a los seis modos principales.}
-  \label{fig:Fuchs}
-\end{figure}
-En este caso se encontraron en lugar de un modo dipolar, como vimos
-para el caso de la esfera, seis modos principales y unos modos
-adicionales con poca fuerza de oscilador, con una polarización cuya
-distribución espacial muestra bastante riqueza.
-\subsection{Cristales fotónicos}
-Consideremos ahora un dieléctrico transparente no dispersivo
-homogéneo, como en la figura \ref{fig:fotonico}a.
-\begin{figure}
-  \centering
-  \includegraphics[width=0.3\textwidth]{talk-9}
-  \includegraphics[width=0.3\textwidth]{talk-10}
-  \includegraphics[width=0.3\textwidth]{talk-11}
-  \\
-  \includegraphics[width=0.3\textwidth]{wvsk1-0}
-  \includegraphics[width=0.3\textwidth]{wvsk1-1}
-  \includegraphics[width=0.3\textwidth]{wvsk1-2}\\
-  \begin{picture}(0,0)
-    \put(-6.5cm,8.1cm){\color{white} (a)}
-    \put(-2.0cm,8.1cm){\color{white} (b)}
-    \put(2.5cm,8.1cm){(c)}
-    \put(-6.0cm,3.5cm){(d)}
-    \put(-1.5cm,3.5cm){(e)}
-    \put(3cm,3.5cm){(f)}
-  \end{picture}
-  \caption{(a)Medio dieléctrico homogéneo con respuesta $\epsilon$,
-    (b) cristal fotónico unidimensional con funciones respuesta
-    $\epsilon_a$ y $\epsilon_b$ y periodo $d$, y (c) cristal fotónico
-    con periodicidad en más dimensiones. (d)Relación de
-    dispersión $\omega$ vs $k$ de la luz del medio
-    homogéneo. (e)Relaciones de dispersión transladadas por $0, \pm
-    2\pi/d$ en el espacio recíproco mostrando cruzamientos en el borde
-    de la zona de Brillouin $k=\pm \pi/d$. (f)El acoplamiento abre una
-    brecha en los puntos de degeneración evitando el cruce y formando
-    brechas prohibidas.}
-  \label{fig:fotonico}
-\end{figure}
-La relación de dispersión de la luz en este medio está dada por $k^2=
-\epsilon\omega^2/c^2$ que corresponde a las dos rectas mostradas en la
-fig. \ref{fig:fotonico}d. Si en vez de un dieléctrico homogéneo
-tuvieramos un cristal artificial formado por películas de dos
-materiales alternados
-(fig. \ref{fig:fotonico}b), el ímpetu y el vector de onda ya no
-serían cantidades conservadas. Las
-reflecciones múltiples en las interfaces producirían
-ondas esparcidas en que el vector de onda cambiaría $k\to k+2\pi n/d$
-para enteros positivos y negativos $n$
-(fig. \ref{fig:fotonico}e), dando lugares a puntos de degeneración en
-que se cruzan las distintas réplicas de la relación de dispersión. El
-acoplamiento entre los campos esparcidos rompe la degeneración y abre
-{\em brechas fotónicas}  evitando los cruces y dando origen a una
-relación de dispersión (fig. \ref{fig:fotonico}f) organizada en {\em
-  bandas fotónicas} análogas a las bandas electrónicas que describen
-la propagación de electrones en sólidos cristalinos. Algo similar
-suscedería si la periodicidad fuese bidimensional o
-tridimensional (fig. \ref{fig:fotonico}c) en cuyo caso podría
-producirse brechas omnidireccionales en las que la luz no se propaga
-en ninguna dirección. Las brechas fotónicas explican algunos fenómenos
-naturales, como la iridiscencia en los caparazones de diversos
-insectos y los colores de las alas de las mariposas, colores
-producidos no por pigmentos que absorben la luz, sino por pequeñas estructuras
-dieléctricas transparentes que forman cristales fotónicos con regiones
-de frecuencia en que la luz es fuertemente reflejada por corresponder
-a brechas en que no se puede propagar. Estos colores se llaman por su
-origen {\em colores estructurales}. Introduciendo {\em defectos} en cristales
-fotónicos se pueden generarse sitios en que la luz puede ser atrapada,
-hecho que ha encontrado aplicaciones tal
-y como la elaboración de fibras ópticas fotónicas.
-
-\subsection{Materiales izquierdos}
-Consideremos ahora un material cuya permitividad $\epsilon(\omega)$
-dependa de la frecuencia y tenga un comportamiento resonante. La
-relación de dispersión $k^2=\epsilon\omega^2/c^2$ implica que al pasar
-la resonancia, cuando $\epsilon$ adquiere valores negativos, $k$ se
-vuelve imaginario y la luz no puede propgarse. Esto explica la
-aparición del color en los materiales comunes, en que hay frecuencias
-caracterizticas de cada material en absorben la luz y justo arriba hay
-frecuencias en que no la pueden propagar. Si el material tuviera
-además una respuesta magnética $\mu\ne 1$ la relación de dispersión
-cambiaría a $k^2=\epsilon\mu\omega^2/c^2$. Si tanto
-$\epsilon$ como $\mu$ tuvieran resonancias cercanas, arriba de éstas
-podría suceder que ambas fueran negativas, $\epsilon<0$ y $\mu<0$. En
-este caso, su producto $\epsilon\mu>0$ sería positivo y sí podría
-haber propagación con un vector de onda real. Sin embargo, esta
-propagación sería curiosa. Sabemos que a partir de las
-ecuaciones de Maxwell, por ejemplo, de las leyes de Faraday y de Gauss magnética,
-que para una onda plana, el campo eléctrico $\bm E$, la densidad de
-flujo magnético
-$\bm B$ y el vector de onda $\bm k$ forman una triada ordenada
-derecha, como ilustra la figura \ref{fig:triada}.
-\begin{figure}
-  \centering
-  \includegraphics{talk-13}
-  \caption{Relación entre las direcciones del campo eléctrico
-    $\bm E$, densidad de flujo magnético $\bm B$, vector de onda
-    $\bm k$, campo magnético $\bm H$ y vector de Poynting $\bm S$
-    en un metamaterial izquierdo isotrópico. Como $(\bm E, \bm B,
-    \bm k)$ y $(\bm E, \bm H,\bm S)$ son triadas ordenadas
-    derechas, y $\bm B$ y $\bm H$ son antiparalelos, entonces $\bm
-    k$ y $\bm S$ son antiparalelos.  }
-  \label{fig:triada}
-\end{figure}
-Sin embargo, la definición del vector de Poynting y la ley de
-Ampere-Maxwell implican que el campo eléctrico $\bm E$, el campo
-magnético
-$\bm H$ y el flujo de energía $\bm S$ también forman una triada
-ordenada derecha. Sin embargo, si $\mu<0$, entonces $\bm B$ y $\bm
-H$ apuntan en direcciones opuestas. Luego, $\bm S$ ¡apunta en la
-dirección opuesta a $\bm k$! La dirección en que avanza la fase de la
-onda es opuesta a la dirección en que avanza la energía. Esto sólo
-puede ser posible si la velocidad de grupo es opuesta a la velocidad
-de fase. Una consecuencia curiosa de este resultado se manifiesta
-cuando una onda se refracta en una superficie plana. La ley de
-conservación del ímpetu asociada a una simetría translacional implica
-que la proyección del vector de onda $\bm k_\|$ a lo largo de la
-superficie debe coicidir para la onda reflejada, la onda transmitida y
-la onda incidente. De aquí se derivan las leyes de la reflexión y de
-Snell. Sin embargo, la {\em causalidad} implica que las ondas
-esparcidas por la superficie, la onda incidente y la onda reflejada,
-deben tener un flujo de energía que se aleja de la superficie. Ello
-implica que cuando incide luz desde un medio ordinario hacia un medio
-con $\epsilon<0$ y $\mu<0$, la componente normal del vector de onda
-de la onda transmitida ¡debe apuntar hacia la superficie!, como
-ilustrar la fig. \ref{fig:refneg}.
-\begin{figure}
-  \centering
-  \includegraphics{talk-17}
-  \caption{Una onda incide desde un medio normal (verde) sobre la
-    interface que lo separa de un medio con permitividad y
-    permeabilidad negativas (rojo). Se muestran esquemáticamente las
-    direcciones de los vectores de onda (flechas azules) y de los
-    vectores de Poynting (flechas amarillas) de las ondas incidente,
-    reflejada y transmitida. La proyección sobre la interface de los
-    tres vectores de onda debe coincidir. El flujo de energía de la
-    onda transmitida debe alejarse de la interface. Por ello, la
-    componente normal del vector de onda transmitido apunta hacia la
-    interface.}
-  \label{fig:refneg}
-\end{figure}
-De esta figura podemos inferir que una onda que incide viajando hacia
-arriba se refracta hacia abajo y vieversa. Eso lleva a plantear
-dispositivos como el ilustrado en la fig. \ref{fig:lenteplana}
-consistente en una película plana de un metamaterial izquierdo con
-$\epsilon<0$ y $\mu<0$.
-\begin{figure}
-  \centering
-  \includegraphics{talk-24}
-  \caption{Lente consistente en una película plana de un metamaterial
-    izquierdo (rojo) en el seno de un material ordinario (verde). Se
-    ilustra la trayectoria de varios rayos que emergen de una fuente puntual de
-    luz y convergen en un punto imagen. }
-  \label{fig:lenteplana}
-\end{figure}
-La luz que emerge de una fuente puntual y viaja hacia la derecha y
-hacia arriba se refracta hacia abajo mientras que luz que viaja hacia
-abajo se refracta hacia arriba. Algo análogo sucede al emerger de la
-película. Es posible entonces que todos los rayos que parten de la
-fuente luminosa converjan en un punto, la imagen de la fuente formada
-por una lente plana.
-
-Desafortunadamente, no existen materiales naturales en los que tanto
-la permitividad como la permeabilidad sean negativas a la misma
-frecuencia. Sin embargo, hay metamateriales artificiales que pueden
-describirse por una permitividad y permeabilidad efectiva que sí
-cumplan esta condición. La figura \ref{fig:rings} muestra un ejemplo
-\begin{figure}
-  \centering
-  \includegraphics[width=.7\textwidth]{splitResonator}
-  \caption{Metamaterial izquierdo formado por una red de parejas de
-    anillos conductores interrumpidos ({\em split rings}) y pistas
-    conductoras rectas sobre un dieléctrico. }
-  \label{fig:rings}
-\end{figure}
-formado por un arreglo de parejas de anillos interrumpidos que
-funcionan como un circuito LC resonante. La corriente recorriendo los anillos
-produce un dipolo magnético, y debido a su interrupción, produce una
-acumulación de cargas que lo acopla con el otro anillo. Este circuito
-tiene una resonancia arriba de la cual la permeabilidad macroscópica
-es negativa. Por otro lado, una serie de pistas rectas permiten que el
-material se comporte en la dirección vertical como un conductor, por
-lo cual la permitividad es negativa abajo de la frecuencia de plasma
-efectiva.
-\subsection{Metasuperficies}
-Hemos visto arriba que partículas metálicas pequeñas pueden tener resonancias
-plasmónicas cuyas frecuencias dependen en general de su composición y
-de su geometría. También partículas dieléctricas pueden tener
-resonancias aunque estén formadas por materiales no dispersivos,
-siempre y cuando la longitud de onda de la luz en su interior sea
-conmensurable con su tamaño. Estas resonancias se deben a la
-interferencia constructiva entre ondas múltiplemente reflejadas por
-sus superficies. Por ejemplo, partículas esféricas o cilíndricas
-muestran {\em resonancias de Mie} cuando el perímetro de su sección
-transversal es cercano a un múltipolo de la longitud de onda.
-Una ventaja de estas resonancias  sobre las
-resonancias plasmónicas para diseñar y
-construir dispositivos fotónicos  es
-que las pérdidas de energía debidas a la absorción dentro del material
-son menores que las pérdidas ohmicas que suelen mostrar los
-metales. Sin embargo, estas resonancias requieren que las partículas
-tengan un tamaño relativamente grande conmensurable con la longitud de
-onda en su interior. Sin embargo, si se emplean
-materiales con un índice de refracción alto, la longitud de onda
-dentro de estos materiales puede ser mucho menor que la
-correspondiente al espacio vacío, permitiéndo así resonancias
-dieléctricas en partículas de tamaño muy pequeñas, en analogía a las
-resonancias plasmónicas.
-
-Las funciones respuesta de una partícula cambian de
-signo conforme la frecuencia de la luz pasa de ser menor a ser mayor a
-su frecuencia de resonancia. Por tanto, la fase que adquiere un haz
-luminoso al pasar a través de una superficie cubierta por partículas
-depende muy sensiblemente de la cercanía de la frecuencia a la
-frecuencia de resonancia de las partículas, la cual a su vez, depende de
-la geometría. Por tanto, modulando la geometría de las partículas a lo
-largo de la superficie, puede modularse la fase que adquiere la luz en
-forma análoga a como el ancho variable de una lente o de un prisma
-modula la fase de los rayos de luz que los atraviesan.
->>>>>>> wlmb
 
 La ley de Snell usual implica que a lo largo de una interface uniforme
 hay un empatamiento de fases $\phi^\alpha(\bm r_\|)=\bm k^\alpha_\|\cdot\bm
@@ -1285,10 +803,7 @@ Análogamente, podemos identificar al proyector transversal
   \label{eq:PT}
   \hat{\mathcal P}^T=\hat{\bm 1}-\hat{\mathcal P}^L=-\hat\nabla\times \hat\nabla^{-2}\hat\nabla\times.
 \end{equation}
-<<<<<<< HEAD
 
-=======
->>>>>>> wlmb
 \subsection{Caso no retardado}
 Regresando a nuestro problema, notamos a partir de las ecuaciones de
 Maxwell que la proyección longitudinal del desplazamiento, $\bm
@@ -1327,7 +842,7 @@ y promediando ambos lados de la ecuación, usando el hecho de que $\bm
 D^L$ no tiene fluctuaciones y que $\hat{\mathcal P}_p$ es idempotente,
 obtenemos
 \begin{equation}
-  \label{eq:ELvsDL}
+  \label{eq:ELpvsDLp}
   \bm E^L_p=(\hat{\bm\epsilon}^{LL})^{-1}_{pp}\bm D^L_p.
 \end{equation}
 Finalmente, identificando los campos promedios con los campos
@@ -1410,7 +925,8 @@ promediamos, lo identificamos en términos del operador de onda
 macroscópico, lo volvemos a invertir y finalmente obtenemos el
 operador de onda macroscópico.\cite{samuel}
 
-\subsection{Recursión de Haydock}
+\subsection{Sistema binario periódico sin retardamiento}
+\label{binario}
 Consideremos ahora un sistema periódico hecho de dos materiales,
 digamos, de partículas de un material $B$ embebidas en una matriz de
 un material $A$. La respuesta dieléctrica {\em microscópica} es en
@@ -1448,12 +964,308 @@ es la {\em función característica}. Notemos que $u$ depende de la
 composición del material y puede depender de la frecuencia a través de
 las funciones dieléctricas de las componentes, mientras que $B$ no
 depende de la composición ni de la frecuencia, sino únicamente de la
-geometría, la cual caracteriza totalmente.
+geometría.
 
+Ahora supongamos que nuestro sistema es periódico, caracterizado por
+una {\em red de Bravais} $\{\bm R\}$, tal que $\epsilon(\bm r+\bm
+R)=\epsilon(\bm r)$. A esta red corresponde una {\em red recíproca}
+$\{\bm K\}$, formada por todos aquellos vectores de onda tales que el
+producto escalar $\bm K\cdot\bm R=2\pi n$, con $n$ un número entero
+para cualquier vector real $\bm R$ y vector recíproco $\bm K$.
 
-% acá creo que sobra la útilma frase o está mal "la cual caracteriza
-% totalmente", la geometría caracteriza, la B caracteriza, a qué
-% caracteriza? me ha hecho bolas
+Entonces, podemos describir a $\hat \epsilon$
+como una matriz en el espacio recíproco mediante una integral de Fourier,
+\begin{equation}
+  \label{eq:eKK}
+  \epsilon_{\bm K\bm K'}=\epsilon_{\bm K-\bm K'}=\frac{1}{\Omega}\int_0
+  d^3r\, \epsilon(\bm r) e^{-i\bm K\cdot\bm r}.
+\end{equation}
+donde la integral se realiza sobre una celda primitiva cualquiera, cuyo
+volumen es $\Omega$. La relación conversa es
+\begin{equation}
+  \label{eq:er}
+  \epsilon(\bm r)=\sum_{\bm K}\epsilon_{\bm K} e^{i\bm K\cdot\bm r}.
+\end{equation}
+El teorema de Bloch nos permite escribir a los campos en el interior
+de un sistema periódico como una superposición de ondas de Block, cada
+una de las cuales cambia por una fase $e^{i\bm k\cdot\bm R}$ cuando
+nos desplazamos un vector de la red, donde $\bm k$ es el {\em vector
+  de Bloch}, una especie de vector de onda, que es una {\em cantidad
+  conservada}. Por tanto, eligiendo un valor cualquiera de $\bm k$
+podemos escribir cualquier campo en términos de una suma de Fourier
+como
+\begin{equation}
+  \label{eq:blochFourier}
+  \bm F(\bm r)=\sum_{\bm K}\bm F_{K} e^{i(\bm k+\bm K)\cdot\bm r}.
+\end{equation}
+El {\em teorema de convolución} nos permite entonces escribir la
+ecuación material $\bm D(\bm r)=\epsilon(\bm r)\bm E(\bm r)$ en el
+espacio recíproco como la ecuación matricial
+\begin{equation}
+  \label{eq:DKvsEK}
+  \bm D_{\bm K}=\sum_{\bm K'}\epsilon_{\bm K\bm K'} \bm E_{\bm K'}.
+\end{equation}
+Como la respuesta del material puede representarse en distintos
+espacios, como son el espacio real o el espacio recíproco, es que
+conviene abstraer la acción de la respuesta dieléctrica y tratarla
+como un operador $\hat{\bm \epsilon}$ abstracto, más que como una
+función de la posición.
+
+En el espacio recíproco, el operador $\nabla$ se puede representar por
+un producto con el vector $\nabla\to i(\bm k+\bm K)$, por lo cual el laplaciano
+es $\nabla^2\to-|\bm k+\bm K|^2$ y su inverso es simplemente
+$\nabla^{-2}\to -1/|\bm k+\bm K|^2$. Por lo tanto, el proyector
+longitudinal \eqref{eq:PL} se puede representar por la matriz
+\begin{equation}
+  \label{eq:PLKK}
+  \mathcal P^L_{\bm K\bm K'}=\delta_{\bm K\bm K'}\hat{\bm K}\hat{\bm K}\cdot,
+\end{equation}
+donde definimos los vectores unitarios
+\begin{equation}
+  \label{eq:hatK}
+  \hat{\bm K}\equiv\frac{\bm k+\bm K}{|\bm k+\bm K|},
+\end{equation}
+y $\delta_{\bm K\bm K'}$ es una función delta de Kronecker.
+
+Los vectores recíprocos $\bm K\ne0$ corresponden a oscilaciones
+con longitudes de onda del orden de el parámetro de red del sistema
+periódico. Es conveniente entonces {\em definir} el promedio como
+un filtro pasabajos en el espacio recíproco que elimina todos los vectores
+recíprocos, exceptuando $\bm K=0$, convirtiendo una onda de Bloch en
+una onda plana con vector de onda $\bm k$. Escribimos entonces
+\begin{equation}
+  \label{eq:PaKK}
+  \mathcal P_{p,\bm K\bm K'}=\delta_{\bm K\bm 0}\delta_{\bm K'\bm0}.
+\end{equation}
+
+De acuerdo a la ec. \eqref{eq:epsLLM}, podemos hallar la respuesta
+macroscópica siguiendo los siguientes pasos:
+\begin{enumerate}
+\item Expresamos la permitividad como una matriz $\epsilon_{\bm K\bm
+    K'}$ en el espacio recíproco haciendo una
+  transformación de Fourier (ec. \eqref{eq:eKK}).
+\item Tomamos su proyección longitudinal, $\epsilon^{LL}_{\bm K\bm
+    k'}$  multiplicando a izquierda y derecha por el proyector
+  longitudinal (ec. \eqref{eq:PLKK}).
+\item Invertimos la matriz resultante en el subespacio de campos
+  vectoriales longitudinales $\epsilon^{-1}_{\bm K\bm K'}$.
+\item Promediamos la inversa tomando el elemento $\bm K=\bm K'=0$.
+\item Interpretamos el resultado como el inverso de la proyección
+  longitudinal del tensor dieléctrico macroscópico.
+\end{enumerate}
+El procedimiento anterior puede resumirse como
+$\bm\epsilon^{LL}_M=\hat{\bm k}\epsilon^{LL}_M\hat{\bm k}$, donde la
+{\em componente longitudinal} de la respuesta es
+\begin{equation}
+  \label{eq:kek}
+  \epsilon_M^{LL}=\hat{\bm k}\cdot\bm\epsilon_M\cdot\hat{\bm k}=\left(\left.\left(\hat{\bm
+    K}\cdot\epsilon_{\bm K\bm K'}\hat{\bm
+    K'}\right)^{-1}\right|_{\bm K=\bm K'=\bm 0}\right)^{-1}.
+\end{equation}
+Repitiéndo el cálculo indicado por la ec. \eqref{eq:kek} para
+distintas direcciones $\hat{\bm k}$ del vector de onda, podemos hallar
+todas las componentes del tensor dieléctrico macroscópico
+$\bm\epsilon_M$.
+\subsection{Recursión de Haydock}
+De acuerdo a la sección anterior, para obtener la respuesta
+macroscópica de un medio binario arbitrario en el límite de longitud
+de onda larga, basta invertir la matriz $\bm K\cdot\epsilon_{\bm K\bm
+  K'}$ y tomar el elemento $\bm 0\bm 0$ del resultado. Sustituyendo la
+ec. \eqref{eq:epsmic1}, obtenemos
+\begin{equation}
+  \label{eq:evsG}
+  \frac{1}{\epsilon_M^{LL}}=\frac{u}{\epsilon_A}(u\delta_{\bm K\bm
+    K'}-B^{LL}_{\bm K\bm K'})^{-1}_{\bm K=\bm K'=0},
+\end{equation}
+donde introdujimos la componente longitudinal de la función
+característica en el espacio recíproco
+\begin{equation}
+  \label{eq:BLL}
+  B^{LL}_{\bm K\bm K'}=\hat{\bm K}\cdot B_{\bm K-\bm K'}\hat{\bm K'},
+\end{equation}
+y $B_{\bm K-\bm K'}$ es el coeficiente de Fourier de la función
+característica $B(\bm r)$ correspondiente al vector recíproco $\bm
+K-\bm K'$.
+
+Notamos que en la ec. \eqref{eq:evsG} debemos calcular el inverso de un
+operador $(u-\hat B^{LL})$ representado como una matriz en el espacio
+recíproco, donde $u$ es un número complejo y $\hat B^{LL}$ es un
+operador hermitiano, y luego proyectar el resultado sobre un estado
+$\ket{0}$ correspondiente a una onda plana con vector de onda $\bm
+k$. Esto es análogo al cálculo del operador de Green proyectado
+$\braket{0|\hat{\mathcal G}(\varepsilon)|0}$ en mecánica cuántica, donde
+$\hat{\mathcal G}(\varepsilon)=(\varepsilon-\hat{\mathcal H})^{-1}$ es el operador
+de Green correspondiente a un operador hamiltoniano ${\mathcal H}$
+evaluado para un valor $\varepsilon$ de una energía compleja. Entre
+las aplicaciones del operador de Green proyectado se encuentra el
+cálculo de la densidad de estados cuánticos proyectada. Podemos
+entonces tomar prestado el método recursivo de Haydock
+\cite{haydock}. De acuerdo a nuestra analogía, $u$ juega el papel de
+energía compleja $\varepsilon$ y $\hat B^{LL}$ juega el papel de
+hamiltoniano.
+
+Hemos definido el estado $\ket{0}$ como el correspondiente a una onda
+plana con vector de onda $\bm k$, i.e., un estado cuya representación
+en el espacio recíproco es $\braket{\bm K}|\bm 0>=\delta_{\bm K\bm 0}$,
+pues no tiene contribuciones de ondas con $\bm K\ne0$. Ahora, podemos
+generar un nuevo estado haciendo actuar a nuestro hamiltoniona sobre
+el estado inicial, $\ket{\tilde 1}=\hat{\mathcal
+  H}\ket{0}$. Escribimos este estado como una combinación lineal del
+estado que ya teníamos $\ket{0}$ y un estado nuevo $\ket{1}$ del cual
+pedimos que sea ortogonal a $\ket{0}$ y que esté normalizado,
+$\ket{\tilde 1}=b_1\ket{1}+a_0\ket{0}$. Ahora repetimos el
+procedimiento con el estado $\ket{1}$, i.e., $\ket{\tilde
+  2}=\hat{\mathcal H}\ket{1}=b_2\ket{2}+a_1\ket{1}+b_1\ket{0}$. El
+caso genérico sería
+\begin{equation}
+  \label{eq:tilden}
+  \ket{\tilde n}=\hat{\mathcal
+    H}\ket{n-1}=b_n\ket{n}+a_{n-1}\ket{n-1}+b_{n-1}\ket{n-2},
+\end{equation}
+donde exigimos que todos los estados sean ortonormales, es decir,
+\begin{equation}
+  \label{eq:n|m}
+  \braket{n|m}=\delta_{nm}.
+\end{equation}
+Aquí empleamos el producto escalar
+\begin{equation}
+  \label{eq:braket}
+  \braket{n|m}=\sum_{\bm K}\phi_n^*(\bm K)\phi_m(\bm K)
+  =\frac{1}{\Omega}\int_0 d^3r\, \phi_n^*(\bm r)\phi_m(\bm r)
+\end{equation}
+donde, copiando el lenguaje de la mecánica cuántica, $\phi_m(\bm
+K)=\braket{\bm K|n}$ es la {\em función de onda}
+correspondiente al estado $\ket{n}$ evaluada en el vector recíproco
+$\bm K$, y $\phi_m(\bm r)=\braket{\bm r|n}$ es la función de onda
+correspondiente al mismo estado pero evaluada en la posición $\bm r$,
+y donde hemos empleado la identidad de Parseval.
+
+Notamos que en la ec. \eqref{eq:tilden} no aparecen los términos
+$\ket{n-3}$, $\ket{n-4}$, etc. pues nuestro operador es
+hermitiano. Por ejemplo,
+i.e., $\braket{n-3|\tilde
+  n}=\braket{n-3|H|n-1} = \braket{n-1|H|n-3} =
+\bra{n-1}\left(b_{n-2}\ket{n-2} + a_{n-3}\ket{n-3}+b_{n-3}\ket{n-4}\right) = 0$.
+Los coeficientes de Haydock son reales y pueden obtenerse de la condición de ortonormalidad,
+\begin{equation}
+  \label{eq:qn}
+  a_{n-1}=\braket{n-1|\hat{\mathcal H}|n-1}
+\end{equation}
+y
+\begin{equation}
+  \label{eq:bn}
+    \ket{n}=(\ket{\tilde n}-a_{n-1}\ket{n-1}-b_{n-1}\ket{n-1})/b_n,
+    \quad \braket{n|n}=1.
+\end{equation}
+De esta manera podemos construir una {\em base} $\{\ket{n}\}$ en la
+cual el {\em hamiltoniano} puede $\hat{\mathcal H}$ representarse por
+una matriz tridiagonal
+\begin{equation}
+  \label{eq:trid}
+  \mathcal H_{nn'}=
+  \begin{pmatrix}
+    a_0   &b_1   &0     &0     &0\ldots\\
+    b_1   &a_1   &b_2   &0     &0\ldots\\
+    0     &b_2   &a_2   &b_3   &0\ldots\\
+    0     &0     &b_3   &a_3   &b_4\ldots\\
+    \vdots&\vdots&\vdots&\ddots&\ddots\ddots\\
+  \end{pmatrix}
+\end{equation}
+De acuerdo a la ec. \eqref{eq:evsG}, la respuesta macroscópica está
+dada por la proyección de la inversa $\mathcal G_{nn'}$ de la matriz tridiagonal
+$\varepsilon-\mathcal H_{nn'}$ sobre el estado $\ket{0}$, i.e., no
+necesitamos toda la inversa, sino sólo su elemento $\mathcal G_{00}$.
+Notamos que el vector columna $\mathcal G_{n0}$ obedece la ecuación
+\begin{equation}
+  \label{eq:Gn0}
+  \sum_{m} (\varepsilon\delta_{nm}-\mathcal H_{nm})\mathcal G_{m0}=\delta_{n0}.
+\end{equation}
+Si truncamos la ecuación después de $N$ renglones, el último renglón
+de la ecuación sería de la forma
+\begin{equation}
+  \label{eq:GN}
+  -b_N\mathcal G_{N-1,0} +(u-a_N)\mathcal G_{N,0}=0,
+\end{equation}
+que nos permite despejar
+\begin{equation}
+  \label{eq:GN1}
+  \mathcal G_{N,0}=\frac{b_N}{u-a_N}\mathcal G_{N-1,0}.
+\end{equation}
+Sustituyendo esta solución en la penúltima ecuación
+\begin{equation}
+  \label{eq:GN2}
+  \begin{split}
+    -b_{N-1}\mathcal \mathcal_{N-2,0}
+    &+(u-a_{N-1})\mathcal G_{N-1,0}-b_{N}\mathcal
+    G_{N,0}\\
+    &=-b_{N-1}\mathcal G_{N-2,0}+
+    \left(u-a_{N-1}-\frac{b_N^2}{u-a_N}\right)\mathcal G_{N-1}=0,
+  \end{split}
+\end{equation}
+podemos despejar
+\begin{equation}
+  \label{eq:GN3}
+  \mathcal G_{N-1,0}=\frac{b_{N-1}}{u-a_{N-1}-\frac{b_N^2}{u-a_N}}\mathcal G_{N-2,0}.
+\end{equation}
+Prosiguiendo de esta forma con todas las ecuaciones correspondientes a $n>0$,
+\begin{equation}
+  \label{eq:Gnne0}
+  -b_n\mathcal G_{n-1,0} +(u-a_n)\mathcal G_{n,0}-b_{n+1}\mathcal G_{n+1,0}=0,
+\end{equation}
+llegamos a
+\begin{equation}
+  \label{eq:GN4}
+  \mathcal
+  G_{1,0}=\frac{b_{1}}{u-a_{1}-\frac{b_2^2}{u-a_2-\frac{b_3^2}{u-a_3-\ddots}}}
+  \mathcal G_{N-2,0}.
+\end{equation}
+Sustituyendo en la ecuación correspondiente a $n=0$,
+\begin{equation}
+  \label{eq:Gneq0}
+  (u-a_0)\mathcal G_{00}-b_{n+1}\mathcal G_{1,0}=1,
+\end{equation}
+obtenemos una expresión para $\mathcal G_{00}$ en forma de una
+fracción continuada
+\begin{equation}
+  \label{eq:G00}
+  \mathcal
+  G_{00}=\frac{1}{u-a_0-\frac{b_{1}^2}{u-a_{1}-\frac{b_2^2}{u-a_2-\frac{b_3^2}{u-a_3-\ddots}}}},
+\end{equation}
+la cual podemos emplear en la ec. \eqref{eq:evsG} para finalmente
+obtener la respuesta macroscópica
+\begin{equation}
+  \label{eq:eMLL}
+  \epsilon_M^{LL}=\frac{\epsilon_A}{u}\left(
+    u-a_0-\frac{b_{1}^2}{u-a_{1}-\frac{b_2^2}{u-a_2-\frac{b_3^2}{u-a_3-\ddots}}}\right).
+\end{equation}
+
+Debemos enfatizar que en esta exprersión, los coeficientes de Haydock
+dependen exclusivamente de la geometría, a través de la función
+característica $B(r)$ y no dependen de la composición del material ni
+de la frecuencia. Por lo tanto, sólo es necesario calcularlos una vez
+para una geometría dada y posteriormente pueden emplearse
+para calcular la respuesta de cualquier metamaterial con dicha
+geometría con cualquier composición y a cualquier frecuencia,
+simplemente sustituyendo la variable espectral adecuada $u$
+(ec. \eqref{eq:u}. Así, con este formalismo podemos calcular la
+respuesta de sistemas formados por aislantes o metales, con o sin
+dispersión y con o sin disipación; el operador $\hat B^{LL}$ es
+hermitiano haya o no haya dispersión o disipación.
+
+Por otro lado, podemos  aplicar el hamiltoniano $\hat
+B^{LL}$ (\eqref{eq:BLL}) en
+etapas, notando que multiplicar por $\hat{\bm K'}$ es trivial en el
+espacio recíproco. El producto matricial del vector resultante con
+$B_{\bm K\bm K'}=B_{\bm K-\bm K'}$ corresponde a una convolución, por lo
+cual, tras una transformada de Fourier hacia el espacio real, se
+convierte  en un producto trivial por la función
+característca $B(\bm r)$. Finalmente, tomando una transformada de
+Fourier de regreso al espacio recíproco, el producto escalar por los vectores
+unitarios $\hat{\bm K}\cdot$ se vuelve trivial. Esto muestra que podemos
+aplicar nuestro hamiltoniano repetidas veces para obtener los
+coeficientes de Haydock sin necesidad de multiplicar ninguna
+matriz. Eso vuelve muy eficiente el proceso aquí descrito.
+
 \ifignora
 
 \begin{equation}
@@ -1713,7 +1525,223 @@ la reescribimos como
 \fi %ifignora
 
 \section{Implementación}
+La teoría mostrada arriba ha sido implementada en un paquete
+computacional llamado {\em Photonic}, el cual ha sido puesto en el
+dominio público \cite{PhotonicCPAN,PhotonicGitHub}. El programa fue
+escrito en el lenguaje {\em PERL}, el cual es muy expresivo y cuya
+sintaxis hereda construcciones de lenguajes previos como {\em C, C++,
+  awk, bash, sed}, etc. El lenguaje es versátil y flexible, y refleja
+la filosofía de su creador resumida en frases como {\em hay más de una
+  manera de resolverlo} y {\em lo fácil debe ser fácil, lo difícil
+  debe ser posible}. Sólo contiene tres tipos de datos, que son {\em
+  escalares, arreglos} indizados por un entero y {\em arreglos
+  asociativos} indizados por cualquier escalar. Los escalares pueden
+representar números enteros o reales, cadenas de caracteres, o
+referencias a otros escalares, arreglos o arreglos asociativos, e
+incluso, referencias a subrutinas. Los arreglos son dinámicos y pueden
+crecer o decrecer en ambos extremos o en su interior. Esto permite
+implementar de manera trivial pilas de datos ({\em stacks}, colas {\em
+  fifo}, árboles y otras estructuras de datos. Se pueden
+construir fragmentos de código durante la ejecución de un programa
+para ejecutarse posteriormente. Esta flexibilidad permite
+emplear una gran variedad de paradigmas al programar en {\em PERL},
+incluyendo programación procedural, funcional y/o orientada a
+objetos.
+
+El costo a pagar por la flexibilidad del lenguaje es la velocidad de
+ejecución. Se ha reportado recientemente que {\em PERL} es varias decenas de
+veces más lento que {\em C} para tareas orientadas a procesamiento
+numérico.\cite{benchmark} Por ello, un grupo de investigadores se
+abocaron a crear una extensión del lenguaje llamado {\em Perl Data
+  Language} o {\em PDL} \cite{PDL, PDLCPAN, PDLGitHUb}, que permite
+ligar rutinas numéricas escritas en otros lenguajes como {\em C} o
+{\em Fortran} para el manejo eficiente de arreglos numéricos, sin
+sacrificar la flexibilidad y expresividad de {\em PERL}. Una prueba
+reciente\cite{benchmark} mostró que {\em PDL} es competitivo y hasta
+puede superar en velocidad a códigos nativos en {\em C}.
+
+Finalmente, para simplificar el proceso de codificación y volverlo
+robusto conforme evoluciona el paquete se empleó un sistema de
+programación de objetos conocido como {\em Moose}\cite{Moose}. Este
+sistema permite definir {\em clases} que abstraen el comportamiento de
+los {\em objetos}, instancias que tienen una serie de
+{\em atributos}, datos privados, y {\em métodos} que definen el
+comportamiento de los objetos. Las clases pueden heredar su
+comportamiento de otras clases o de {\em roles} que definen las
+interfases.
+
+\subsection{Ejemplo}
+
+No explicaremos aquí los detalles de la implementación, que son
+bastante complejos, pero en cambio mostraremos fragmentos de un pequeño
+programa para explicar cómo se usa el sistema. El programa íntegro
+puede consultarse en la referencia \cite{toroide}. El programa calcula
+el tensor dieléctrico de una red tetragonal de toroides hechos de cierto
+material y embebido en una matriz de otro material.
+
+Iniciamos con una serie de {\em pragmas} y cargando paquetes que serán
+útiles más adelante
+\begin{verbatim}
+#!/usr/bin/env perl
+# ...
+use strict;
+use warnings;
+use v5.12;
+use Getopt::Long;
+use PDL;
+use PDL::NiceSlice;
+use PDL::Constants qw(PI);
+use Photonic::Geometry::FromB;
+use Photonic::LE::NR2::Haydock;
+use Photonic::LE::NR2::EpsL;
+\end{verbatim}
+{\tt strict} y {\tt warnings}  son para pedir al sistema que sea estricto y nos advierta
+de nuestros errores, {\tt v5.12} es para habilitar algunas
+construcciones semánticas, {\tt PDL} es para usar la interface
+numérica, {\tt NiceSlice} simplificar el manejo de índices en las
+estructuras de datos y {\tt PI} es para definir una constante
+útil. Los paquetes relacionados con {\tt Photonic} serán discutidos
+más abajo.
+
+A continuación definimos algúnos parámetros y el código para leerlos
+desde la línea de comandos.
+\begin{verbatim}
+my $ratio; # b/a for torus
+...
+my $options=q(
+	'ratio=f'=>\$ratio,
+        ...
+	);
+...
+GetOptions( %options)or usage($options, "Bad options");
+usage($options, "Missing options")
+     unless luall {defined $_}
+     ($ratio, $fraction, @eps_a, @eps_b, $Nxy, $Nz, $Nh);
+...
+set_autopthread_targ($cores) if defined $cores;;
+\end{verbatim}
+Los parámetros a leer son la razon de los radios del toroide, la
+fracción de llenado en la celda unitaria, el numero de {\em voxels} a lo
+largo de los ejes de la red, los pares de funciones dieléctricas e
+emplear para los toroides y la matriz, el número de coeficientes de Haydock a
+emplear y el número de núcleos computacionales a emplear en el
+cálculo. A continuación se leen y validan las opciones y de ser
+necesario se envían mensajes de error.
+
+Como idicamos arriba, la geometría queda definida a partir de la
+función característica, cuyo valor es 1 dentro de del toroide y 0 en
+su exterior. Primero calculamos los dos radios del toroide en términos
+de la fracción de llenado deseada.
+\begin{verbatim}
+my ($Nxy2, $Nz2)=(2*$Nxy+1, 2*$Nz+1);
+my $unit_cell_volume=$Nxy2*$Nxy2*$Nz2;
+my $small_radius=($fraction*$unit_cell_volume/(2*PI**2*$ratio))**(1/3);
+my $large_radius=$ratio*$small_radius;
+warn "Tori overlap" if $small_radius>$Nz
+                       or $large_radius+$small_radius>$Nxy;
+\end{verbatim}
+Luego creamos un arreglo 3D representando a la celda unitaria y lo
+poblamos de unos y ceros de acuerdo a la función característica
+deseada.
+\begin{verbatim}
+my $r=zeroes($Nxy2, $Nxy2, $Nz2)->ndcoords
+      -pdl($Nxy, $Nxy, $Nz); #positions array
+my $B=(sqrt($r((0))**2+$r((1))**2)-$large_radius)**2
+       +$r((2))**2 < $small_radius**2;
+\end{verbatim}
+La rutina {\tt zeroes} produce el arreglo 3D de ceros del tamaño
+solicitado, el {\em método} {\tt ndcoords} asigna a cada punto del
+arreglo un vector en 3D con las coordenadas de dicho punto. Al restar
+las coordenadas del centro del arreglo, la variable {\tt \$r} guarda
+las coordenadas de los puntos del arreglo con respecto al
+centro. Procesando dichas coordenadas obtenemos la distancia de cada
+punto al círculo alrededor del cual se forma el toroide y en la
+variable {\tt \$B} guardamos un 1 o un 0 dependiendo de si estamos
+suficientemente cerca de la generatriz o no.
+
+A continuación incializamos dos objetos que codifican la geometría del
+sistema empleando la función característica.
+\begin{verbatim}
+my $gx=Photonic::Geometry::FromB->new(B=>$B, Direction0=>pdl(1,0,0));
+my $gz=Photonic::Geometry::FromB->new(B=>$B, Direction0=>pdl(0,0,1));
+\end{verbatim}
+El objeto {\tt Photonic::Geometry} sabe cómo calcular la red de {\em
+  voxels}, pero también sabe cómo calcular la red recíproca, y los
+vectores recíprocos normalizados $\hat{\bm K}$, entre
+otros métodos relacioniados a la geometría del sistema, a partir de la
+función característica {\tt B}. Sin embargo, para ello necesita saber en qué
+dirección apunta el vector de Bloch, el atributo inicializado con la
+palabra clave {\tt Direction0}. Emplearemos entonces dos geometrías,
+una con ondas viajando en la dirección $\hat{\bm x}$ y otra viajando en
+la dirección $\hat{\bm y}$.
+
+Con las dos geometrías podemos inicializar dos objetos para calcular
+coeficientes de Haydock.
+\begin{verbatim}
+my $nrx=Photonic::LE::NR2::Haydock->new(geometry=>$gx, nh=>$Nh);
+my $nrz=Photonic::LE::NR2::Haydock->new(geometry=>$gz, nh=>$Nh);
+\end{verbatim}
+Finalmente, para cada pareja de funciones dieléctricas, calcula la
+respuesta dieléctrica macroscópica longitudinal, proyectada sobre la
+dirección del vector de Bloch establecida arriba.
+\begin{verbatim}
+say "#ratio Nxy Nz Nh f-nom f-act medium torus epsxx epszz";
+foreach(0..@eps_a-1){
+    my ($ea, $eb)=(pdl($eps_a[$_])->r2C, pdl($eps_b[$_])->r2C);
+    my $epsx_calc=Photonic::LE::NR2::EpsL->new(haydock=>$nrx, nh=>$Nh,
+             epsA=>$ea, epsB=>$eb);
+    my $epsz_calc=Photonic::LE::NR2::EpsL->new(haydock=>$nrz, nh=>$Nh,
+             epsA=>$ea, epsB=>$eb);
+    my $resultx=$epsx_calc->epsL;
+    my $resultz=$epsz_calc->epsL;
+\end{verbatim}
+El objeto {\tt EpsL} sabe calcular la respuesta dieléctrica
+longitudinal y se inicializa con un objeto que calcula
+coeficientes de Haydock, con el número de coeficientes que se desea
+usar y con las funciones dieléctricas de ambas
+componentes. Finalmente, el {\em método} {\tt epsL} regresa el {\em
+  valor} de la función dieléctrica macroscópica deseada.
+
+El resto del programa simplemente imprime el resultado y mensajes de
+error de haberlos habido.
+\begin{verbatim}
+    say sprintf "%.4f %d %d %d %.4f %.4f %.4f %.4f %.4f %.4f",
+    $ratio, $Nxy, $Nz, $Nh, $fraction, $gx->f, $ea->re, $eb->re,
+    $resultx->re, $resultz->re;
+    say "x-no-covergió" unless $epsx_calc->converged;
+    say "z-no-covergió" unless $epsz_calc->converged;
+}
+
+sub usage {
+    ...
+}
+\end{verbatim}
+
+\subsection{Extensiones}
+Además de la teoría no retardada desarrollada en detalle en la sección
+\ref{binario}, hemos desarrollado la teoría para poder calcular la
+respuesta dieléctrica en presencia de retardamiento y para sistemas no
+binarios, con tres o más componentes. También hemos extendido la
+teoría para poder calcular los campos electromagnéticos microscópicos
+y a partir de ellos calcular propiedades no lineales. Estas
+extensiones han sido incorporadas en el paquete {\em Photonic}.
+
+\subsection{Instalación}
+
+Para instalar el paquete {\em Photonic} es necesario instalar primero
+el paquete {\em PDL}. En un sistema {\em linux} basta emplear el
+comando {\tt cpanm --look PDL} desde una línea de comandos. Debe
+leerse entonces el archivo {\tt INSTALLATION} e instalar su lista de
+prerrequisitos manualmente para posteriormente invocar los comandos
+{\tt perl Makefile.PL}, {\tt make}, {\tt make test} y {\tt make
+  install}. Posteriormente, el comando {\tt cpanm Photonic} instala de
+manera automática nuestro sistema. Una vez instalado, el comando {\tt
+  perldoc Photonic} da acceso al manual en línea.
+
 \section{Resultados}
+
+\section{Agradecimientos}
+Este trabajo fue apoyado por DGAPA-UNAM mediante el proyecto IN111119.
 
 \begin{thebibliography}{0000}
 \bibitem{Metamorphose} Virtual Institute for Artificial
@@ -1749,14 +1777,35 @@ IC. Archaeometry {\bf 32} 33–45 (1990).
  Optics Express {\bf 18}(21) 22119-22127 (2010).
  \href{https://www.osapublishing.org/oe/fulltext.cfm?uri=oe-18-21-22119&id=206120}
  {doi:10.1364/OE.18.022119}.
-
 \bibitem{samuel}   {\em Macroscopic optical response and photonic
     bands}, José Samuel Pérez-Huerta, Guillermo P. Ortiz, Bernardo
   S. Mendoza y W. Luis Mochán, New Journal of Physics {\bf 15}(4),
   043037 (2013).
   \href{https://iopscience.iop.org/article/10.1088/1367-2630/15/4/043037}
   {doi:10.1088/1367-2630/15/4/043037}.
-
+\bibitem{haydock}{\em The Recursive Solution of the Schrödinger Equation},
+R.~Haydock, Solid State Physics  {\bf 35}, 215 (1980) ed. por
+H. Ehrenreich, F. Seitz y D. Turnbull.
+\bibitem{PhotonicCPAN}
+  W. Luis Mochan, Guillermo Ortiz, Bernardo S. Mendoza, José Samuel
+  Pérez-Huerta, Lucila Juárez Reyes, Raksha Singla y Merlyn Jaqueline
+  Juárez-Gutiérrez, {\em Photonic}, \url{https://metacpan.org/pod/Photonic}.
+\bibitem{PhotonicGitHub}  W. Luis Mochan, Guillermo Ortiz, Bernardo S. Mendoza, José Samuel
+  Pérez-Huerta, Lucila Juárez Reyes, Raksha Singla y Merlyn Jaqueline
+  Juárez-Gutiérrez, {\em Photonic}, \url{https://github.com/wlmb/Photonic}.
+\bibitem{benchmark}W. Luis Mochán, {\em Perl Benchmark}
+  \url{https://wlmb.github.io/2021/10/03/pdl/}.
+\bibitem{PDL}{\em Perl Data Language: Scientific COmputing with Perl}
+  \url{http://pdl.perl.org/}.
+\bibitem{PDLCPAN} {\em PDL} \url{https://metacpan.org/pod/PDL}.
+\bibitem{PDLGitHUb}{\em Perl Data Language (PDL)},
+  \href{https://github.com/PDLPorters/pdl}.
+\bibitem{Moose}{\em Moose - A postmodern object system for Perl 5},
+  \url{https://metacpan.org/pod/Moose}.
+\bibitem{toroide}
+  \href{https://github.com/wlmb/Photonic/blob/master/examples/LE/NR2/toroid.pl}{Ejemplo}
+    de uso de {\em Photonic} para el cálculo de las propiedades
+    ópticas de una red de toroides.
 \end{thebibliography}
 
 \end{document}
