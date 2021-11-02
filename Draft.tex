@@ -926,6 +926,7 @@ macroscópico, lo volvemos a invertir y finalmente obtenemos el
 operador de onda macroscópico.\cite{samuel}
 
 \subsection{Sistema binario periódico sin retardamiento}
+\label{binario}
 Consideremos ahora un sistema periódico hecho de dos materiales,
 digamos, de partículas de un material $B$ embebidas en una matriz de
 un material $A$. La respuesta dieléctrica {\em microscópica} es en
@@ -1524,7 +1525,223 @@ la reescribimos como
 \fi %ifignora
 
 \section{Implementación}
+La teoría mostrada arriba ha sido implementada en un paquete
+computacional llamado {\em Photonic}, el cual ha sido puesto en el
+dominio público \cite{PhotonicCPAN,PhotonicGitHub}. El programa fue
+escrito en el lenguaje {\em PERL}, el cual es muy expresivo y cuya
+sintaxis hereda construcciones de lenguajes previos como {\em C, C++,
+  awk, bash, sed}, etc. El lenguaje es versátil y flexible, y refleja
+la filosofía de su creador resumida en frases como {\em hay más de una
+  manera de resolverlo} y {\em lo fácil debe ser fácil, lo difícil
+  debe ser posible}. Sólo contiene tres tipos de datos, que son {\em
+  escalares, arreglos} indizados por un entero y {\em arreglos
+  asociativos} indizados por cualquier escalar. Los escalares pueden
+representar números enteros o reales, cadenas de caracteres, o
+referencias a otros escalares, arreglos o arreglos asociativos, e
+incluso, referencias a subrutinas. Los arreglos son dinámicos y pueden
+crecer o decrecer en ambos extremos o en su interior. Esto permite
+implementar de manera trivial pilas de datos ({\em stacks}, colas {\em
+  fifo}, árboles y otras estructuras de datos. Se pueden
+construir fragmentos de código durante la ejecución de un programa
+para ejecutarse posteriormente. Esta flexibilidad permite
+emplear una gran variedad de paradigmas al programar en {\em PERL},
+incluyendo programación procedural, funcional y/o orientada a
+objetos.
+
+El costo a pagar por la flexibilidad del lenguaje es la velocidad de
+ejecución. Se ha reportado recientemente que {\em PERL} es varias decenas de
+veces más lento que {\em C} para tareas orientadas a procesamiento
+numérico.\cite{benchmark} Por ello, un grupo de investigadores se
+abocaron a crear una extensión del lenguaje llamado {\em Perl Data
+  Language} o {\em PDL} \cite{PDL, PDLCPAN, PDLGitHUb}, que permite
+ligar rutinas numéricas escritas en otros lenguajes como {\em C} o
+{\em Fortran} para el manejo eficiente de arreglos numéricos, sin
+sacrificar la flexibilidad y expresividad de {\em PERL}. Una prueba
+reciente\cite{benchmark} mostró que {\em PDL} es competitivo y hasta
+puede superar en velocidad a códigos nativos en {\em C}.
+
+Finalmente, para simplificar el proceso de codificación y volverlo
+robusto conforme evoluciona el paquete se empleó un sistema de
+programación de objetos conocido como {\em Moose}\cite{Moose}. Este
+sistema permite definir {\em clases} que abstraen el comportamiento de
+los {\em objetos}, instancias que tienen una serie de
+{\em atributos}, datos privados, y {\em métodos} que definen el
+comportamiento de los objetos. Las clases pueden heredar su
+comportamiento de otras clases o de {\em roles} que definen las
+interfases.
+
+\subsection{Ejemplo}
+
+No explicaremos aquí los detalles de la implementación, que son
+bastante complejos, pero en cambio mostraremos fragmentos de un pequeño
+programa para explicar cómo se usa el sistema. El programa íntegro
+puede consultarse en la referencia \cite{toroide}. El programa calcula
+el tensor dieléctrico de una red tetragonal de toroides hechos de cierto
+material y embebido en una matriz de otro material.
+
+Iniciamos con una serie de {\em pragmas} y cargando paquetes que serán
+útiles más adelante
+\begin{verbatim}
+#!/usr/bin/env perl
+# ...
+use strict;
+use warnings;
+use v5.12;
+use Getopt::Long;
+use PDL;
+use PDL::NiceSlice;
+use PDL::Constants qw(PI);
+use Photonic::Geometry::FromB;
+use Photonic::LE::NR2::Haydock;
+use Photonic::LE::NR2::EpsL;
+\end{verbatim}
+{\tt strict} y {\tt warnings}  son para pedir al sistema que sea estricto y nos advierta
+de nuestros errores, {\tt v5.12} es para habilitar algunas
+construcciones semánticas, {\tt PDL} es para usar la interface
+numérica, {\tt NiceSlice} simplificar el manejo de índices en las
+estructuras de datos y {\tt PI} es para definir una constante
+útil. Los paquetes relacionados con {\tt Photonic} serán discutidos
+más abajo.
+
+A continuación definimos algúnos parámetros y el código para leerlos
+desde la línea de comandos.
+\begin{verbatim}
+my $ratio; # b/a for torus
+...
+my $options=q(
+	'ratio=f'=>\$ratio,
+        ...
+	);
+...
+GetOptions( %options)or usage($options, "Bad options");
+usage($options, "Missing options")
+     unless luall {defined $_}
+     ($ratio, $fraction, @eps_a, @eps_b, $Nxy, $Nz, $Nh);
+...
+set_autopthread_targ($cores) if defined $cores;;
+\end{verbatim}
+Los parámetros a leer son la razon de los radios del toroide, la
+fracción de llenado en la celda unitaria, el numero de {\em voxels} a lo
+largo de los ejes de la red, los pares de funciones dieléctricas e
+emplear para los toroides y la matriz, el número de coeficientes de Haydock a
+emplear y el número de núcleos computacionales a emplear en el
+cálculo. A continuación se leen y validan las opciones y de ser
+necesario se envían mensajes de error.
+
+Como idicamos arriba, la geometría queda definida a partir de la
+función característica, cuyo valor es 1 dentro de del toroide y 0 en
+su exterior. Primero calculamos los dos radios del toroide en términos
+de la fracción de llenado deseada.
+\begin{verbatim}
+my ($Nxy2, $Nz2)=(2*$Nxy+1, 2*$Nz+1);
+my $unit_cell_volume=$Nxy2*$Nxy2*$Nz2;
+my $small_radius=($fraction*$unit_cell_volume/(2*PI**2*$ratio))**(1/3);
+my $large_radius=$ratio*$small_radius;
+warn "Tori overlap" if $small_radius>$Nz
+                       or $large_radius+$small_radius>$Nxy;
+\end{verbatim}
+Luego creamos un arreglo 3D representando a la celda unitaria y lo
+poblamos de unos y ceros de acuerdo a la función característica
+deseada.
+\begin{verbatim}
+my $r=zeroes($Nxy2, $Nxy2, $Nz2)->ndcoords
+      -pdl($Nxy, $Nxy, $Nz); #positions array
+my $B=(sqrt($r((0))**2+$r((1))**2)-$large_radius)**2
+       +$r((2))**2 < $small_radius**2;
+\end{verbatim}
+La rutina {\tt zeroes} produce el arreglo 3D de ceros del tamaño
+solicitado, el {\em método} {\tt ndcoords} asigna a cada punto del
+arreglo un vector en 3D con las coordenadas de dicho punto. Al restar
+las coordenadas del centro del arreglo, la variable {\tt \$r} guarda
+las coordenadas de los puntos del arreglo con respecto al
+centro. Procesando dichas coordenadas obtenemos la distancia de cada
+punto al círculo alrededor del cual se forma el toroide y en la
+variable {\tt \$B} guardamos un 1 o un 0 dependiendo de si estamos
+suficientemente cerca de la generatriz o no.
+
+A continuación incializamos dos objetos que codifican la geometría del
+sistema empleando la función característica.
+\begin{verbatim}
+my $gx=Photonic::Geometry::FromB->new(B=>$B, Direction0=>pdl(1,0,0));
+my $gz=Photonic::Geometry::FromB->new(B=>$B, Direction0=>pdl(0,0,1));
+\end{verbatim}
+El objeto {\tt Photonic::Geometry} sabe cómo calcular la red de {\em
+  voxels}, pero también sabe cómo calcular la red recíproca, y los
+vectores recíprocos normalizados $\hat{\bm K}$, entre
+otros métodos relacioniados a la geometría del sistema, a partir de la
+función característica {\tt B}. Sin embargo, para ello necesita saber en qué
+dirección apunta el vector de Bloch, el atributo inicializado con la
+palabra clave {\tt Direction0}. Emplearemos entonces dos geometrías,
+una con ondas viajando en la dirección $\hat{\bm x}$ y otra viajando en
+la dirección $\hat{\bm y}$.
+
+Con las dos geometrías podemos inicializar dos objetos para calcular
+coeficientes de Haydock.
+\begin{verbatim}
+my $nrx=Photonic::LE::NR2::Haydock->new(geometry=>$gx, nh=>$Nh);
+my $nrz=Photonic::LE::NR2::Haydock->new(geometry=>$gz, nh=>$Nh);
+\end{verbatim}
+Finalmente, para cada pareja de funciones dieléctricas, calcula la
+respuesta dieléctrica macroscópica longitudinal, proyectada sobre la
+dirección del vector de Bloch establecida arriba.
+\begin{verbatim}
+say "#ratio Nxy Nz Nh f-nom f-act medium torus epsxx epszz";
+foreach(0..@eps_a-1){
+    my ($ea, $eb)=(pdl($eps_a[$_])->r2C, pdl($eps_b[$_])->r2C);
+    my $epsx_calc=Photonic::LE::NR2::EpsL->new(haydock=>$nrx, nh=>$Nh,
+             epsA=>$ea, epsB=>$eb);
+    my $epsz_calc=Photonic::LE::NR2::EpsL->new(haydock=>$nrz, nh=>$Nh,
+             epsA=>$ea, epsB=>$eb);
+    my $resultx=$epsx_calc->epsL;
+    my $resultz=$epsz_calc->epsL;
+\end{verbatim}
+El objeto {\tt EpsL} sabe calcular la respuesta dieléctrica
+longitudinal y se inicializa con un objeto que calcula
+coeficientes de Haydock, con el número de coeficientes que se desea
+usar y con las funciones dieléctricas de ambas
+componentes. Finalmente, el {\em método} {\tt epsL} regresa el {\em
+  valor} de la función dieléctrica macroscópica deseada.
+
+El resto del programa simplemente imprime el resultado y mensajes de
+error de haberlos habido.
+\begin{verbatim}
+    say sprintf "%.4f %d %d %d %.4f %.4f %.4f %.4f %.4f %.4f",
+    $ratio, $Nxy, $Nz, $Nh, $fraction, $gx->f, $ea->re, $eb->re,
+    $resultx->re, $resultz->re;
+    say "x-no-covergió" unless $epsx_calc->converged;
+    say "z-no-covergió" unless $epsz_calc->converged;
+}
+
+sub usage {
+    ...
+}
+\end{verbatim}
+
+\subsection{Extensiones}
+Además de la teoría no retardada desarrollada en detalle en la sección
+\ref{binario}, hemos desarrollado la teoría para poder calcular la
+respuesta dieléctrica en presencia de retardamiento y para sistemas no
+binarios, con tres o más componentes. También hemos extendido la
+teoría para poder calcular los campos electromagnéticos microscópicos
+y a partir de ellos calcular propiedades no lineales. Estas
+extensiones han sido incorporadas en el paquete {\em Photonic}.
+
+\subsection{Instalación}
+
+Para instalar el paquete {\em Photonic} es necesario instalar primero
+el paquete {\em PDL}. En un sistema {\em linux} basta emplear el
+comando {\tt cpanm --look PDL} desde una línea de comandos. Debe
+leerse entonces el archivo {\tt INSTALLATION} e instalar su lista de
+prerrequisitos manualmente para posteriormente invocar los comandos
+{\tt perl Makefile.PL}, {\tt make}, {\tt make test} y {\tt make
+  install}. Posteriormente, el comando {\tt cpanm Photonic} instala de
+manera automática nuestro sistema. Una vez instalado, el comando {\tt
+  perldoc Photonic} da acceso al manual en línea.
+
 \section{Resultados}
+
+\section{Agradecimientos}
+Este trabajo fue apoyado por DGAPA-UNAM mediante el proyecto IN111119.
 
 \begin{thebibliography}{0000}
 \bibitem{Metamorphose} Virtual Institute for Artificial
@@ -1560,18 +1777,35 @@ IC. Archaeometry {\bf 32} 33–45 (1990).
  Optics Express {\bf 18}(21) 22119-22127 (2010).
  \href{https://www.osapublishing.org/oe/fulltext.cfm?uri=oe-18-21-22119&id=206120}
  {doi:10.1364/OE.18.022119}.
-
 \bibitem{samuel}   {\em Macroscopic optical response and photonic
     bands}, José Samuel Pérez-Huerta, Guillermo P. Ortiz, Bernardo
   S. Mendoza y W. Luis Mochán, New Journal of Physics {\bf 15}(4),
   043037 (2013).
   \href{https://iopscience.iop.org/article/10.1088/1367-2630/15/4/043037}
   {doi:10.1088/1367-2630/15/4/043037}.
-
 \bibitem{haydock}{\em The Recursive Solution of the Schrödinger Equation},
 R.~Haydock, Solid State Physics  {\bf 35}, 215 (1980) ed. por
 H. Ehrenreich, F. Seitz y D. Turnbull.
-
+\bibitem{PhotonicCPAN}
+  W. Luis Mochan, Guillermo Ortiz, Bernardo S. Mendoza, José Samuel
+  Pérez-Huerta, Lucila Juárez Reyes, Raksha Singla y Merlyn Jaqueline
+  Juárez-Gutiérrez, {\em Photonic}, \url{https://metacpan.org/pod/Photonic}.
+\bibitem{PhotonicGitHub}  W. Luis Mochan, Guillermo Ortiz, Bernardo S. Mendoza, José Samuel
+  Pérez-Huerta, Lucila Juárez Reyes, Raksha Singla y Merlyn Jaqueline
+  Juárez-Gutiérrez, {\em Photonic}, \url{https://github.com/wlmb/Photonic}.
+\bibitem{benchmark}W. Luis Mochán, {\em Perl Benchmark}
+  \url{https://wlmb.github.io/2021/10/03/pdl/}.
+\bibitem{PDL}{\em Perl Data Language: Scientific COmputing with Perl}
+  \url{http://pdl.perl.org/}.
+\bibitem{PDLCPAN} {\em PDL} \url{https://metacpan.org/pod/PDL}.
+\bibitem{PDLGitHUb}{\em Perl Data Language (PDL)},
+  \href{https://github.com/PDLPorters/pdl}.
+\bibitem{Moose}{\em Moose - A postmodern object system for Perl 5},
+  \url{https://metacpan.org/pod/Moose}.
+\bibitem{toroide}
+  \href{https://github.com/wlmb/Photonic/blob/master/examples/LE/NR2/toroid.pl}{Ejemplo}
+    de uso de {\em Photonic} para el cálculo de las propiedades
+    ópticas de una red de toroides.
 \end{thebibliography}
 
 \end{document}
