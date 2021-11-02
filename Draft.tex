@@ -760,24 +760,14 @@ haber {\em correlaciones} entre las fluctuaciones espaciales de $\epsilon(\bm r)
 y del campo eléctrico $\bm E(\bm r)$.
 
 % cambié a, por lo tanto, por que en este caso, por lo que antes se ha
-% dicho, los campos promediados son libres de fluctuaciones.
+% dicho los campos promediados son libres de fluctuaciones.
 
 \subsection{Proyectores longitudinal y transversal}
-Para obtener la respuesta macroscópica $\hat{\bm \epsilon}_M$, que
-como hemos mencionado no es el simple promedio de la respuesta microscópica
-$\hat{\bm\epsilon}$, podemos recurrir a las ecuaciones de Maxwell.
-Consideraremos primero un material formado por inclusiones muy pequeñas
-y muy cercanas entre sí, comparando su tamaño y su separación con la
-longitud de onda característica de la luz $\lambda_0=2\pi c/\omega$ a
-una frecuencia $\omega$ dada. En este caso podemos ignorar el {\em
-  retardamiento}, tomar el límite $c\to\infty$ en la ecuación de
-Faraday y tratar al campo eléctrico como si fuera un campo
-{\em longitudinal}, $\bm E=\bm E^L$, derivable de un potencial escalar. Recordemos que de
-acuerdo al teorema de Helmholtz, todo campo vectorial $\bm F=\bm
-F^L+\bm F^T$ puede escribirse como la suma de dos contribuciones, un
-campo longitudinal $\bm F^L=\hat{\mathcal P^L}\bm F$ y un campo
-transversal $\bm F^T=\hat{\mathcal P^T}\bm F$, que cumplen las
-ecuaciones
+Por otro lado, recordemos que de acuerdo al teorema de Helmholtz, todo
+campo vectorial $\bm F=\bm F^L+\bm F^T$ puede escribirse como la suma
+de dos contribuciones, un campo longitudinal
+$\bm F^L=\hat{\mathcal P^L}\bm F$ y un campo transversal
+$\bm F^T=\hat{\mathcal P^T}\bm F$, que cumplen las ecuaciones
 \begin{subequations}
   \label{eq:Helmholtz}
   \begin{align}
@@ -801,7 +791,7 @@ obtenemos $\bm F^L=\hat\nabla\hat\nabla^{-2}\hat\nabla\cdot\bm F$ de
 donde identificamos al proyector longitudinal
 \begin{equation}
   \label{eq:PL}
-  \hat{\mathcal P}^L=\hat\nabla\hat\nabla^{-2}\hat\nabla\cdot.
+  \hat{\mathcal P}^L=\hat\nabla\hat\nabla^{-2}\hat\nabla\cdot .
 \end{equation}
 Análogamente, podemos identificar al proyector transversal
 \begin{equation}
@@ -810,28 +800,37 @@ Análogamente, podemos identificar al proyector transversal
 \end{equation}
 
 \subsection{Caso no retardado}
-Regresando a nuestro problema, notamos a partir de las ecuaciones de
-Maxwell que la proyección longitudinal del desplazamiento, $\bm
-D^L=\hat{\mathcal P}^L\hat\epsilon \bm E=\hat{\mathcal P}^L\epsilon
-\bm E^L=\hat{\mathcal P}^L\epsilon\hat{\mathcal P}^L \bm
+Para obtener la respuesta macroscópica $\hat{\bm \epsilon}_M$, que
+como hemos mencionado no es el simple promedio de la respuesta microscópica
+$\hat{\bm\epsilon}$, recurrimos a las ecuaciones de Maxwell.
+Consideremos un material formado por inclusiones muy pequeñas
+y muy cercanas entre sí, comparando su tamaño y su separación con la
+longitud de onda característica de la luz $\lambda_0=2\pi c/\omega$ a
+una frecuencia $\omega$ dada. En este caso podemos ignorar el {\em
+  retardamiento}, tomar el límite $c\to\infty$ en la ecuación de
+Faraday y tratar al campo eléctrico como si fuera un campo puramente
+{\em longitudinal}, $\bm E=\bm E^L$, derivable de un potencial escalar.
+Por tanto, la proyección longitudinal del desplazamiento, $\bm
+D^L=\hat{\mathcal P}^L\hat\epsilon \bm E=\hat{\mathcal P}^L\hat\epsilon
+\bm E^L=\hat{\mathcal P}^L\hat\epsilon\hat{\mathcal P}^L \bm
 E^L$,
 \begin{equation}
   \label{eq:DLvsEL}
   \bm D^L=\hat{\bm\epsilon}^{LL}\bm E^L,
 \end{equation}
-cumple las mismas ecuaciones que el campo eléctrico longitudinal
-externo,
+cumple las mismas ecuaciones que el campo eléctrico
+longitudinal externo,
 \begin{equation}
   \label{eq:DvsEext}
   \begin{split}
-    \nabla\times\bm D^L&=0=\nabla\times\bm E^{\text{ex,}L},\\
-    \nabla\cdot\bm D^L&=4\pi\rho^{\text{ex}}=\nabla\cdot\bm E^{\text{ex,}L}.
+    \nabla\times\bm D^L&=0=\nabla\times\bm E_{\text{ex}}^{L},\\
+    \nabla\cdot\bm D^L&=4\pi\rho^{\text{ex}}=\nabla\cdot\bm E^{L}_{\text{ex}}.
   \end{split}
 \end{equation}
 Aquí, hemos definido
 $\hat{\bm O}^{\alpha\beta}=\hat{\mathcal P}^\alpha\hat {\bm O}
 \hat{\mathcal P}^\beta$ ($\alpha,\beta=L,T$) para cualquier operador
-$\hat{\bm O}$.  Por lo tanto, podemos identificar a $\bm D^L$ con el
+$\hat{\bm O}$. Entonces, podemos identificar a $\bm D^L$ con el
 campo eléctrico longitudinal externo. Siendo un campo externo, sus
 fuentes son unicamente las cargas externas $\rho^{\text{ex}}$, las
 cuales no tienen absolutamente nada que ver con la composición del
@@ -863,7 +862,7 @@ igual al promedio del inverso de la proyección longitudinal de la
 respuesta microscópica.\cite{guilleOE}
 
 \subsection{Caso retardado}
-Una lección de este pequeño ejercicio es que para obtener la respuesta
+Como se ha mostrado, obtener la respuesta
 macroscópica de un sistema no basta con promediar cualquier función
 respuesta. Por ejemplo, el promedio de $\bm\epsilon$ no tiene
 significado como respuesta macroscópica. Sin embargo, si logramos
