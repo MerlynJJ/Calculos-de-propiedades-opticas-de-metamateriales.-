@@ -34,6 +34,7 @@
 \usetikzlibrary{shadows.blur}
 \usetikzlibrary{shapes}
 
+\decimalpoint
 %\renewcommand\familydefault{\sfdefault}
 \usepackage{showkeys}
 %\usepackage{showlabel}
@@ -53,7 +54,7 @@
 
 \begin{document}
 \maketitle
-\tableofcontents
+%\tableofcontents
 
 \section{Introducción}
 
@@ -83,18 +84,19 @@ Por ejemplo, si un meta-material tiene componentes metálicos, estos
 pueden presentar resonancias asociadas a un movimiento oscilatorio
 colectivo de sus electrones de conducción, denominado de acuerdo a sus
 características como plasmón de bulto, plasmón de superficie o plasmón
-localizados. La frecuencia de este movimiento se denomina como
+localizado. La frecuencia de este movimiento en un sistema infinito se
+denomina como
 frecuencia de plasma $\omega_{p}$. Para estimar esta frecuencia,
 considere el modelo más simple de un conductor, un gas de electrones
-que en equilibrio tiene una densidad de número $n_{0}$, libres de
+que en equilibrio tienen una densidad de número $n_{0}$, y que son libres de
 moverse en un entorno positivamente cargado, de manera que el sistema
 sea neutro. Si debido a algún efecto como una compresión o rarefacción
-del gas de electrones se produce una acumulación de carga $Q$,
-localizada en alguna región $\mathcal{R}$, esta producirá un campo
+del gas de electrones se produce una acumulación de carga $Q$
+localizada en alguna región $\mathcal{R}$, ésta producirá un campo
 eléctrico $\bm{E} (\bm{r})$, como ilustra la figura
 \ref{Bulkplasmon}. De acuerdo a la segunda ley de Newton, los
 electrones adquieren una aceleración
-$\frac{d^{2}\bm{r}}{dt^{2}} = -e\bm{E}(\bm{r},t)/m$, donde $m$ y $-e$
+$d^{2}\bm{r}/dt^{2} = -e\bm{E}(\bm{r},t)/m$, donde $m$ y $-e$
 son la masa y la carga eléctrica electrónica. La velocidad adquirida
 por los electrones resulta en una corriente eléctrica
 $\bm{j}(\bm{r},t) = -n_0 e \bm v=-n_{0}e({d\bm{r}}/{dt})$ que obedece
@@ -113,7 +115,7 @@ la carga $Q$ encerrada en $\Sigma$,
   $\Sigma$ sobre la cual se aplica la ley de Gauss al campo producido
   por $Q$, campo que produce una densidad de corriente que fluye a
   través de $\Sigma$. La corriente modifica $Q$ conforme transcurre el
-  tiempo $t$ produciendo las llamadas oscilaciones de plasma.}
+  tiempo $t$ produciendo oscilaciones de plasma.}
 \label{Bulkplasmon}
 \end{figure}
 \begin{equation}
@@ -154,9 +156,9 @@ proseguir su camino hasta que en la región orignal disminuya tanto la
 densidad de electrones que aparezca una carga neta positiva que frene
 a los electrones en fuga y los haga regresar, hasta que su repulsión
 mutua los frene al haber regresado a la configuración inicial. Este
-proceso se repetie periódicamente y su frecuencia $\omega_p$ está
+proceso se repite periódicamente y su frecuencia $\omega_p$ está
 relacionada con la repulsión coulombiana, proporcional a $e^2$, la
-densidad de de número electrónica $n_0$ y la inercia electrónica
+densidad de número electrónica $n_0$ y la inercia electrónica
 caracterizada por $m$.
 
 En lugar de un medio infinito, consideremos ahora un medio
