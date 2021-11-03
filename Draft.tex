@@ -34,6 +34,7 @@
 \usetikzlibrary{shadows.blur}
 \usetikzlibrary{shapes}
 
+\decimalpoint
 %\renewcommand\familydefault{\sfdefault}
 \usepackage{showkeys}
 %\usepackage{showlabel}
@@ -114,7 +115,7 @@ la carga $Q$ encerrada en $\Sigma$,
   $\Sigma$ sobre la cual se aplica la ley de Gauss al campo producido
   por $Q$, campo que produce una densidad de corriente que fluye a
   través de $\Sigma$. La corriente modifica $Q$ conforme transcurre el
-  tiempo $t$ produciendo las llamadas oscilaciones de plasma.}
+  tiempo $t$ produciendo oscilaciones de plasma.}
 \label{Bulkplasmon}
 \end{figure}
 \begin{equation}
@@ -215,7 +216,7 @@ $\bm{\mathcal{P}}=-n_0 e\bm \zeta$, como ilustra la fig. \ref{Polariton},
     carga en la dirección opuesta induciendo polarización en el
     sistema $\bm{\mathcal{P}}$ (flechas verdes) y una carga
     superficial la cual produce un campo eléctrico
-    $\bm{E}(\bm{r},t)$.}
+    $\bm{E}(\bm{r},t)$ (flechas azules).}
 \label{Polariton}
 
 \end{figure}
@@ -274,7 +275,7 @@ intensamente. \cite{LycurgusInvestigation}
     \caption{Copa de Lycurgo, fabricada en la Roma tardía del siglo IV
       D.C., cuya fabricación resultante muestra propiedades ópticas
       excepcionales.  Es una taza para beber de vidrio que se ve verde
-      o rojo, dependiendo de cómo es iluminada.  ©The Trustees of the
+      o roja, dependiendo de cómo es iluminada.  ©The Trustees of the
       British Museum.}
     \label{Lycurgus}
 \end{figure}
@@ -303,9 +304,13 @@ de carga superficial.
   \includegraphics[width=0.4\textwidth]{fuchs1}
   \includegraphics[width=0.5\textwidth]{fuchs2}
   \caption{Modos resonantes de un cristal de sal y espectro de
-    absorción teórico y experimental. Del lado izquierdo mostramos los
-    signos de la polarización en una de las ocho esquinas del cubo de
-    sal correspondiente a los seis modos principales.}
+    absorción teórico y experimental.  Los
+    signos del lado izquierdo indican la polarización en una de las
+    ocho esquinas del cubo de sal correspondiente para cada uno de los
+    seis modos principales. La posición y peso de cada resonancia se
+    ilustran con las pequeñas gaussianas en la base del panel
+    derecho, las cuales generan el espectro teórico al escalarse,
+    ensancharse y sumarse.}
   \label{fig:Fuchs}
 \end{figure}
 En este caso se encontraron en lugar de un modo dipolar, como vimos
@@ -574,7 +579,9 @@ como la que ilustra la figura \ref{fig:metalente}.
   \includegraphics[height=.3\textwidth,valign=c]{metasup5}
   \includegraphics[height=.5\textwidth,valign=c]{metasup4}
 \caption{Metalente formada por un arreglo de prismas de alto índice
-    de refracción con direcciones variables (izquierda). Imagen de una
+    de refracción con orientaciones variables (izquierda). Refracción
+    de la luz debido a la modulación de fase al atravesar el metalente
+    (centro). Imagen de una
     fuente puntual formada por la metalente y por una lente
     convencional (derecha). }
   \label{fig:metalente}
@@ -917,7 +924,8 @@ pasos indicados en la figura \ref{fig:circulo}.
   \includegraphics[width=0.8\textwidth]{procedure-419}
   \caption{Pasos para obtener la respuesta macroscópica
     $\hat{\bm \epsilon}_M$ a partir de la respuesta microscópica
-    $\epsilon(\bm r)$. Primero construimos el operador de onda, lo
+    $\epsilon(\bm r)$ incluyendo efectos de retardamiento. Primero
+    construimos el operador de onda, lo
     invertimos, lo promediamos, identificamos el operador de onda
     macroscópico inverso, lo invertimos y finalmente identificamos el
     operador dieléctrico macroscópico.}
@@ -1579,10 +1587,11 @@ con otros, como las construcciones con bloques de juguetes  {\em Lego}.
 
 \subsection{Ejemplo}
 
-No explicaremos aquí los detalles de la implementación, que son
-bastante complejos, pero en cambio mostraremos fragmentos de un pequeño
-programa para explicar cómo se usa el sistema. El programa íntegro
-puede consultarse en la referencia \cite{toroide}. El programa calcula
+No explicaremos aquí los detalles de la implementación, pues su
+comprensión requeriría cierto dominio de los sistemas (Perl, PDL y
+Moose) empleados. En cambio, mostraremos fragmentos de un pequeño
+programa para explicar cómo se usa el sistema. El programa íntegro,
+disponible en la referencia \cite{toroide}, calcula
 el tensor dieléctrico de una red tetragonal de toroides hechos de cierto
 material y embebido en una matriz de otro material.
 
@@ -1603,8 +1612,9 @@ use Photonic::LE::NR2::Haydock;
 use Photonic::LE::NR2::EpsL;
 \end{verbatim}
 {\tt strict} y {\tt warnings}  son para pedir al sistema que sea estricto y nos advierta
-de nuestros errores, {\tt v5.12} es para habilitar algunas
-construcciones semánticas, {\tt PDL} es para usar la interface
+de errores potenciales, {\tt v5.12} es para habilitar algunas
+construcciones semánticas, {\tt Getopt} es para leer los parámetros
+desde la línea de comandos al ejecutar el programa, {\tt PDL} es para usar la interface
 numérica, {\tt NiceSlice} para simplificar el manejo de índices en las
 estructuras de datos y {\tt PI} es simplemente una constante
 útil. Los paquetes relacionados con {\tt Photonic} serán discutidos
@@ -1640,7 +1650,7 @@ necesario se envían mensajes de error. La rutina {\tt
 que deseamos usar al paralelizar el programa.
 
 Como idicamos arriba, la geometría queda definida a partir de la
-función característica, cuyo valor es 1 dentro de del toroide y 0 en
+función característica, cuyo valor es 1 dentro del toroide y 0 en
 su exterior. Primero calculamos los dos radios del toroide en términos
 de la fracción de llenado deseada.
 \begin{verbatim}
@@ -1680,12 +1690,14 @@ my $gz=Photonic::Geometry::FromB->new(B=>$B, Direction0=>pdl(0,0,1));
 Las clases {\tt Geometry} saben cómo calcular la red de {\em
   voxels}, pero también cómo calcular la red recíproca, y los
 vectores recíprocos normalizados $\hat{\bm K}$, entre
-otros métodos relacioniados a la geometría del sistema, a partir de la
-función característica {\tt B}. Sin embargo, para ello necesita saber en qué
-dirección apunta el vector de Bloch, el atributo inicializado con la
-palabra clave {\tt Direction0}. Emplearemos entonces dos geometrías,
+otros métodos relacioniados a la geometría del sistema, a partir del
+atributo {\tt B} que inicializamos con la
+función característica {\tt \$B}. Sin embargo, para ello necesita saber en qué
+dirección apunta el vector de Bloch, asociado al atributo {\tt
+  Direction0}. Emplearemos entonces dos {\em geometrías},
 una con ondas viajando en la dirección $\hat{\bm x}$ y otra viajando en
-la dirección $\hat{\bm y}$.
+la dirección $\hat{\bm z}$, i.e., a lo largo del plano y del eje del
+toroide, respectivamente.
 
 Con las dos geometrías podemos inicializar dos objetos para calcular
 coeficientes de Haydock.
@@ -1715,7 +1727,7 @@ componentes. Finalmente, el {\em método} {\tt epsL} regresa el {\em
   valor} de la función dieléctrica macroscópica deseada.
 
 El resto del programa simplemente imprime el resultado y mensajes de
-error de haberlos habido.
+error de ser necesario.
 \begin{verbatim}
     say sprintf "%.4f %d %d %d %.4f %.4f %.4f %.4f %.4f %.4f",
     $ratio, $Nxy, $Nz, $Nh, $fraction, $gx->f, $ea->re, $eb->re,
@@ -1731,7 +1743,7 @@ sub usage {
 
 Podemos correr el programa como en el siguiente ejemplo, en el que
 calculamos las propiedades de una red tetragonal de
-$80\times80\times20$ voxeles con toroides cuyas funciones
+$161\times161\times41$ voxeles con toroides cuyas funciones
 dieléctricas son $\epsilon_b=5,10$, immersos en el vacío, $\epsilon_a=1$,
 con una fracción de llenado nominal $f=0.3$, con una razón entre los
 radios del círculo mayor al circulo menor $R_>/R_<=3$ y empleando 100
@@ -1778,10 +1790,11 @@ obtenido con la teoría y códigos descritos arriba.
 \subsection{Dicroismo lineal y transmisión extraordinaria}
 El punto de inicio de nuestros cálculos es la función característica
 $B(\bm r)$, consistente en unos y ceros, dependiendo de si $\bm r$ se
-halla dentro del material $B$ o $A$. Al discretizar el espacio real,
+halla dentro del material $B$ o $A$. Al discretizar el espacio real en
+2D,
 $B(\bm r)$ se vuelve una representación binaria de una imagen
 pixelada. Por lo tanto, nuestro programa puede alimentarse
-literalmente de una imagen pixelada de alto contraste. Esto permite
+{\em literalmente} de una imagen pixelada de alto contraste. Esto permite
 manipular la imagen usando herramientas gráficas y calcular las
 propiedades ópticas del sistema resultante. Ilustramos esto con la
 fig. \ref{fig:elipses}, en cuyo lado izquierdo mostramos un corte de
@@ -1804,15 +1817,17 @@ polarización y casi nada para la polarización ortogonal.\cite{bms12}
 \begin{figure}
   \centering
   \includegraphics[width=.8\textwidth]{cu-epsa-ag-epsb-R1I0-s-1-15_75}
-  \caption{(izquierda)Red rectangular con parámetros de red $L_y=2L_x$ de
+  \caption{(Izquierda)Red rectangular con parámetros de red $L_y=2L_x$ de
     agujeros cilíndricos con razón de semiejes $a=1.8b$ en una matriz
     de plata. El semieje mayor está rotado $\theta=74^\circ$ con
-    respecto a la vertical. (derecha arriba) Espectro de reflectancia
+    respecto a la vertical. (Derecha arriba) Espectro de reflectancia
     de una película delgada de ancho 100\AA iluminada normalmente por
     luz linealmente polarizada a lo largo de los ejes principales del
     tensor dieléctrico, cuya dirección se indica a la izquierda y a la
     derecha abajo. Como referencia, se muestra la reflectancia de una
-    película homogénea con la misma cantidad de Ag (linea continua).}
+    película homogénea con la misma cantidad de Ag (linea
+    continua). (Derecha abajo) Direcciones principales del tensor
+    dieléctrico.}
   \label{fig:elipses}
 \end{figure}
 El mínimo de reflectancia puede entonarse a través de toda la región
@@ -1861,7 +1876,7 @@ automatizada del óptimo de cualquier propiedad deseada.
     parametrizado por el ancho $W$ y altura $H$ de los primas  y el
     desplazamiento ${\bm \rho}$ entre parejas de agujeros en la celda
     unitaria. (Derecha) Dicroismo circular de películas de 100nm de
-    ancho con parámetros entonados para tener un máximo en una
+    ancho con parámetros entonados para maximizar el dicroismo a una
     frecuencia preestablecida (puntos).}
   \label{fig:circular}
 \end{figure}
@@ -1953,8 +1968,17 @@ se emplearon 350 pares de coeficientes de Haydock.
   \centering
   \includegraphics[width=.34\textwidth]{arraybonito}
   \includegraphics[width=.55\textwidth]{fig3}
-  \caption{(Izquierda) Red cuadrada de parejas de cilindros cortados
-    (split rings) anidados. Los anillos son metales }
+  \caption{(Izquierda) Red cuadrada de parejas de cilindros metálicos cortados
+    (split rings) anidados. Los cilindros están descritos por el
+    modelo de Drude con frecuencia de plasma $\omega_p=20c/d$, con $d$
+    el parámetro de red. (Derecha) Permeabilidad magnética obtenida
+    a partir de la dispersión espacial de la permitividad y a partir de
+    un modelo simple para cilindros con paredes infinitesimales pero con
+    la misma conductividad superficial. Los radios internos y externos
+    de los anillos metálicos son $0.26d$, $0.32d$, $0.34d$, y
+    $0.4d$ y están interrumpidos por brechas de tamaño $0.1d$. Se
+    emplearon 350 pares de coeficientes de Haydock en una retícula de
+    $401\times401$ pixeles. }
   \label{fig:mu}
 \end{figure}
 Como referencia, se muestran resultados de un cálculo simplificado
