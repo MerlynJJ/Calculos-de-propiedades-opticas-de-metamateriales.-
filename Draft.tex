@@ -36,7 +36,7 @@
 
 \decimalpoint
 %\renewcommand\familydefault{\sfdefault}
-\usepackage{showkeys}
+%\usepackage{showkeys}
 %\usepackage{showlabel}
 \hypersetup{
     colorlinks=true,
@@ -47,7 +47,7 @@
 
 \title{Metamateriales \\
   XVIII Escuela de Verano en Física}
-\author{ Merlyn Jaqueline Juárez-Gutiérrez y Wolf Luis Mochán\\
+\author{ Merlyn Jaqueline Juárez-Gutiérrez y W. Luis Mochán\\
   Instituto de Ciencias Físicas}
 %\date{}
 
@@ -58,47 +58,45 @@
 
 \section{Introducción}
 
-
-Un meta-material es un material diseñado artificialmente, formado por
-dos o más materiales, con propiedades determinadas por la geometría de
-sus componentes y su arreglo. Los meta-materiales se definen como
-``{\em Un arreglo de elementos estructurales artificiales, diseñados
+Un metamaterial es un material artificial formado por
+dos o más materiales alternados. Los metamateriales se pueden definir como
+{\em un arreglo de elementos estructurales artificiales, diseñados
   para alcanzar propiedades electromagnéticas ventajosas e
-  inusuales}''\cite{Metamorphose}. Esta definición es la adoptada en
-el {\em Virtual Institute for Artificial Electromagnetic Materials and
+  inusuales}\cite{Metamorphose}, de acuerdo al
+{\em Virtual Institute for Artificial Electromagnetic Materials and
   Meta-Materials}.
-
-Las propiedades electromagnéticas de los meta-materiales están
+Dichas propiedades están
 determinadas por sus constituyentes básicos, a los que se denomina
-ocasionalmente como meta-átomos, los cuales son objetos hechos de
-materiales usuales. Las propiedades de los meta-materiales pueden ser
-muy distintas a las de los materiales que los conforman y pueden
-llegar a ser muy exóticas. Pueden ser entonadas escogiendo las formas,
+ocasionalmente como {\em meta-átomos}, los cuales son objetos hechos de
+materiales usuales, así como por su forma y disposición, y pueden ser
+muy distintas a las de los materiales que los conforman, llegando a
+a ser muy exóticas. Pueden ser diseñadas y entonadas escogiendo las formas,
 estructuras internas, tamaños, orientaciones mutuas, etc., de sus
-meta-átomos.  Incluso sus repuestas individuales pueden ser
-controladas por señales externas e internas y por microprocesadores
+meta-átomos.  Sus funciones repuesta pueden ser
+modificadas mediante señales externas e internas y pueden ser
+controladas mediante microprocesadores
 programables.\cite{IntroductiontoMetamaterialsandNanophotonics}
 
 \subsection{Materiales plasmónicos}
-Por ejemplo, si un meta-material tiene componentes metálicos, estos
-pueden presentar resonancias asociadas a un movimiento oscilatorio
-colectivo de sus electrones de conducción, denominado de acuerdo a sus
-características como plasmón de bulto, plasmón de superficie o plasmón
-localizado. La frecuencia de este movimiento en un sistema infinito se
+Si un metamaterial tiene componentes metálicos, estos
+pueden presentar resonancias asociadas a los movimientos oscilatorios
+colectivos de sus electrones de conducción, denominados de acuerdo a sus
+características como plasmones de bulto, de superficie o
+localizados. La frecuencia de estos movimientos en un sistema infinito se
 denomina como
-frecuencia de plasma $\omega_{p}$. Para estimar esta frecuencia,
+frecuencia de plasma $\omega_{p}$. Para estimarla,
 considere el modelo más simple de un conductor, un gas de electrones
 que en equilibrio tienen una densidad de número $n_{0}$, y que son libres de
 moverse en un entorno positivamente cargado, de manera que el sistema
-sea neutro. Si debido a algún efecto como una compresión o rarefacción
-del gas de electrones se produce una acumulación de carga $Q$
-localizada en alguna región $\mathcal{R}$, ésta producirá un campo
+en equilibrio sea neutro. Si debido a alguna compresión o rarefacción
+del gas de electrones se produjera una acumulación de carga $Q$
+localizada en alguna región $\mathcal{R}$, ésta produciría un campo
 eléctrico $\bm{E} (\bm{r})$, como ilustra la figura
 \ref{Bulkplasmon}. De acuerdo a la segunda ley de Newton, los
-electrones adquieren una aceleración
+electrones adquirirían una aceleración
 $d^{2}\bm{r}/dt^{2} = -e\bm{E}(\bm{r},t)/m$, donde $m$ y $-e$
 son la masa y la carga eléctrica electrónica. La velocidad adquirida
-por los electrones resulta en una corriente eléctrica
+por los electrones resultaría en una corriente eléctrica
 $\bm{j}(\bm{r},t) = -n_0 e \bm v=-n_{0}e({d\bm{r}}/{dt})$ que obedece
 la ecuación de movimiento por
 ${\partial \bm{j}(\bm{r},t)}/{\partial t}=
@@ -133,7 +131,7 @@ armónico simple como el que se ilustra en la fig.
     distancia $y$.}
 \end{figure}
 Sustituyendo la Ley de Hooke $F= -ky$ en la segunda ley de Newton
-$ma=F$ para un oscilador con constante $k$ y masa $m$ obtenemos
+$ma=F$ para un oscilador con constante $k$ y masa $m$, obtenemos
 \begin{equation}
   \label{OAEq}
   \frac{d^{2}y}{dt^{2}}=-\omega^2y,
@@ -142,7 +140,7 @@ donde $\omega=\sqrt{k/m}$, y cuya solución,
 $y(t)=y_{0}\cos(\omega t+\phi_0)$ es un movimiento periódico con una
 frecuencia $\omega$ que depende de $k$ y $m$.  Comparando las ecs.  y
 \eqref{ChargeDifEq} y \eqref{OAEq} notamos que puede existir carga en
-el seno de nuestro metal modelo, pero ésta oscila con la {\em
+el seno de nuestro metal modelo, pero ésta oscilaría con la {\em
   frecuencia de plasma} $\omega_p$ dada por
 \begin{equation}
   \label{plasmafec}
@@ -151,11 +149,11 @@ el seno de nuestro metal modelo, pero ésta oscila con la {\em
 La repulsión mutua entre electrones los impulsa lejos de regiones en
 que haya una densidad electrónica excedente, por arriba de su valor
 nominal. El movimiento consecuente prosigue aun después de que el
-sistema se neutralice debido a la inercia electrónica, que los hará
-proseguir su camino hasta que en la región orignal disminuya tanto la
-densidad de electrones que aparezca una carga neta positiva que frene
-a los electrones en fuga y los haga regresar, hasta que su repulsión
-mutua los frene al haber regresado a la configuración inicial. Este
+sistema se neutraliza debido a la inercia electrónica, que los hace
+proseguir su camino hasta que en la región original disminuye tanto la
+densidad de electrones que aparezca una carga neta positiva que frena
+a los electrones en fuga y los hace regresar, hasta que su repulsión
+mutua los frena, habiendo regresado a la configuración inicial. Este
 proceso se repite periódicamente y su frecuencia $\omega_p$ está
 relacionada con la repulsión coulombiana, proporcional a $e^2$, la
 densidad de de número electrónica $n_0$ y la inercia electrónica
@@ -171,7 +169,7 @@ el conductor.
 \begin{figure}
   \centering
   \input{SurfPlasmon.code.tex}
-  \caption{Region $\mathcal{R}$ en la superficie de un conductor
+  \caption{Región $\mathcal{R}$ en la superficie de un conductor
     semi-infinito en la que hay una carga $Q$, la cual produce un
     campo eléctrico $\bm{E}(\bm{r},t)$ (líneas azules) y éste a su vez
     produce una densidad de corriente (líneas verdes) que atraviesan
@@ -183,7 +181,7 @@ el conductor.
 Usando la ecuación dinámica de la densidad de corriente podemos
 escribir la ecuación dinámica de la carga como hicimos en el caso del
 plasmón de bulto, con la diferencia que la densidad de corriente en
-este caso sólo fluye a través de la mitad de la superficie $\Sigma $
+este caso sólo fluye a través de la mitad $\Sigma/2$ de la superficie $\Sigma $
 que se halla en el interior del metal,
 \begin{equation}
   \begin{split}
@@ -206,27 +204,26 @@ finito consistente en una partícula metálica separada del vacío por
 una superficie esférica. Supongamos que perturbamos esta esfera
 moviendo todos sus electrones una separación $\bm{\zeta}$ respecto a
 su posición de equilibrio, lo cual induce una polarización
-$\bm{\mathcal{P}}=-n_0 e\bm \zeta$, como ilustra la fig. \ref{Polariton},
+$\bm{P}=-n_0 e\bm \zeta$, como ilustra la fig. \ref{Polariton},
 \begin{figure}
   \centering
   \input{polaritonesferico.code.tex}
-
   \caption{Esfera metálica cuyos electrones han sido desplazados en la
     dirección de $\bm{\zeta}$ (flecha negra), dejando una ausencia de
     carga en la dirección opuesta induciendo polarización en el
-    sistema $\bm{\mathcal{P}}$ (flechas verdes) y una carga
+    sistema $\bm P$ (flechas verdes) y una carga
     superficial la cual produce un campo eléctrico
     $\bm{E}(\bm{r},t)$ (flechas azules).}
 \label{Polariton}
 
 \end{figure}
-El deplazamiento de los electrones hacia uno de los hemisferios de la
+El desplazamiento de los electrones hacia uno de los hemisferios de la
 esfera genera un exceso de carga negativa en su superficie y un exceso
 de carga positiva en el otro, descrita por la densidad de carga
-superficial $\sigma=\bm{\mathcal P}\cdot\hat n$, donde $\hat n$ es un
+superficial $\sigma=\bm{P}\cdot\hat n$, donde $\hat n$ es un
 vector unitario radial. Estas cargas producen un campo eléctrico
-$\bm{E}(\bm{r},t) = -(4\pi/3)\bm{\mathcal{P}} $ donde empleamos el
-{\em factor de depolarización} $-4\pi/3$ de una esfera. Este campo
+$\bm{E}(\bm{r},t) = -(4\pi/3)\bm{P} $ donde empleamos el
+{\em factor de despolarización} $-4\pi/3$ de una esfera. Este campo
 acelera las cargas de acuerdo a
 $md^{2}\bm\zeta/d^{2}t=-e\bm{E}(\bm{r},t)$. Escribiendo al
 campo en términos de $\bm\zeta$,
@@ -255,9 +252,9 @@ electromagnéticos inducidos podrían generar corrimientos adicionales
 de las resonancias.
 
 Un ejemplo excepcional de las propiedades que emergen al generar
-\textit{metamateriales} es la copa de Lycurgo, una copa de cristal
+\textit{metamateriales} es la copa de Licurgo, una copa de cristal
 tallada en la época romana tardía, decorada con un friso que muestra
-escenas del mito del Rey Lycurgo. La copa que data del siglo IV, D.C.,
+escenas del mito del Rey Licurgo. La copa que data del siglo IV, D.C.,
 se produjo a partir de una pieza en bruto de vidrio soplado de unos
 15mm de espesor. Las figuras se cortaron y rectificaron y se unieron a
 la pared del recipiente mediante pequeños puentes de vidrio. Aparte
@@ -272,7 +269,7 @@ intensamente. \cite{LycurgusInvestigation}
 \begin{figure}
     \centering
     \includegraphics[width = 0.6\textwidth]{Lycurguscup.jpg}
-    \caption{Copa de Lycurgo, fabricada en la Roma tardía del siglo IV
+    \caption{Copa de Licurgo, fabricada en la Roma tardía del siglo IV
       D.C., cuya fabricación resultante muestra propiedades ópticas
       excepcionales.  Es una taza para beber de vidrio que se ve verde
       o roja, dependiendo de cómo es iluminada.  ©The Trustees of the
@@ -343,7 +340,7 @@ homogéneo, como en la figura \ref{fig:fotonico}.
     $\epsilon_a$ y $\epsilon_b$ y periodo $d$, y (c) cristal fotónico
     con periodicidad en más dimensiones. (d)Relación de dispersión
     $\omega$ vs $k$ de la luz del medio homogéneo. (e)Relaciones de
-    dispersión transladadas por $0, \pm 2\pi/d$ en el espacio
+    dispersión trasladadas por $0, \pm 2\pi/d$ en el espacio
     recíproco mostrando cruzamientos en el borde de la zona de
     Brillouin $k=\pm \pi/d$. (f)El acoplamiento abre una brecha en los
     puntos de degeneración evitando el cruce y formando brechas
@@ -353,10 +350,10 @@ homogéneo, como en la figura \ref{fig:fotonico}.
 La relación de dispersión de la luz en este medio está dada por
 $k^2= \epsilon \omega^2/c^2$ que corresponde a las dos rectas
 mostradas en la (fig. \ref{fig:fotonico}d). Si en vez de un
-dieléctrico homogéneo tuvieramos un cristal artificial formado por
+dieléctrico homogéneo tuviéramos un cristal artificial formado por
 películas de dos materiales alternados (fig. \ref{fig:fotonico}b), el
 ímpetu y el vector de onda ya no serían cantidades conservadas. Las
-reflecciones múltiples en las interfaces producirían ondas esparcidas
+reflexiones múltiples en las interfaces producirían ondas esparcidas
 en que el vector de onda cambiaría $k\to k+2\pi n/d$ para enteros
 positivos y negativos $n$ (fig. \ref{fig:fotonico}e), dando lugar a
 puntos de degeneración en que se cruzan las distintas réplicas de la
@@ -365,7 +362,7 @@ rompe la degeneración y abre {\em brechas fotónicas} evitando los
 cruces y dando origen a una relación de dispersión
 (fig. \ref{fig:fotonico}f) organizada en {\em bandas fotónicas}
 análogas a las bandas electrónicas que describen la propagación de
-electrones en sólidos cristalinos. Algo similar suscedería si la
+electrones en sólidos cristalinos. Algo similar sucedería si la
 periodicidad fuese bidimensional o tridimensional
 (fig. \ref{fig:fotonico}c) en cuyo caso podrían producirse brechas
 omnidireccionales en las que la luz no se propaga en ninguna
@@ -386,7 +383,7 @@ Consideremos ahora un material cuya permitividad $\epsilon(\omega)$
 dependa de la frecuencia y tenga un comportamiento resonante. La
 relación de dispersión $k^2=\epsilon\omega^2/c^2$ implica que al pasar
 la resonancia, cuando $\epsilon$ adquiere valores negativos, $k$ se
-vuelve imaginario y la luz no puede propgarse. Esto explica la
+vuelve imaginario y la luz no puede propagarse. Esto explica la
 aparición del color en los materiales comunes, en que hay frecuencias
 características de cada material en que absorben luz y justo arriba
 hay frecuencias en que no se puede propagar. Si el material tuviera
@@ -414,7 +411,7 @@ ilustra la figura \ref{fig:triada}.
   \label{fig:triada}
 \end{figure}
 Sin embargo, la definición del vector de Poynting y la ley de
-Ampere-Maxwell implican que el campo eléctrico $\bm E$, el campo
+Ampère-Maxwell implican que el campo eléctrico $\bm E$, el campo
 magnético $\bm H$ y el flujo de energía $\bm S$ también forman una
 triada ordenada derecha. Sin embargo, si $\mu<0$, entonces $\bm B$ y
 $\bm H$ apuntan en direcciones opuestas. Luego, $\bm S$ ¡apunta en la
@@ -425,7 +422,7 @@ de fase. Una consecuencia curiosa de este resultado se manifiesta
 cuando una onda se refracta en una superficie plana. La ley de
 conservación del ímpetu asociada a una simetría translacional implica
 que las proyecciones del vector de onda $\bm k_\|$ a lo largo de la
-superficie deben coicidir para las ondas reflejada,  transmitida e
+superficie deben coincidir para las ondas reflejada,  transmitida e
 incidente. De aquí se derivan las leyes de la reflexión y de
 Snell. Sin embargo, la {\em causalidad} requiere que las ondas
 esparcidas por la superficie, la onda incidente y la onda reflejada,
@@ -438,15 +435,15 @@ la fig. \ref{fig:refneg}.
   \centering
   \includegraphics{talk-17}
   \caption{Una onda incide desde un medio normal (verde) sobre la
-    interface que lo separa de un medio con permitividad y
+    interfaz que lo separa de un medio con permitividad y
     permeabilidad negativas (rojo). Se muestran esquemáticamente las
     direcciones de los vectores de onda (flechas azules) y de los
     vectores de Poynting (flechas amarillas) de las ondas incidente,
-    reflejada y transmitida. La proyección sobre la interface de los
+    reflejada y transmitida. La proyección sobre la interfaz de los
     tres vectores de onda debe coincidir. El flujo de energía de la
-    onda transmitida debe alejarse de la interface. Por ello, la
+    onda transmitida debe alejarse de la interfaz. Por ello, la
     componente normal del vector de onda transmitido apunta hacia la
-    interface.}
+    interfaz.}
   \label{fig:refneg}
 \end{figure}
 De esta figura podemos inferir que una onda que incide viajando hacia
@@ -506,12 +503,12 @@ transversal es cercano a un múltiplo de la longitud de onda.  Una
 ventaja de estas resonancias sobre las resonancias plasmónicas para
 diseñar y construir dispositivos fotónicos es que las pérdidas de
 energía debidas a la absorción dentro del material son menores que las
-pérdidas ohmicas que suelen mostrar los metales. Sin embargo, estas
+pérdidas óhmicas que suelen mostrar los metales. Sin embargo, estas
 resonancias requieren que las partículas tengan un tamaño
 relativamente grande conmensurable con la longitud de onda en su
 interior. Sin embargo, si se emplean materiales con un índice de
 refracción alto, la longitud de onda dentro de estos materiales puede
-ser mucho menor que la correspondiente al espacio vacío, permitiéndo
+ser mucho menor que la correspondiente al espacio vacío, permitiendo
 así resonancias dieléctricas en partículas de tamaño muy pequeñas, en
 analogía a las resonancias plasmónicas.
 
@@ -527,7 +524,7 @@ forma análoga a como el ancho variable de una lente o de un prisma
 modula la fase de los rayos de luz que los atraviesan.
 
 
-La ley de Snell usual implica que a lo largo de una interface uniforme
+La ley de Snell usual implica que a lo largo de una interfaz uniforme
 hay un empatamiento de fases $\phi^\alpha(\bm r_\|)=\bm k^\alpha_\|\cdot\bm
 r_\|$ entre la onda incidente, la onda reflejada y la
 onda transmitida, por lo cual los vectores de onda $\bm k^\alpha_\|$
@@ -589,7 +586,7 @@ como la que ilustra la figura \ref{fig:metalente}.
 
 \ifignora
 \subsection{Electrodinámica}
-La descripción de los fenomenos electromagnéticos es provista por las
+La descripción de los fenómenos electromagnéticos es provista por las
 ecuaciones de Maxwell las cuales describen la propagación de los
 campos electromagnéticos en el vacío y en la materia, su interacción
 con las cargas eléctricas de los materiales, y la interacción entre
@@ -631,14 +628,14 @@ material al aplicar un campo eléctrico y la permeabilidad
 $\mu(\bm{k},\omega)$, que describe el efecto cuando se aplican campos
 magnéticos. A estas cantidades se les denomina funciones respuesta del
 sistema y pueden o no depender de $\bm k}$ el vector de onda la cual
-es y $\omega$ la frecuencia de la preturbación, en el espació real
+es y $\omega$ la frecuencia de la perturbación, en el espació real
 estas dependencias son espacial y temporal respectivamente. Las
 diferentes formas de estás funciones dan pie a la clasifición de la
 materia, por ejemplo, un medio con permitividad constante $\epsilon$
 en todas las direcciones es un medio isotrópico homogéneo, los medios
 cuyas funciones respuesta dependen de la dirección y/o del punto en
-que se realiza la medición, se les clasifica como anisotrópicos
-inhomogenéos.
+que se realiza la medición, se les clasifica como anisótropos
+iinhomogéneas.
 
 La propagación de ondas electromagnéticas en los medios es descrita
 por estas funciones respuesta, por ejemplo, consideremos un medio
@@ -653,7 +650,7 @@ de dispersión en el vacío.
   \input{Mediohomogneo.code.tex}
 
   \caption{(a) Medio homogéneo con permitividad constante $\epsilon$,
-    (b) relaciones de dipersión de la propagación de la onda, línea
+    (b) relaciones de dispersión de la propagación de la onda, línea
     roja propagación en el vacío, línea azul propagación dentro del
     material.}
 \label{mediohomogneo}
@@ -840,7 +837,7 @@ $\hat{\bm O}^{\alpha\beta}=\hat{\mathcal P}^\alpha\hat {\bm O}
 \hat{\mathcal P}^\beta$ ($\alpha,\beta=L,T$) para cualquier operador
 $\hat{\bm O}$. Entonces, podemos identificar a $\bm D^L$ con el
 campo eléctrico longitudinal externo. Siendo un campo externo, sus
-fuentes son unicamente las cargas externas $\rho^{\text{ex}}$, las
+fuentes son únicamente las cargas externas $\rho^{\text{ex}}$, las
 cuales no tienen absolutamente nada que ver con la composición del
 material ni con la disposición de sus componentes. En particular,
 $\bm D^L$ no tiene fluctuaciones espaciales derivadas de la textura
@@ -880,7 +877,7 @@ microscópica del material, su promedio nos proporciona la
 respuesta correspondiente macroscópica. Para dar un ejemplo de éste
 proceso, a continuación obtendremos la respuesta macroscópica en el
 caso en que no podemos ignorar el retardamiento. Tomando el
-rotacional de la ley de Faraday y sustituyendo la ec. de Ampére-Maxwell
+rotacional de la ley de Faraday y sustituyendo la ec. de Ampère-Maxwell
 podemos obtener una ecuación de onda con fuentes, que podemos escribir
 como
 \begin{equation}
@@ -1074,7 +1071,7 @@ $\bm\epsilon^{LL}_M=\hat{\bm k}\epsilon^{LL}_M\hat{\bm k}$, donde la
     K}\cdot\epsilon_{\bm K\bm K'}\hat{\bm
     K'}\right)^{-1}\right|_{\bm K=\bm K'=\bm 0}\right)^{-1}.
 \end{equation}
-Repitiéndo el cálculo indicado por la ec. \eqref{eq:kek} para
+Repitiendo el cálculo indicado por la ec. \eqref{eq:kek} para
 distintas direcciones $\hat{\bm k}$ del vector de onda, podemos hallar
 todas las componentes del tensor dieléctrico macroscópico
 $\bm\epsilon_M$.
@@ -1112,7 +1109,7 @@ evaluado para un valor $\varepsilon$ de una energía compleja. Entre
 las aplicaciones del operador de Green proyectado se encuentra el
 cálculo de la densidad de estados cuánticos proyectada. Podemos
 entonces tomar prestado el método recursivo de Haydock
-\cite{haydock} para calcular proyeccionies de funciones de Green. De
+\cite{haydock} para calcular proyecciones de funciones de Green. De
 acuerdo a nuestra analogía, $u$ juega el papel de
 energía compleja $\varepsilon$ y $\hat B^{LL}$ juega el papel de
 hamiltoniano $\hat {\mathcal H}$.
@@ -1121,7 +1118,7 @@ Hemos definido el estado $\ket{0}$ como el correspondiente a una onda
 plana con vector de onda $\bm k$, i.e., un estado cuya representación
 en el espacio recíproco es $\braket{\bm K|0}=\delta_{\bm K\bm 0}$,
 pues no tiene contribuciones de ondas con $\bm K\ne0$. Ahora, podemos
-generar un nuevo estado haciendo actuar a nuestro hamiltoniona sobre
+generar un nuevo estado haciendo actuar a nuestro hamiltoniano sobre
 el estado inicial, $\ket{\tilde 1}=\hat{\mathcal
   H}\ket{0}$. Escribimos este estado como una combinación lineal del
 estado que ya teníamos $\ket{0}$ y un estado nuevo $\ket{1}$ del cual
@@ -1272,7 +1269,7 @@ espacio recíproco. El producto matricial del vector resultante con
 $B_{\bm K\bm K'}=B_{\bm K-\bm K'}$ corresponde a una convolución, por lo
 cual, tras una transformada de Fourier hacia el espacio real, se
 convierte  en un producto trivial por la función
-característca $B(\bm r)$. Finalmente, tomando una transformada de
+característica $B(\bm r)$. Finalmente, tomando una transformada de
 Fourier de regreso al espacio recíproco, el producto escalar por los vectores
 unitarios $\hat{\bm K}\cdot$ se vuelve trivial. Esto muestra que podemos
 aplicar nuestro hamiltoniano repetidas veces para obtener los
@@ -1315,10 +1312,10 @@ $\hat{\epsilon}$, microscópica
 \end{equation}
 la cual acopla las fluctuaciones locales de los campos ${\bm D}$ y
 ${\bm E}$ totales y a la cual se le aplica un procedimiento de
-promediación para relacionar $\hat{\epsilon}$ con
+promediado para relacionar $\hat{\epsilon}$ con
 $\hat{\epsilon}_{M}$, de tal manera que las fluctuaciones
 microscópicas sean incorporadas en la respuesta macroscópica. Para tal
-proposito seguimos el procedimiento descrito en
+propósito seguimos el procedimiento descrito en
 \cite{ElectromagneticResponseofSystemwithSpatialFluctuations}, por
 Mochán et al.
 
@@ -1415,7 +1412,7 @@ resultado se presume exacto.
 
 Para analizar el resultado de \eqref{DielectricFunction} nos
 restringimos a una longitud de escala característica de las
-fluctuaciones mucho menor a la longitud de onda. Convenitntemente se
+fluctuaciones mucho menor a la longitud de onda. Convenientemente se
 definen los operadores de proyección longitudinal
 \begin{equation}
   \hat{P}^{L} = \hat{\nabla} \hat{\nabla}^{-2} \hat{\nabla}\times,
@@ -1434,11 +1431,11 @@ propiedades
     \hat{P}^{T}\hat{P}^{L}=\hat{P}^{L}\hat{P}^{T}=0, & \hat{P}^{T}+\hat{P}^{L}=\hat{1},
   \end{array}
 \end{equation}
-y communtan con $\hat{P}_{f}$ y $\hat{P}_{p}$.
+y conmutan con $\hat{P}_{f}$ y $\hat{P}_{p}$.
 
 Al proyectar $\hat{\mathcal{W}}^{-1}=
 \left[(\hat{\epsilon}_{ff}-\frac{c^{2}}{\omega^{2}}(\nabla \times
-  \nabla \times)_{ff})\right]^{-1}$ en los subespacios longitudina y
+  \nabla \times)_{ff})\right]^{-1}$ en los subespacios longitudinal y
 transversal
 \[\hat{\mathcal{W}}^{-1}=\left[
     \begin{array}{cc}
@@ -1547,8 +1544,8 @@ sintaxis hereda construcciones de lenguajes previos como {\em C, C++,
 la filosofía de su creador resumida en frases como {\em hay más de una
   manera de resolverlo} y {\em lo fácil debe ser fácil, lo difícil
   debe ser posible}. Sólo contiene tres tipos de datos, que son {\em
-  escalares, arreglos} indizados por un entero y {\em arreglos
-  asociativos} indizados por cualquier escalar. Los escalares pueden
+  escalares, arreglos} indexados por un entero y {\em arreglos
+  asociativos} indexados por cualquier escalar. Los escalares pueden
 representar números enteros o reales, cadenas de caracteres, o
 referencias a otros escalares, arreglos o arreglos asociativos, e
 incluso, referencias a subrutinas. Los arreglos son dinámicos y pueden
@@ -1622,7 +1619,7 @@ más abajo. Las componentes {\tt LE} y {\tt NR2} en su nombre indican que usarem
 aquellas rutinas relacionadas con la respuesta dieléctrica
 longitudinal en el límite no retardado y restringido a dos componentes.
 
-A continuación definimos algúnos parámetros y el código para leerlos
+A continuación definimos algunos parámetros y el código para leerlos
 desde la línea de comandos.
 \begin{verbatim}
 my $ratio; # b/a for torus
@@ -1639,7 +1636,7 @@ usage($options, "Missing options")
 ...
 set_autopthread_targ($cores) if defined $cores;;
 \end{verbatim}
-Los parámetros a leer son la razon de los radios del toroide, la
+Los parámetros a leer son la razón de los radios del toroide, la
 fracción de llenado en la celda unitaria, el numero de {\em voxels} a lo
 largo de los ejes de la red, los pares de funciones dieléctricas e
 emplear para los toroides y la matriz, el número de coeficientes de Haydock a
@@ -1649,7 +1646,7 @@ necesario se envían mensajes de error. La rutina {\tt
   set\_autopthread\_targ} establece el número de núcleos computacionales
 que deseamos usar al paralelizar el programa.
 
-Como idicamos arriba, la geometría queda definida a partir de la
+Como indicamos arriba, la geometría queda definida a partir de la
 función característica, cuyo valor es 1 dentro del toroide y 0 en
 su exterior. Primero calculamos los dos radios del toroide en términos
 de la fracción de llenado deseada.
@@ -1681,7 +1678,7 @@ punto al círculo alrededor del cual se forma el toroide y en la
 variable {\tt \$B} guardamos un 1 o un 0 dependiendo de si estamos
 suficientemente cerca de la generatriz o no.
 
-A continuación incializamos dos objetos que codifican la geometría del
+A continuación inicializamos dos objetos que codifican la geometría del
 sistema empleando la función característica.
 \begin{verbatim}
 my $gx=Photonic::Geometry::FromB->new(B=>$B, Direction0=>pdl(1,0,0));
@@ -1690,7 +1687,7 @@ my $gz=Photonic::Geometry::FromB->new(B=>$B, Direction0=>pdl(0,0,1));
 Las clases {\tt Geometry} saben cómo calcular la red de {\em
   voxels}, pero también cómo calcular la red recíproca, y los
 vectores recíprocos normalizados $\hat{\bm K}$, entre
-otros métodos relacioniados a la geometría del sistema, a partir del
+otros métodos relacionados a la geometría del sistema, a partir del
 atributo {\tt B} que inicializamos con la
 función característica {\tt \$B}. Sin embargo, para ello necesita saber en qué
 dirección apunta el vector de Bloch, asociado al atributo {\tt
@@ -1744,7 +1741,7 @@ sub usage {
 Podemos correr el programa como en el siguiente ejemplo, en el que
 calculamos las propiedades de una red tetragonal de
 $161\times161\times41$ voxeles con toroides cuyas funciones
-dieléctricas son $\epsilon_b=5,10$, immersos en el vacío, $\epsilon_a=1$,
+dieléctricas son $\epsilon_b=5,10$, inmersos en el vacío, $\epsilon_a=1$,
 con una fracción de llenado nominal $f=0.3$, con una razón entre los
 radios del círculo mayor al circulo menor $R_>/R_<=3$ y empleando 100
 coeficientes de Haydock, usando en el cálculo 4 núcleos de la unidad
@@ -1787,7 +1784,7 @@ manera automática nuestro sistema. Una vez instalado, el comando {\tt
 \section{Resultados}
 En esta sección enumeraremos algunos de los resultados que hemos
 obtenido con la teoría y códigos descritos arriba.
-\subsection{Dicroismo lineal y transmisión extraordinaria}
+\subsection{Dicroísmo lineal y transmisión extraordinaria}
 El punto de inicio de nuestros cálculos es la función característica
 $B(\bm r)$, consistente en unos y ceros, dependiendo de si $\bm r$ se
 halla dentro del material $B$ o $A$. Al discretizar el espacio real en
@@ -1798,8 +1795,8 @@ pixelada. Por lo tanto, nuestro programa puede alimentarse
 manipular la imagen usando herramientas gráficas y calcular las
 propiedades ópticas del sistema resultante. Ilustramos esto con la
 fig. \ref{fig:elipses}, en cuyo lado izquierdo mostramos un corte de
-una red rectangular de agujeros cilindricos con sección transversal
-elíptica en una matriz de plata. Manipulamos gráficamente la razon de
+una red rectangular de agujeros cilíndricos con sección transversal
+elíptica en una matriz de plata. Manipulamos gráficamente la razón de
 aspecto de la red, y la excentricidad y orientación de las elipses. En
 la figura hemos elegido el valor 2 para la razón de aspecto de
 la red y escogimos 1.8 para la razón entre los semiejes de las
@@ -1807,12 +1804,12 @@ elipses. En el
 lado derecho mostramos el espectro de reflectancia a incidencia normal
 de una película delgada, de 100\AA\ de ancho, formada por este
 metamaterial. Mostramos dos conjuntos de datos, pues el material es
-anisotrópico. Para cierta polarización, casi horizontal, el material
-se comporta como un metal ordinario con una alta reflectividad,
+anisótropo. Para cierta polarización, casi horizontal, el material
+se comporta como un metal ordinario con una alta reflectancia,
 cercana a $R=1$. Sin embargo, para una polarización ortogonal, casi
-vertical hay un espectro de reflectividad con un mínimo profundo
+vertical hay un espectro de reflectancia con un mínimo profundo
 alrededor de $\hbar\omega=2.4 eV$, en que nuestra película muestra un
-dicroismo extremo, i.e., casi toda la luz se refleja para una
+dicroísmo extremo, i.e., casi toda la luz se refleja para una
 polarización y casi nada para la polarización ortogonal.\cite{bms12}
 \begin{figure}
   \centering
@@ -1832,8 +1829,8 @@ polarización y casi nada para la polarización ortogonal.\cite{bms12}
 \end{figure}
 El mínimo de reflectancia puede entonarse a través de toda la región
 visible mediante cambios pequeños en la orientación $\theta$ de las
-elipses. El motivo del dicroismo extremo es que en la dirección
-vertical los caminos conductores se hallan casi extrangulados, pero
+elipses. El motivo del dicroísmo extremo es que en la dirección
+vertical los caminos conductores se hallan casi estrangulados, pero
 abiertos. Por tanto, mientras que el sistema es un buen conductor para
 campos horizontales, es un mal conductor para campos verticales y para
 campos que oscilan rápidamente el sistema se comporta como un
@@ -1844,8 +1841,8 @@ positiva y con resonancias a altas frecuencias (comportamiento
 dieléctrico). Interpolando entre ambos comportamientos, para alguna
 frecuencia intermedia la respuesta empata con la del vacío y el
 material adquiere una transparencia extraordinaria, lo cual contrasta
-con la alta reflectividad para una polarización ortogonal.
-\subsection{Dicroismo circular}
+con la alta reflectancia para una polarización ortogonal.
+\subsection{Dicroísmo circular}
 En la fig. \ref{fig:circular} mostramos un sistema formado por una red
 cuadrada de parejas de agujeros en forma de prismas rectangulares en una película delgada
 de Ag colocada sobre un sustrato de vidrio. Los agujeros están
@@ -1875,19 +1872,19 @@ automatizada del óptimo de cualquier propiedad deseada.
     $\epsilon_b$. El sistema está
     parametrizado por el ancho $W$ y altura $H$ de los primas  y el
     desplazamiento ${\bm \rho}$ entre parejas de agujeros en la celda
-    unitaria. (Derecha) Dicroismo circular de películas de 100nm de
-    ancho con parámetros entonados para maximizar el dicroismo a una
+    unitaria. (Derecha) Dicroísmo circular de películas de 100nm de
+    ancho con parámetros entonados para maximizar el dicroísmo a una
     frecuencia preestablecida (puntos).}
   \label{fig:circular}
 \end{figure}
 Por ejemplo, hemos hallado las combinaciones de parámetros que nos permiten obtener
-un máximo de dicroismo circular, la diferencia entre la abosrtancia de
+un máximo de dicroísmo circular, la diferencia entre la absortancia de
 la película cuando es iluminada con polarización circular derecha e
 izquierda, y situarlo en cualquier frecuencia
 deseada.\cite{bms16} En el lado derecho de la fig. \ref{fig:circular}
-mostramos fragmentos de los espectros de dicroismo obtenidos,
-momstrando que podemos entonar su máximo a cualquier energía deseada
-en el espectro visible. Hacemos notar que el dicroismo circular de los
+mostramos fragmentos de los espectros de dicroísmo obtenidos,
+mostrando que podemos entonar su máximo a cualquier energía deseada
+en el espectro visible. Hacemos notar que el dicroísmo circular de los
 materiales naturales suele ser de apenas unas partes en mil, mientras
 que aquí hemos encontrado señales de orden uno.
 \subsection{Magnetismo}
@@ -1917,7 +1914,7 @@ el medio no local,
   \label{eq:kvsw}
   k^2=\epsilon_M(k,\omega) \frac{\omega^2}{c^2},
 \end{equation}
-donde por simplicidad ignoramos el caracter tensorial de $\epsilon$ y
+donde por simplicidad ignoramos el carácter tensorial de $\epsilon$ y
 vectorial de $k$. Hacemos una expansión de Taylor
 \begin{equation}
   \label{eq:taylor}
@@ -1927,7 +1924,7 @@ vectorial de $k$. Hacemos una expansión de Taylor
 respecto al número de onda para $k$'s pequeñas. El término lineal
 está ausente de esta expansión si el sistema es invariante frente a
 inversiones temporales. Sustitución en la ec. \eqref{eq:kvsw} conduce
-apeoximadamente a
+aproximadamente a
 \begin{equation}
   \label{eq:kvsw1}
   k^2= \left(\epsilon_M(0,\omega)+\frac{k^2}{2}\frac{\partial^2}{\partial
@@ -1953,7 +1950,7 @@ identificamos la permeabilidad local
     k^2}\epsilon_M(0,\omega)}.
 \end{equation}
 En la fig. \ref{fig:mu} mostramos un sistema formado por una red
-cuadrada, de anillos concentricos truncados. Calculamos con {\em
+cuadrada, de anillos concéntricos truncados. Calculamos con {\em
   Photonic} la permeabilidad no local del sistema, y a partir de su
 dispersión espacial obtuvimos la permeabilidad magnética.\cite{lucila} Del lado
 derecho mostramos el espectro de la permeabilidad $\mu_M(\omega)$ como
@@ -2020,7 +2017,7 @@ seno de una película de Ag.
     (izquierda) y la densidad de carga inducida (derecha) en un
     metamaterial formado por una red de agujeros en forma de letra T
     en una matriz de Ag excitado por un campo polarizado en la
-    dirección vertical para dos frecuencias resonantes. El caracter
+    dirección vertical para dos frecuencias resonantes. El carácter
     dipolar y cuadrupolar de las resonancias se advierte en los signos
     de la carga inducida y las direcciones del campo.}
   \label{fig:lineal}
@@ -2061,7 +2058,7 @@ materiales no lineales usuales.
 \begin{figure}
   \centering
   \includegraphics[width=\textwidth]{figshg2}
-  \caption{Distintas componentes de la suceptibilidad no lineal para
+  \caption{Distintas componentes de la susceptibilidad no lineal para
     generación de segundo armónico $\chi_{ijk}$ para el sistema
     descrito en la figura \ref{fig:lineal} como función de la energía
     de los fotones fundamentales. Distintas curvas corresponden a las
@@ -2069,9 +2066,9 @@ materiales no lineales usuales.
   \label{fig:xi2}
 \end{figure}
 
-\section{Conclusionies}
+\section{Conclusiones}
 En este trabajo hemos presentado una introducción a los metamateriales
-y a algunas de sus multiples propiedades, algunas exóticas, y
+y a algunas de sus múltiples propiedades, algunas exóticas, y
 aplicaciones. Luego desarrollamos una teoría basada en la
 identificación de operadores cuyo promedio tiene significado físico y
 a partir de los cuales podemos obtener las funciones respuesta
@@ -2080,11 +2077,11 @@ presentamos el método recursivo de Haydock, el cual aprovecha una
 analogía entre el cálculo de funciones respuesta macroscópicas y
 funciones de Green proyectadas para obtener algoritmos computacionales
 muy eficientes. Los diversos métodos desarrollados han sido
-implementados en paquetes computacionales moduares que han sido
+implementados en paquetes computacionales modulares que han sido
 puestos en el dominio público. Como algunos ejemplos de su uso,
 presentamos el cálculo, diseño y optimización de propiedades ópticas
 lineales y no lineales como son la transmitancia
-extraordinaria, el dicroismo lineal, el dicroismo circular, las
+extraordinaria, el dicroísmo lineal, el dicroísmo circular, las
 resonancias magnéticas y la generación de segundo armónico.
 
 \section{Agradecimientos}
@@ -2101,10 +2098,7 @@ grupos de trabajo y estudiantes.
 \bibitem{IntroductiontoMetamaterialsandNanophotonics} {\em An introduction
   to metamaterials and nanophotonics}, Constantin Simovski y Sergei
 Tretyakov,(Cambridge University Press, Cambridge, 2021), ISBN:9781108492645.
-
-Department of Electronics and Nanoengineering, School of
-  Electrical Engineering, Aalto University,
-  Finland. \url{http://www.cambridge.org/9781108492645}
+\url{http://www.cambridge.org/9781108492645}
 \bibitem{ElectromagneticResponseofSystemwithSpatialFluctuations}
   {\em Electromagnetic response of systems with spatial
   fluctuations. I. General formalism}, W. Luis Mochán y Rubén
