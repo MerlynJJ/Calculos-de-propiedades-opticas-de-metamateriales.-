@@ -590,13 +590,13 @@ las mismas cargas, las ecuaciones en forma diferencial son,
 \begin{equation}
   \label{Maxwell-eqs}
   \begin{array}{cc}
-    \nabla \cdot {\bf D} = 4\pi \rho_{ex}, & \nabla \cdot {\bf B} =0, \\
-    \nabla \times {\bf E} = -\frac{1}{c}\frac{\partial {\bf B}}{\partial t}, &
-    \nabla \times {\bf H} = \frac{4\pi}{c}{\bf
-      J}_{ex} + \frac{1}{c}\frac{\partial {\bf D}}{\partial t},
+    \nabla \cdot {\bm D} = 4\pi \rho_{ex}, & \nabla \cdot {\bm B} =0, \\
+    \nabla \times {\bm E} = -\frac{1}{c}\frac{\partial {\bm B}}{\partial t}, &
+    \nabla \times {\bm H} = \frac{4\pi}{c}{\bm
+      J}_{ex} + \frac{1}{c}\frac{\partial {\bm D}}{\partial t},
   \end{array}
 \end{equation}
-donde ${\bf J}_{ex}$ y $\rho_{ex}$ son la densidad de corriente y
+donde ${\bm J}_{ex}$ y $\rho_{ex}$ son la densidad de corriente y
 densidad de carga externas, respectivamente. Por ejemplo, el siguiente
 sistema que consiste de circuitos de alambre a los que se aplica un
 campo magnético a lo largo de la dirección perpendicular al plano en
@@ -1276,24 +1276,24 @@ matriz. Eso vuelve muy eficiente el proceso aquí descrito.
 \begin{equation}
   \label{Maxwell-eqs1}
   \begin{array}{cc}
-    \nabla \cdot {\bf D} = 4\pi \rho_{ex}, & \nabla \cdot {\bf B} =0, \\
-    \nabla \times {\bf E} = -\frac{1}{c}\frac{\partial {\bf B}}{\partial t}, &
-    \nabla \times {\bf H} = \frac{4\pi}{c}{\bf
-      J}_{ex} + \frac{1}{c}\frac{\partial {\bf D}}{\partial t},
+    \nabla \cdot {\bm D} = 4\pi \rho_{ex}, & \nabla \cdot {\bm B} =0, \\
+    \nabla \times {\bm E} = -\frac{1}{c}\frac{\partial {\bm B}}{\partial t}, &
+    \nabla \times {\bm H} = \frac{4\pi}{c}{\bm
+      J}_{ex} + \frac{1}{c}\frac{\partial {\bm D}}{\partial t},
   \end{array}
 \end{equation}
-donde ${\bf J}_{ex}$ y $\rho_{ex}$ son la densidad de corriente y
+donde ${\bm J}_{ex}$ y $\rho_{ex}$ son la densidad de corriente y
 densidad de carga externas, respectivamente. Y para calcular
 respuestas ópticas de un sistema se define al operador dieléctrico
 $\hat{\epsilon}_{M}$ a través de la relación
 \begin{equation}
-  {\bf D}_{p} = \hat{\epsilon}_{M} {\bf E}_{p}
+  {\bm D}_{p} = \hat{\epsilon}_{M} {\bm E}_{p}
   \label{Def-Dilectric-Op}
 \end{equation}
-donde ${\bf D}_{p}$ y ${\bf E}_{p}$ representan los promedios macroscópicos del
+donde ${\bm D}_{p}$ y ${\bm E}_{p}$ representan los promedios macroscópicos del
 campo desplazamiento y eléctrico, respectivamente.
 
-Sin embargo es posible definir ${\bf D}$ y ${\bf H}$ para incluir
+Sin embargo es posible definir ${\bm D}$ y ${\bm H}$ para incluir
 fluctuaciones microscópicas y que sigan obedeciendo las ecuaciones de
 Maxwell \eqref{Maxwell-eqs1}.
 
@@ -1302,11 +1302,11 @@ fluctuaciones locales de los campos inducidas por inhomogeneidades del
 sistema, consideramos primero una respuesta dieléctrica,
 $\hat{\epsilon}$, microscópica
 \begin{equation}
-  {\bf D} = \hat{\epsilon} {\bf E},
+  {\bm D} = \hat{\epsilon} {\bm E},
   \label{MicroscopicDielectric-Op}
 \end{equation}
-la cual acopla las fluctuaciones locales de los campos ${\bf D}$ y
-${\bf E}$ totales y a la cual se le aplica un procedimiento de
+la cual acopla las fluctuaciones locales de los campos ${\bm D}$ y
+${\bm E}$ totales y a la cual se le aplica un procedimiento de
 promediación para relacionar $\hat{\epsilon}$ con
 $\hat{\epsilon}_{M}$, de tal manera que las fluctuaciones
 microscópicas sean incorporadas en la respuesta macroscópica. Para tal
@@ -1338,10 +1338,10 @@ lo cual significa que son operadores de proyección.
 Consideremos un campo eléctrico consistente de una parte promedio y
 una parte fluctuante
 \begin{equation}
-  {\bf E} =
+  {\bm E} =
   \begin{pmatrix}
-  {\bf E}_{p} \\
-  {\bf E}_{f}
+  {\bm E}_{p} \\
+  {\bm E}_{f}
 \end{pmatrix}
 ,
 \end{equation}
@@ -1351,8 +1351,8 @@ $f$,
 \begin{equation}
   \label{CamposCompletos}
   \begin{pmatrix}
-    {\bf D}_{p} \\
-    {\bf D}_{f}
+    {\bm D}_{p} \\
+    {\bm D}_{f}
   \end{pmatrix}
   =
   \begin{pmatrix}
@@ -1360,8 +1360,8 @@ $f$,
     \hat{\epsilon}_{fp} & \hat{\epsilon}_{ff}
   \end{pmatrix}
   \begin{pmatrix}
-    {\bf E}_{p} \\
-    {\bf E}_{f}
+    {\bm E}_{p} \\
+    {\bm E}_{f}
   \end{pmatrix}
 \end{equation}
 donde se ha definido
@@ -1373,25 +1373,25 @@ donde se ha definido
 para cualquier operador.
 
 Para calcular la respuesta macroscópica del sistema desacoplamos
-${\bf D}_{p}$ y ${\bf E}_{f}$ de la ecuación de campos completos
+${\bm D}_{p}$ y ${\bm E}_{f}$ de la ecuación de campos completos
 \eqref{CamposCompletos}. Usando las ecuaciones de Maxwell para
-los campos microscópicos se encuentra una relación entre ${\bf E}_{p}$
-y ${\bf E}_{f}$,
+los campos microscópicos se encuentra una relación entre ${\bm E}_{p}$
+y ${\bm E}_{f}$,
 \begin{equation}
   \begin{split}
-      \nabla \times \nabla \times {\bf E} = \frac{4\pi
-        i\omega}{c^{2}}{\bf j}_{ex} + \frac{\omega^{2}}{c^{2}}{\bf D}
+      \nabla \times \nabla \times {\bm E} = \frac{4\pi
+        i\omega}{c^{2}}{\bm j}_{ex} + \frac{\omega^{2}}{c^{2}}{\bm D}
       \\ \left[ \hat{\epsilon}_{ff} - \frac{c^{2}}{\omega^{2}}(\nabla
-        \times \nabla \times)_{ff}\right] {\bf E}_{f} = \frac{4\pi}{i
-        \omega }{\bf j}_{f}^{ex}-\hat{\epsilon}_{fp}{\bf E}_{p}
+        \times \nabla \times)_{ff}\right] {\bm E}_{f} = \frac{4\pi}{i
+        \omega }{\bm j}_{f}^{ex}-\hat{\epsilon}_{fp}{\bm E}_{p}
   \end{split}
 \end{equation}
-asumiendo que ${\bf J}^{ex}_{f} = 0 $, sustituimos ${\bf E}_{f}$ en la
+asumiendo que ${\bm J}^{ex}_{f} = 0 $, sustituimos ${\bm E}_{f}$ en la
 ecuación \eqref{CamposCompletos},
 \begin{equation}
-  {\bf
+  {\bm
     D}_{p}=\left(\hat{\epsilon}_{pp}-(\hat{\epsilon}_{pf}(\hat{\epsilon}_{ff}-\frac{c^{2}}{\omega^{2}}(\nabla
-  \times \nabla)_{ff})^{-1}\hat{\epsilon}_{fp}\right){\bf E}_{p},
+  \times \nabla)_{ff})^{-1}\hat{\epsilon}_{fp}\right){\bm E}_{p},
   \label{MacroscopicRelation}
 \end{equation}
 comparando con la ecuación de campos macroscópicos obtenemos que
@@ -1416,8 +1416,8 @@ y transversal
 \begin{equation}
   \hat{P}^{T}=-\hat{\nabla}\times \hat{\nabla}^{-2} \hat{\nabla}\times,
 \end{equation}
-tales que extraen las partes irrotacional ${\bf F}^{L}=\hat{P}^{L}{\bf
-  F} $ y solenoidal ${\bf F}^{T}=\hat{P}^{T}{\bf F}$ de una campo
+tales que extraen las partes irrotacional ${\bm F}^{L}=\hat{P}^{L}{\bm
+  F} $ y solenoidal ${\bm F}^{T}=\hat{P}^{T}{\bm F}$ de una campo
 vectorial arbitrario. Estos operadores cumplen las siguiente
 propiedades
 \begin{equation}
@@ -2075,59 +2075,63 @@ grupos de trabajo y estudiantes.
   Electromagnetic Materials and
   Meta-materials. \url{https://www.metamorphose-vi.org/}
 \bibitem{IntroductiontoMetamaterialsandNanophotonics} {\em An introduction
-  to metamaterials and nanophotonics} Constantin Simovski and Sergei
-  Tretyakov, Department of Electronics and Nanoengineering, School of
+  to metamaterials and nanophotonics}, Constantin Simovski y Sergei
+Tretyakov,(Cambridge University Press, Cambridge, 2021), ISBN:9781108492645.
+
+Department of Electronics and Nanoengineering, School of
   Electrical Engineering, Aalto University,
   Finland. \url{http://www.cambridge.org/9781108492645}
 \bibitem{ElectromagneticResponseofSystemwithSpatialFluctuations}
   {\em Electromagnetic response of systems with spatial
-  fluctuations. I. General formalism}, W. Luis Mochán and Rubén
-  G. Barrera. Phys. Rev. B {\bf 32}, 4984 (1985).
+  fluctuations. I. General formalism}, W. Luis Mochán y Rubén
+  G. Barrera. Phys. Rev. B {\bf 32} 4984
+  (1985). \href{https://journals.aps.org/prb/abstract/10.1103/PhysRevB.32.4984}{doi:
+    10.1103/PhysRevB.32.4984}.
 \bibitem{Bulkplasmon} {\em Plasmons}, W. Luis Mochán,
-        In Reference Module in Materials Science and Materials
+        en Reference Module in Materials Science and Materials
         Engineering, (Elsevier, Amsterdam, 2016)
-        ed. by Saleem Hashmi.
-	(por invitación).
+        ed. por Saleem Hashmi.
         ISBN 9780128035818,
         \href{http://dx.doi.org/10.1016/B978-0-12-803581-8.01192-9}
         {doi:10.1016/B978-0-12-803581-8.01192-9}.
 \bibitem{LycurgusInvestigation} {\em  An
   investigation of the origin of the color of the Lycurgus cup by
-  analytical transmission electron-microscopy} Barber DJ, Freestone
-IC. Archaeometry {\bf 32} 33–45 (1990).
+  analytical transmission electron-microscopy}, Barber DJ y Freestone
+IC,  Archaeometry {\bf 32} 33–45 (1990).
+\href{https://onlinelibrary.wiley.com/doi/10.1111/j.1475-4754.1990.tb01079.x}
+{doi:10.1111/J.1475-4754.1990.TB01079.X}.
 \bibitem{Fuchs} {\em Theory of the optical properties of ionic crystal
-  cubes}, Ronald Fuchs, Physical Review B {\bf 11}, 1732--1740, (1975),
-  \href{http://link.aps.org/doi/10.1103/PhysRevB.11.1732}{doi:10.1103/PhysRevB.11.1732}
+  cubes}, Ronald Fuchs, Physical Review B {\bf 11} 1732, (1975).
+  \href{http://link.aps.org/doi/10.1103/PhysRevB.11.1732}{doi:10.1103/PhysRevB.11.1732}.
 \bibitem{guilleOE}{\em Efficient homogenization procedure for the calculation of
   optical properties of 3D nanostructured composites},
  W. Luis Mochán, Guillemo P. Ortiz y Bernardo S. Mendoza,
- Optics Express {\bf 18}(21) 22119-22127 (2010).
+ Optics Express {\bf 18} 22119 (2010).
  \href{https://www.osapublishing.org/oe/fulltext.cfm?uri=oe-18-21-22119&id=206120}
  {doi:10.1364/OE.18.022119}.
 \bibitem{samuel}   {\em Macroscopic optical response and photonic
     bands}, José Samuel Pérez-Huerta, Guillermo P. Ortiz, Bernardo
-  S. Mendoza y W. Luis Mochán, New Journal of Physics {\bf 15}(4),
+  S. Mendoza y W. Luis Mochán, New Journal of Physics {\bf 15}
   043037 (2013).
   \href{https://iopscience.iop.org/article/10.1088/1367-2630/15/4/043037}
   {doi:10.1088/1367-2630/15/4/043037}.
 \bibitem{haydock}{\em The Recursive Solution of the Schrödinger Equation},
-R.~Haydock, Solid State Physics  {\bf 35}, 215 (1980) ed. por
+R.~Haydock, Solid State Physics  {\bf 35} 215 (1980) ed. por
 H. Ehrenreich, F. Seitz y D. Turnbull.
 \bibitem{PhotonicCPAN}
-  W. Luis Mochan, Guillermo Ortiz, Bernardo S. Mendoza, José Samuel
+  W. Luis Mochán, Guillermo Ortiz, Bernardo S. Mendoza, José Samuel
   Pérez-Huerta, Lucila Juárez Reyes, Raksha Singla y Merlyn Jaqueline
   Juárez-Gutiérrez, {\em Photonic}, \url{https://metacpan.org/pod/Photonic}.
-\bibitem{PhotonicGitHub}  W. Luis Mochan, Guillermo Ortiz, Bernardo S. Mendoza, José Samuel
+\bibitem{PhotonicGitHub}  W. Luis Mochán, Guillermo Ortiz, Bernardo S. Mendoza, José Samuel
   Pérez-Huerta, Lucila Juárez Reyes, Raksha Singla y Merlyn Jaqueline
   Juárez-Gutiérrez, {\em Photonic}, \url{https://github.com/wlmb/Photonic}.
 \bibitem{benchmark}W. Luis Mochán, {\em Perl Benchmark}
   \url{https://wlmb.github.io/2021/10/03/pdl/}.
-\bibitem{PDL}{\em Perl Data Language: Scientific COmputing with Perl}
+\bibitem{PDL}{\em Perl Data Language: Scientific Computing with Perl}.
   \url{http://pdl.perl.org/}.
 \bibitem{PDLCPAN} {\em PDL} \url{https://metacpan.org/pod/PDL}.
-\bibitem{PDLGitHUb}{\em Perl Data Language (PDL)},
-  \href{https://github.com/PDLPorters/pdl}.
-\bibitem{Moose}{\em Moose - A postmodern object system for Perl 5},
+\bibitem{PDLGitHUb}{\em Perl Data Language (PDL)}.  \url{https://github.com/PDLPorters/pdl}.
+\bibitem{Moose}{\em Moose - A postmodern object system for Perl 5}.
   \url{https://metacpan.org/pod/Moose}.
 \bibitem{toroide}
   \href{https://github.com/wlmb/Photonic/blob/master/examples/LE/NR2/toroid.pl}{Ejemplo}
@@ -2135,15 +2139,15 @@ H. Ehrenreich, F. Seitz y D. Turnbull.
     ópticas de una red de toroides.
 \bibitem{bms12}  {\em Birefringent Nanostructured Composite
       Materials}, Bernardo S Mendoza y W. Luis Mochán, Physical Review
-    B {\bf 85} 125418 (2012)
+    B {\bf 85} 125418 (2012).
     \href{https://doi.org/10.1103/PhysRevB.85.125418}{doi:10.1103/PhysRevB.85.125418}.
 \bibitem{bms16} {\em Tailored Optical Polarization in Nanostructured
     Metamaterials},    Bernardo S. Mendoza y W. Luis Mochán,
-  Physical Review B {\bf 94} 195137 (2016)
+  Physical Review B {\bf 94} 195137 (2016).
   \href{https://doi.org/10.1103/PhysRevB.94.195137}{doi:10.1103/PhysRevB.94.195137}.
 \bibitem{lucila} {\em Magnetic Response of Metamaterials}, Lucila
   Juárez-Reyes y W. Luis Mochán, Physica Status Solidi (b) {\bf 255}
-  1700495 (2018)
+  1700495 (2018).
   \href{https://doi.org/10.1002/pssb.201700495}{doi:10.1002/pssb.201700495}.
 \bibitem{bms19} {\em Second-Harmonic Generation in Nanostructured
     Metamaterials},  Ulises R. Meza, Bernardo S. Mendoza y W. Luis
