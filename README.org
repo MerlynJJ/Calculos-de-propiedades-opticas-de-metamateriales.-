@@ -1,0 +1,28 @@
+* Cálculo de propiedades ópticas de metamateriales
+  *Merlyn J. Juárez-Gutiérrez y W. Luis Mochán*
+** About
+   Notes of a short course presented at the summer school
+   /XXVIII Escuela de Verano/ organized by the /Instituto de Física/
+   and /Instituto de Ciencias Físicas/ of the /Universidad Nacional
+   Autónoma de México/ at Mexico City and Cuernavaca, on
+   2021-06-21--2021-07-02.
+** Abstract
+   We present an introduction to metamaterials, some of their optical
+   properties, and examples of their uses. We develop an efficient
+   theory for the calculation of the macroscopic permittivity of binary
+   systems and systems with more components, in the non-retarded case and in the
+   general case, and we present its implementation in a computational
+   package and illustrate its use. We discuss some applications regarding
+   the design of optimized nanostructured optical devices and we
+   discuss the linear and non-linear properties obtained.
+** Resumen
+   Presentamos una introducción a los metamateriales, algunas de sus
+   propiedades ópticas y ejemplos de sus usos. Desarrollamos una teoría
+   eficiente para el cálculo de su permitividad macroscópica en
+   sistemas binarios o con más componentes, en el caso no retardado y
+   en el caso general, y presentamos su implementación en un paquete
+   computacional y su uso. Finalizamos discutiendo algunas aplicaciones
+   del mismo para el diseño de dispositivos ópticos nanoestructurados
+   optimizados y discutimos las propiedades lineales y no lineales
+   obtenidas.
+** Language: Spanish
