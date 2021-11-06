@@ -52,11 +52,11 @@
 \begin{abstract}
   We present an introduction to metamaterials, some of their optical
   properties, and examples of their uses. We develop an efficient
-  theory for the calculation of its macroscopic permittivity in binary
-  systems or with more components, in the non-delayed case and in the
+  theory for the calculation of the macroscopic permittivity of binary
+  systems and systems with more components, in the non-retarded case and in the
   general case, and we present its implementation in a computational
-  package and its use. We end by discussing some applications of it
-  for the design of optimized nanostructured optical devices and we
+  package and illustrate its use. We discuss some applications regarding
+  the design of optimized nanostructured optical devices and we
   discuss the linear and non-linear properties obtained.
 \end{abstract}
 
@@ -111,10 +111,10 @@ eléctrico $\bm{E} (\bm{r})$, como ilustra la figura
 \ref{Bulkplasmon}. De acuerdo a la segunda ley de Newton, los
 electrones adquirirían una aceleración
 $d^{2}\bm{r}/dt^{2} = -e\bm{E}(\bm{r},t)/m$, donde $m$ y $-e$
-son la masa y la carga eléctrica electrónica. La velocidad adquirida
+son la masa y la carga eléctrica. La velocidad adquirida
 por los electrones resultaría en una corriente eléctrica
 $\bm{j}(\bm{r},t) = -n_0 e \bm v=-n_{0}e({d\bm{r}}/{dt})$ que obedece
-la ecuación de movimiento por
+la ecuación de movimiento,
 ${\partial \bm{j}(\bm{r},t)}/{\partial t}=
 -\frac{n_{0}e^{2}}{m}\bm{E}(\bm{r},t)$. Integrando la ecuación
 diferencial de la corriente sobre una superficie $\Sigma$ que rodee
@@ -138,7 +138,7 @@ la carga $Q$ encerrada en $\Sigma$,
 \end{equation}
 la cual es una ecuación diferencial idéntica a la de un oscilador
 armónico simple como el que se ilustra en la fig.
-\ref{OscArmonicoSimple}:
+\ref{OscArmonicoSimple}
 \begin{figure}
   \centering
   \input{fig2.tex}
@@ -147,14 +147,14 @@ armónico simple como el que se ilustra en la fig.
     distancia $y$.}
 \end{figure}
 Sustituyendo la Ley de Hooke $F= -ky$ en la segunda ley de Newton
-$ma=F$ para un oscilador con constante $k$ y masa $m$, obtenemos
+$ma=F$ para un oscilador con constante $k$ y masa $m$, obtenemos \cite{plasmons}
 \begin{equation}
   \label{OAEq}
   \frac{d^{2}y}{dt^{2}}=-\omega^2y,
 \end{equation}
 donde $\omega=\sqrt{k/m}$, y cuya solución,
 $y(t)=y_{0}\cos(\omega t+\phi_0)$ es un movimiento periódico con una
-frecuencia $\omega$ que depende de $k$ y $m$.  Comparando las ecs.  y
+frecuencia $\omega$ que depende de $k$ y $m$.  Comparando las ecs.
 \eqref{ChargeDifEq} y \eqref{OAEq} notamos que puede existir carga en
 el seno de nuestro metal modelo, pero ésta oscilaría con la {\em
   frecuencia de plasma} $\omega_p$ dada por
@@ -179,7 +179,7 @@ En lugar de un medio infinito, consideremos ahora un medio
 semiinfinito separado del vacío por una superficie plana.  Un análisis
 análogo nos permite obtener la frecuencia del {\em plasmón de
   superficie}, considerando ahora un exceso de carga $Q$ en una región
-$R$ en la interfaz, como ilustra la fig.  \ref{Surfplasmon}, el cual
+$\mathcal{R}$ en la interfaz, como ilustra la fig.  \ref{Surfplasmon}, el cual
 produce un campo eléctrico $\bm{E}(\bm{r},t)$ que induce corrientes en
 el conductor.
 \begin{figure}
@@ -272,7 +272,7 @@ Un ejemplo excepcional de las propiedades que emergen al generar
 tallada en la época romana tardía, decorada con un friso que muestra
 escenas del mito del Rey Licurgo. La copa que data del siglo IV, D.C.,
 se produjo a partir de una pieza en bruto de vidrio soplado de unos
-15mm de espesor. Las figuras se cortaron y rectificaron y se unieron a
+15mm de espesor. Las figuras se cortaron, rectificaron y  unieron a
 la pared del recipiente mediante pequeños puentes de vidrio. Aparte
 del trabajo artístico realizado en la decoración, la copa es de gran
 interés por las propiedades ópticas que muestra. El vidrio se ve de
@@ -306,7 +306,7 @@ entre sí producen un color rojo.
 
 \subsection{Otras geometrías}
 Si consideráramos partículas con otras geometrías habría otras
-resonancias asociadas a la excitación de modos con patrones varios de
+resonancias asociadas a la excitación de modos con varios patrones de
 distribución de carga. Por ejemplo, en la figura \ref{fig:Fuchs}
 mostramos resultados experimentales y los primeros resultados teóricos
 para los modos electromagnéticos esperados en pequeños cubos de sal
@@ -390,7 +390,7 @@ dieléctricas transparentes que forman cristales fotónicos con regiones
 de frecuencia en que la luz es fuertemente reflejada por corresponder
 a brechas en que no se puede propagar. Estos colores se llaman por su
 origen {\em colores estructurales}. Introduciendo {\em defectos} en
-cristales fotónicos pueden generarse sitios en que la luz puede ser
+cristales fotónicos se pueden generar sitios en que la luz puede ser
 atrapada, hecho que ha encontrado aplicaciones tales como la
 elaboración de fibras ópticas fotónicas.
 
@@ -505,7 +505,7 @@ permeabilidad macroscópica es negativa. Por otro lado, una serie de
 pistas rectas permiten que el material se comporte en la dirección
 vertical como un conductor, por lo cual la permitividad es negativa
 abajo de la frecuencia de plasma efectiva.
-\subsection{Metasuperficies}
+\subsection{Partículas dieléctricas}
 Hemos visto arriba que partículas metálicas pequeñas pueden tener
 resonancias plasmónicas cuyas frecuencias dependen en general de su
 composición y de su geometría. También partículas dieléctricas pueden
@@ -527,7 +527,7 @@ refracción alto, la longitud de onda dentro de estos materiales puede
 ser mucho menor que la correspondiente al espacio vacío, permitiendo
 así resonancias dieléctricas en partículas de tamaño muy pequeñas, en
 analogía a las resonancias plasmónicas.
-
+\subsection{Metasuperficies}
 Las funciones respuesta de una partícula cambian de signo conforme la
 frecuencia de la luz pasa de ser menor a ser mayor a su frecuencia de
 resonancia. Por tanto, la fase que adquiere un haz luminoso al pasar a
@@ -538,7 +538,6 @@ geometría. Por tanto, modulando la geometría de las partículas a lo
 largo de la superficie, puede modularse la fase que adquiere la luz en
 forma análoga a como el ancho variable de una lente o de un prisma
 modula la fase de los rayos de luz que los atraviesan.
-
 
 La ley de Snell usual implica que a lo largo de una interfaz uniforme
 hay un empatamiento de fases $\phi^\alpha(\bm r_\|)=\bm k^\alpha_\|\cdot\bm
@@ -555,7 +554,7 @@ generalizarse,
   \label{eq:snell}
   \bm k^\alpha_\|=\bm k^i_\|+\nabla_\|\psi^\alpha,\quad(\alpha=r,t)
 \end{equation}
-i.e., el ímpetu paralelo a la interfase adquiere una contribución
+i.e., el ímpetu paralelo a la interfaz adquiere una contribución
 debida a la variación de la fase adicional $\psi^\alpha$. Por lo
 tanto, modulando la fase de una onda a lo largo de una superficie
 podemos manipular la dirección de la luz transmitida o reflejada. Para
@@ -563,14 +562,13 @@ esto se pueden colocar partículas con un índice de refracción grande
 sobre una superficie ordinaria y modificar a lo largo de esta su
 geometría, orientación o densidad, dando lugar a una {\em metasuperficie}.
 
-
 Como las resonancias dependen también de la polarización de la luz,
 este efecto puede usarse para desviar haces de luz de acuerdo a su
 polarización. En la fig. \ref{fig:metasup} mostramos una {\em
   metasuperficie} formada por partículas en forma de $L$ cuya
-respuesta difiere cuando es iluminada con polarización circular
-derecha o polarización circular izquierda, y que por tanto puede
-separa un haz de luz no polarizada en dos haces con polarizaciones
+respuesta difiere cuando es iluminada con polarización horizontal o
+vertical, y que por lo tanto puede
+separar un haz de luz no polarizada en dos haces con polarizaciones
 opuestas.
 \begin{figure}
   \centering
