@@ -1,21 +1,19 @@
 \documentclass[12pt]{article}
-\usepackage{graphicx}
-\usepackage[spanish]{babel}
-\usepackage{float}
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
+\usepackage{graphicx} %macropackage to manage figures
+\usepackage[spanish, english]{babel} % to have labels in spanish
+\usepackage{float} %interface for floating object
+\usepackage[utf8]{inputenc} %allow utf-8 input
+\usepackage[T1]{fontenc} %use 8-bit T1 fonts
 \usepackage{outline}
 \usepackage{pmgraph}
 \usepackage[normalem]{ulem}
 \usepackage{amsmath,mathdots}
 \usepackage{amsfonts,amssymb,amsthm,yhmath}
 \usepackage{fancyhdr}
-%\usepackage{multicol}
 \usepackage{vmargin}
 \usepackage{tikz}
 \usepackage{physics}
 \usepackage{cancel}
-%\usepackage{multicol,multirow}
 \usepackage{bm}
 \usepackage{hyperref}
 \usepackage[scaled]{helvet}
@@ -34,9 +32,6 @@
 \usetikzlibrary{shapes}
 
 \decimalpoint
-%\renewcommand\familydefault{\sfdefault}
-%\usepackage{showkeys}
-%\usepackage{showlabel}
 \hypersetup{
     colorlinks=true,
     linkcolor=black,
@@ -50,12 +45,22 @@
   junio 21-julio 2, 2021}}
 \author{ Merlyn Jaqueline Juárez-Gutiérrez y W. Luis Mochán\\
   Instituto de Ciencias Físicas}
-%\date{}
-
 
 \begin{document}
 \maketitle
-%\tableofcontents
+\selectlanguage{english}
+\begin{abstract}
+  We present an introduction to metamaterials, some of their optical
+  properties, and examples of their uses. We develop an efficient
+  theory for the calculation of its macroscopic permittivity in binary
+  systems or with more components, in the non-delayed case and in the
+  general case, and we present its implementation in a computational
+  package and its use. We end by discussing some applications of it
+  for the design of optimized nanostructured optical devices and we
+  discuss the linear and non-linear properties obtained.
+\end{abstract}
+
+\selectlanguage{spanish}
 \begin{abstract}
   Presentamos una introducción a los metamateriales, algunas de sus
   propiedades ópticas y ejemplos de sus usos. Desarrollamos una teoría
