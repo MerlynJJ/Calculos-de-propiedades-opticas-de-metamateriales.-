@@ -30,6 +30,8 @@
 \usetikzlibrary{patterns}
 \usetikzlibrary{shadows.blur}
 \usetikzlibrary{shapes}
+\usepackage{caption}
+\usepackage{subcaption}
 
 \decimalpoint
 \hypersetup{
@@ -336,22 +338,43 @@ distribución espacial muestra bastante riqueza.
 Consideremos ahora un dieléctrico transparente no dispersivo
 homogéneo, como en la figura \ref{fig:fotonico}.
 \begin{figure}
-  \centering
-  \includegraphics[width=0.3\textwidth]{fig7a}
-  \includegraphics[width=0.3\textwidth]{fig7b}
-  \includegraphics[width=0.3\textwidth]{fig7c}
-  \\
-  \includegraphics[width=0.3\textwidth]{fig7d}
-  \includegraphics[width=0.3\textwidth]{fig7e}
-  \includegraphics[width=0.3\textwidth]{fig7f}\\
-  \begin{picture}(0,0)
-    \put(-6.5cm,8.1cm){\color{white} (a)}
-    \put(-2.0cm,8.1cm){\color{white} (b)}
-    \put(2.5cm,8.1cm){(c)}
-    \put(-6.0cm,3.5cm){(d)}
-    \put(-1.5cm,3.5cm){(e)}
-    \put(3cm,3.5cm){(f)}
-  \end{picture}
+    \begin{subfigure}[b]{0.3\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{fig7a}
+    \caption{}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.3\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{fig7b}
+    \caption{}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.3\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{fig7c}
+    \caption{}
+    \end{subfigure}
+    \hfill
+  \newline
+  \begin{subfigure}[b]{0.3\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{fig7d}
+    \caption{}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.3\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{fig7e}
+    \caption{}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.3\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{fig7f}
+    \caption{}
+    \end{subfigure}
+    \hfill
   \caption{(a)Medio dieléctrico homogéneo con respuesta $\epsilon$,
     (b) cristal fotónico unidimensional con funciones respuesta
     $\epsilon_a$ y $\epsilon_b$ y periodo $d$, y (c) cristal fotónico
